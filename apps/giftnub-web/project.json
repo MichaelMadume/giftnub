@@ -8,19 +8,26 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/giftnub-web",
         "index": "apps/giftnub-web/src/index.html",
         "browser": "apps/giftnub-web/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/giftnub-web/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/giftnub-web/src/favicon.ico",
-          "apps/giftnub-web/src/assets"
+          "apps/giftnub-web/src/assets",
+          "apps/giftnub-web/src/manifest.webmanifest"
         ],
-        "styles": ["apps/giftnub-web/src/styles.scss"],
+        "styles": [
+          "apps/giftnub-web/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -37,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "serviceWorker": "apps/giftnub-web/ngsw-config.json"
         },
         "development": {
           "optimization": false,
@@ -67,11 +75,15 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/giftnub-web/jest.config.ts"
       }
