@@ -1,0 +1,281 @@
+@import '@nebular/theme/styles/theming';
+@import '@nebular/theme/styles/themes/default';
+@import '@nebular/theme/styles/themes/dark';
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('./fonts/Inter-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('./fonts/Inter-Regular.ttf') format('opentype');
+}
+
+$nb-enable-css-custom-properties: true;
+
+$nb-themes: nb-register-theme(
+  (
+    // colors
+    color-primary-100: #fefcf4,
+    color-primary-200: #fef8ea,
+    color-primary-300: #fef4e0,
+    color-primary-400: #feefd8,
+    color-primary-500: #fee8cb,
+    color-primary-600: #dab994,
+    color-primary-700: #b68d66,
+    color-primary-800: #936440,
+    color-primary-900: #794726,
+    color-success-100: #e1fddc,
+    color-success-200: #bdfbba,
+    color-success-300: #95f499,
+    color-success-400: #77ea87,
+    color-success-500: #4ddd6f,
+    color-success-600: #38be64,
+    color-success-700: #269f5a,
+    color-success-800: #18804e,
+    color-success-900: #0e6a47,
+    color-info-100: #dfedff,
+    color-info-200: #bfd9ff,
+    color-info-300: #9fc3ff,
+    color-info-400: #87b1ff,
+    color-info-500: #6092ff,
+    color-info-600: #4670db,
+    color-info-700: #3052b7,
+    color-info-800: #1e3893,
+    color-info-900: #12257a,
+    color-warning-100: #fff7da,
+    color-warning-200: #ffedb5,
+    color-warning-300: #ffe190,
+    color-warning-400: #ffd575,
+    color-warning-500: #ffc147,
+    color-warning-600: #db9d33,
+    color-warning-700: #b77b23,
+    color-warning-800: #935c16,
+    color-warning-900: #7a460d,
+    color-danger-100: #ffe3e2,
+    color-danger-200: #ffc5c8,
+    color-danger-300: #ffa9b6,
+    color-danger-400: #ff93ae,
+    color-danger-500: #ff70a2,
+    color-danger-600: #db518f,
+    color-danger-700: #b7387e,
+    color-danger-800: #93236c,
+    color-danger-900: #7a1560,
+
+    text-heading-1-font-size: 4.3rem,
+    text-heading-1-font-weight: 900,
+    text-heading-1-line-height: 3.5rem,
+
+    text-heading-2-font-size: 2.6rem,
+    text-heading-2-font-weight: 800,
+    text-heading-2-line-height: 3.5rem,
+
+    text-subtitle-font-size: 1.8rem,
+    text-subtitle-font-weight: 400,
+
+    text-paragraph-font-size: 1.8rem,
+    text-paragraph-font-weight: 400,
+    text-paragraph-line-height: 3rem,
+
+    text-label-font-size: 1.8rem,
+    text-label-font-weight: 400,
+    text-label-line-height: 3rem,
+
+    select-large-text-line-height: 1.8rem,
+    select-large-text-weight: 400,
+    select-large-text-height: 3rem,
+    select-outline-large-padding: 1.9rem,
+
+    button-outline-giant-padding: 1.9rem,
+
+    input-giant-text-font-size: 2.5rem,
+    input-giant-text-font-weight: 700,
+    input-giant-text-line-height: 3.5rem,
+    input-giant-padding: 1.6rem,
+
+    alert-padding: 1.5rem,
+
+    badge-text-font-size: 1.3rem,
+    badge-padding: 0.5rem 0.75rem,
+
+    checkbox-text-font-size: 1.8rem,
+    checkbox-height: 2rem,
+    checkbox-width: 2rem,
+
+    card-border-radius: 1rem,
+    // layout-padding-top: 2.25rem,
+    menu-item-icon-margin: 0 0.5rem 0 0,
+    card-height-tiny: 13.5rem,
+    card-height-small: 21.1875rem,
+    card-height-medium: 28.875rem,
+    card-height-large: 36.5625rem,
+    card-height-giant: 44.25rem,
+    card-margin-bottom: 1.875rem,
+    card-header-with-select-padding-top: 0.5rem,
+    card-header-with-select-padding-bottom: 0.5rem,
+    select-min-width: 6rem,
+
+    // keyboard
+    sk-popout-background: rgba(228, 233, 242, 0.8),
+    sk-hg-button-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.11),
+    sk-hg-button-accept: #1c5630,
+    sk-hg-button-delete: #c02323,
+    // select-auth
+    sa-nb-auth-blend: darken,
+
+    // hotlist-cards
+    hotlist-card-color: var(--color-basic-300),
+    accordion-shadow: none,
+    accordion-header-text-line-height: 1.25rem,
+    accordion-border-radius: none,
+    accordion-header-text-font-size: 1rem,
+    accordion-item-text-font-size: 1rem,
+    accordion-item-text-line-height: 1.5rem,
+    accordion-header-text-color: var(--text-basic-color),
+    //giant button
+    button-hero-basic-text-color: #ffffff,
+    button-hero-giant-padding: 1.5rem,
+    button-hero-giant-width: 13.6875rem,
+    button-hero-giant-height: 5.3125rem,
+    button-rectangle-border-radius: 0.5rem,
+    button-giant-text-font-size: 1.8rem,
+    button-giant-text-line-height: 2.4375rem,
+    button-text-font-weight: 600
+  ),
+  default,
+  default
+);
+
+$nb-themes: nb-register-theme(
+  (
+    // colors
+    color-primary-100: #fefcf4,
+    color-primary-200: #fef8ea,
+    color-primary-300: #fef4e0,
+    color-primary-400: #feefd8,
+    color-primary-500: #fee8cb,
+    color-primary-600: #dab994,
+    color-primary-700: #b68d66,
+    color-primary-800: #936440,
+    color-primary-900: #794726,
+    color-success-100: #e1fddc,
+    color-success-200: #bdfbba,
+    color-success-300: #95f499,
+    color-success-400: #77ea87,
+    color-success-500: #4ddd6f,
+    color-success-600: #38be64,
+    color-success-700: #269f5a,
+    color-success-800: #18804e,
+    color-success-900: #0e6a47,
+    color-info-100: #dfedff,
+    color-info-200: #bfd9ff,
+    color-info-300: #9fc3ff,
+    color-info-400: #87b1ff,
+    color-info-500: #6092ff,
+    color-info-600: #4670db,
+    color-info-700: #3052b7,
+    color-info-800: #1e3893,
+    color-info-900: #12257a,
+    color-warning-100: #fff7da,
+    color-warning-200: #ffedb5,
+    color-warning-300: #ffe190,
+    color-warning-400: #ffd575,
+    color-warning-500: #ffc147,
+    color-warning-600: #db9d33,
+    color-warning-700: #b77b23,
+    color-warning-800: #935c16,
+    color-warning-900: #7a460d,
+    color-danger-100: #ffe3e2,
+    color-danger-200: #ffc5c8,
+    color-danger-300: #ffa9b6,
+    color-danger-400: #ff93ae,
+    color-danger-500: #ff70a2,
+    color-danger-600: #db518f,
+    color-danger-700: #b7387e,
+    color-danger-800: #93236c,
+    color-danger-900: #7a1560,
+
+    text-heading-1-font-size: 4.3rem,
+    text-heading-1-font-weight: 900,
+    text-heading-1-line-height: 3.5rem,
+
+    text-heading-2-font-size: 2.6rem,
+    text-heading-2-font-weight: 800,
+    text-heading-2-line-height: 3.5rem,
+
+    text-subtitle-font-size: 1.8rem,
+    text-subtitle-font-weight: 400,
+
+    text-paragraph-font-size: 1.8rem,
+    text-paragraph-font-weight: 400,
+    text-paragraph-line-height: 3rem,
+
+    text-label-font-size: 1.8rem,
+    text-label-font-weight: 400,
+    text-label-line-height: 3rem,
+
+    select-large-text-line-height: 1.8rem,
+    select-large-text-weight: 400,
+    select-large-text-height: 3rem,
+    select-outline-large-padding: 1.9rem,
+
+    button-outline-giant-padding: 1.9rem,
+
+    input-giant-text-font-size: 2.5rem,
+    input-giant-text-font-weight: 700,
+    input-giant-text-line-height: 3.5rem,
+    input-giant-padding: 1.6rem,
+
+    alert-padding: 1.5rem,
+
+    badge-text-font-size: 1.3rem,
+    badge-padding: 0.5rem 0.75rem,
+
+    checkbox-text-font-size: 1.8rem,
+    checkbox-height: 2rem,
+    checkbox-width: 2rem,
+
+    card-border-radius: 1rem,
+    // layout-padding-top: 2.25rem,
+    menu-item-icon-margin: 0 0.5rem 0 0,
+    card-height-tiny: 13.5rem,
+    card-height-small: 21.1875rem,
+    card-height-medium: 28.875rem,
+    card-height-large: 36.5625rem,
+    card-height-giant: 44.25rem,
+    card-margin-bottom: 1.875rem,
+    card-header-with-select-padding-top: 0.5rem,
+    card-header-with-select-padding-bottom: 0.5rem,
+    select-min-width: 6rem,
+
+    // keyboard
+    sk-popout-background: rgba(41, 41, 41, 0.8),
+    sk-hg-button-box-shadow: 2px 2px 10px 0px rgba(255, 255, 255, 0.11),
+    sk-hg-button-accept: #1c5630,
+    sk-hg-button-delete: #c02323,
+    // select-auth
+    sa-nb-auth-blend: lighten,
+
+    // hotlist-cards
+    hotlist-card-color: var(--color-basic-900),
+    accordion-shadow: none,
+    accordion-header-text-line-height: 1.25rem,
+    accordion-border-radius: none,
+    accordion-header-text-font-size: 1rem,
+    accordion-item-text-font-size: 1rem,
+    accordion-item-text-line-height: 1.5rem,
+    accordion-header-text-color: var(--text-basic-color),
+    //giant button
+    button-hero-basic-text-color: #ffffff,
+    button-hero-giant-padding: 1.5rem,
+    button-hero-giant-width: 13.6875rem,
+    button-hero-giant-height: 5.3125rem,
+    button-rectangle-border-radius: 0.5rem,
+    button-giant-text-font-size: 1.8rem,
+    button-giant-text-line-height: 2.4375rem,
+    button-text-font-weight: 600
+  ),
+  dark,
+  dark
+);
