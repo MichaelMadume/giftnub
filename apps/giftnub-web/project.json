@@ -18,9 +18,10 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/giftnub-web/src/favicon.ico",
-          "apps/giftnub-web/src/assets"
+          "apps/giftnub-web/src/assets",
+          "apps/giftnub-web/src/manifest.webmanifest"
         ],
-        "styles": ["apps/giftnub-web/src/styles.scss"],
+        "styles": ["apps/giftnub-web/src/styles/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -37,7 +38,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "serviceWorker": "apps/giftnub-web/ngsw-config.json"
         },
         "development": {
           "optimization": false,
