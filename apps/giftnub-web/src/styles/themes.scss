@@ -12,6 +12,11 @@
   src: url('./fonts/Montserrat-Regular.ttf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Montez', Cursive;
+  src: url('./fonts/Montez-Regular.ttf') format('opentype');
+}
+
 $nb-enable-css-custom-properties: true;
 
 $nb-themes: nb-register-theme(
