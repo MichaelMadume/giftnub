@@ -17,7 +17,7 @@
   src: url('./fonts/Montez-Regular.ttf') format('opentype');
 }
 
-$nb-enable-css-custom-properties: true;
+// $nb-enable-css-custom-properties: true;
 
 $nb-themes: nb-register-theme(
   (
@@ -66,90 +66,7 @@ $nb-themes: nb-register-theme(
     color-danger-600: #db518f,
     color-danger-700: #b7387e,
     color-danger-800: #93236c,
-    color-danger-900: #7a1560,
-
-    text-heading-1-font-size: 4.3rem,
-    text-heading-1-font-weight: 900,
-    text-heading-1-line-height: 3.5rem,
-
-    text-heading-2-font-size: 2.5rem,
-    text-heading-2-font-weight: 600,
-    text-heading-2-line-height: normal,
-
-    text-subtitle-font-size: 1.25rem,
-    text-subtitle-font-weight: 600,
-
-    text-paragraph-font-size: 1.8rem,
-    text-paragraph-font-weight: 400,
-    text-paragraph-line-height: 3rem,
-
-    text-label-font-size: 1.8rem,
-    text-label-font-weight: 400,
-    text-label-line-height: 3rem,
-
-    select-large-text-line-height: 1.8rem,
-    select-large-text-weight: 400,
-    select-large-text-height: 3rem,
-    select-outline-large-padding: 1.9rem,
-
-    button-outline-giant-padding: 1.9rem,
-
-    input-giant-text-font-size: 2.5rem,
-    input-giant-text-font-weight: 700,
-    input-giant-text-line-height: 3.5rem,
-    input-giant-padding: 1.6rem,
-
-    alert-padding: 1.5rem,
-
-    badge-text-font-size: 1.3rem,
-    badge-padding: 0.5rem 0.75rem,
-
-    checkbox-text-font-size: 1.8rem,
-    checkbox-height: 2rem,
-    checkbox-width: 2rem,
-
-    card-border-radius: 1rem,
-    layout-padding: 0,
-    layout-medium-padding: 0,
-    layout-small-padding:0,
-    nb-layout-column:0,
-    menu-item-icon-margin: 0 0.5rem 0 0,
-    card-height-tiny: 13.5rem,
-    card-height-small: 21.1875rem,
-    card-height-medium: 28.875rem,
-    card-height-large: 36.5625rem,
-    card-height-giant: 44.25rem,
-    card-margin-bottom: 1.875rem,
-    card-header-with-select-padding-top: 0.5rem,
-    card-header-with-select-padding-bottom: 0.5rem,
-    select-min-width: 6rem,
-
-    // keyboard
-    sk-popout-background: rgba(228, 233, 242, 0.8),
-    sk-hg-button-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.11),
-    sk-hg-button-accept: #1c5630,
-    sk-hg-button-delete: #c02323,
-    // select-auth
-    sa-nb-auth-blend: darken,
-
-    // hotlist-cards
-    hotlist-card-color: var(--color-basic-300),
-    accordion-shadow: none,
-    accordion-header-text-line-height: 1.25rem,
-    accordion-border-radius: none,
-    accordion-header-text-font-size: 1rem,
-    accordion-item-text-font-size: 1rem,
-    accordion-item-text-line-height: 1.5rem,
-    accordion-header-text-color: var(--text-basic-color),
-    //giant button
-    button-hero-basic-text-color: #ffffff,
-    button-hero-giant-padding: 1.5rem,
-    button-hero-giant-width: 13.6875rem,
-    button-hero-giant-height: 5.3125rem,
-    button-rectangle-border-radius: 0.5rem,
-    button-giant-text-font-size: 1.8rem,
-    button-giant-text-line-height: 2.4375rem,
-    button-text-font-weight: 600
+    color-danger-900: #7a1560
   ),
   default,
   default
@@ -202,90 +119,7 @@ $nb-themes: nb-register-theme(
     color-danger-600: #db518f,
     color-danger-700: #b7387e,
     color-danger-800: #93236c,
-    color-danger-900: #7a1560,
-
-    text-heading-1-font-size: 4.3rem,
-    text-heading-1-font-weight: 900,
-    text-heading-1-line-height: 3.5rem,
-
-    text-heading-2-font-size: 2.6rem,
-    text-heading-2-font-weight: 800,
-    text-heading-2-line-height: 3.5rem,
-
-    text-subtitle-font-size: 1.8rem,
-    text-subtitle-font-weight: 400,
-
-    text-paragraph-font-size: 1.8rem,
-    text-paragraph-font-weight: 400,
-    text-paragraph-line-height: 3rem,
-
-    text-label-font-size: 1.8rem,
-    text-label-font-weight: 400,
-    text-label-line-height: 3rem,
-
-    select-large-text-line-height: 1.8rem,
-    select-large-text-weight: 400,
-    select-large-text-height: 3rem,
-    select-outline-large-padding: 1.9rem,
-
-    button-outline-giant-padding: 1.9rem,
-
-    input-giant-text-font-size: 2.5rem,
-    input-giant-text-font-weight: 700,
-    input-giant-text-line-height: 3.5rem,
-    input-giant-padding: 1.6rem,
-
-    alert-padding: 1.5rem,
-
-    badge-text-font-size: 1.3rem,
-    badge-padding: 0.5rem 0.75rem,
-
-    checkbox-text-font-size: 1.8rem,
-    checkbox-height: 2rem,
-    checkbox-width: 2rem,
-
-    card-border-radius: 1rem,
-    layout-padding: 0,
-    layout-medium-padding: 0,
-    layout-small-padding:0,
-    nb-layout-column:0,
-    menu-item-icon-margin: 0 0.5rem 0 0,
-    card-height-tiny: 13.5rem,
-    card-height-small: 21.1875rem,
-    card-height-medium: 28.875rem,
-    card-height-large: 36.5625rem,
-    card-height-giant: 44.25rem,
-    card-margin-bottom: 1.875rem,
-    card-header-with-select-padding-top: 0.5rem,
-    card-header-with-select-padding-bottom: 0.5rem,
-    select-min-width: 6rem,
-
-    // keyboard
-    sk-popout-background: rgba(41, 41, 41, 0.8),
-    sk-hg-button-box-shadow: 2px 2px 10px 0px rgba(255, 255, 255, 0.11),
-    sk-hg-button-accept: #1c5630,
-    sk-hg-button-delete: #c02323,
-    // select-auth
-    sa-nb-auth-blend: lighten,
-
-    // hotlist-cards
-    hotlist-card-color: var(--color-basic-900),
-    accordion-shadow: none,
-    accordion-header-text-line-height: 1.25rem,
-    accordion-border-radius: none,
-    accordion-header-text-font-size: 1rem,
-    accordion-item-text-font-size: 1rem,
-    accordion-item-text-line-height: 1.5rem,
-    accordion-header-text-color: var(--text-basic-color),
-    //giant button
-    button-hero-basic-text-color: #ffffff,
-    button-hero-giant-padding: 1.5rem,
-    button-hero-giant-width: 13.6875rem,
-    button-hero-giant-height: 5.3125rem,
-    button-rectangle-border-radius: 0.5rem,
-    button-giant-text-font-size: 1.8rem,
-    button-giant-text-line-height: 2.4375rem,
-    button-text-font-weight: 600
+    color-danger-900: #7a1560
   ),
   dark,
   dark
