@@ -1,0 +1,477 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.3.3",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10975567735463464701"
+      },
+      {
+        "file": "amplify/auth/resource.ts",
+        "hash": "15922709595243783584"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "amplify/tsconfig.json",
+        "hash": "7348475233595919444"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "package.json",
+        "hash": "7444585662942598499"
+      },
+      {
+        "file": "amplify/data/resource.ts",
+        "hash": "4015062609152370058"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "amplify/backend.ts",
+        "hash": "10312492173327239286"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5710854610825202009"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "10356342846366472176"
+      },
+      {
+        "file": "README.md",
+        "hash": "4290351960845421863"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": "amplify/package.json",
+        "hash": "16472391776517746675"
+      }
+    ],
+    "projectFileMap": {
+      "giftnub-web": [
+        {
+          "file": "apps/giftnub-web/.eslintrc.json",
+          "hash": "11534265144656288588"
+        },
+        {
+          "file": "apps/giftnub-web/components/our-why.component.html",
+          "hash": "5065993669117867677"
+        },
+        {
+          "file": "apps/giftnub-web/components/our-why.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/components/our-why.component.spec.ts",
+          "hash": "10586938674411502478",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/components/our-why.component.ts",
+          "hash": "13030423821504845148",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/jest.config.ts",
+          "hash": "5571455241743213472"
+        },
+        {
+          "file": "apps/giftnub-web/postcss.config.js",
+          "hash": "10771093299139331962"
+        },
+        {
+          "file": "apps/giftnub-web/project.json",
+          "hash": "7433918478708288387"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/app.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/app.component.spec.ts",
+          "hash": "4027579950264438129",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/app.component.ts",
+          "hash": "15145480003556445086",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/app.config.ts",
+          "hash": "9915913273379432377",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:ngx-stripe",
+            "npm:@angular/common",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.html",
+          "hash": "2661123233913547572"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.spec.ts",
+          "hash": "3005799981538332554",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.ts",
+          "hash": "10141705151009164844",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/consultation-booking.component.html",
+          "hash": "2425937069716727128"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/consultation-booking.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/consultation-booking.component.spec.ts",
+          "hash": "691659012509188778",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/consultation-booking.component.ts",
+          "hash": "6688063022056959925",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/event-gifting.component.ts",
+          "hash": "4782861694237841845",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/faq.component.html",
+          "hash": "3383107619447199459"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/faq.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/faq.component.spec.ts",
+          "hash": "15140035369227840471",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/faq.component.ts",
+          "hash": "13386963011524828150",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/footer.component.html",
+          "hash": "4870840326542635113"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/footer.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/footer.component.spec.ts",
+          "hash": "5850760657800237085",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/footer.component.ts",
+          "hash": "9222127068488098416",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/gift-gallery.component.html",
+          "hash": "14307929631001686946"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/gift-gallery.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/gift-gallery.component.spec.ts",
+          "hash": "12462257555609634688",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/gift-gallery.component.ts",
+          "hash": "434499896395174523",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/hero/hero.component.ts",
+          "hash": "15774330508051657803",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/navbar/navbar.component.ts",
+          "hash": "16625952949505927277",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/our-why.component.ts",
+          "hash": "3178815593492898360",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/path-selector.component.html",
+          "hash": "4348557253606790495"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/path-selector.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/path-selector.component.spec.ts",
+          "hash": "17960083170261996979",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/path-selector.component.ts",
+          "hash": "18202912353221663334",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/testimonials.component.html",
+          "hash": "2104921246633908123"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/testimonials.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/testimonials.component.spec.ts",
+          "hash": "18286306863724877200",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/testimonials.component.ts",
+          "hash": "1814124111130801039",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/interfaces/gift.interface.ts",
+          "hash": "15516603930201789568"
+        },
+        {
+          "file": "apps/giftnub-web/src/app/services/calendly.service.spec.ts",
+          "hash": "468101355375564612",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/services/calendly.service.ts",
+          "hash": "9843613329782229413",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/services/stripe.service.spec.ts",
+          "hash": "8074862290029242978",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/services/stripe.service.ts",
+          "hash": "18003947088731379412",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:ngx-stripe",
+            "npm:rxjs",
+            "npm:@stripe/stripe-js"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/favicon.png",
+          "hash": "11911853330848090797"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/favicon_large.png",
+          "hash": "13062664750166937621"
+        },
+        {
+          "file": "apps/giftnub-web/src/environments/environment.prod.ts",
+          "hash": "2255154772793004377"
+        },
+        {
+          "file": "apps/giftnub-web/src/environments/environment.ts",
+          "hash": "18435350287251396435"
+        },
+        {
+          "file": "apps/giftnub-web/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/giftnub-web/src/index.html",
+          "hash": "6483612147165285900"
+        },
+        {
+          "file": "apps/giftnub-web/src/main.ts",
+          "hash": "16635586463787978962",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/styles.css",
+          "hash": "17105021220447181321"
+        },
+        {
+          "file": "apps/giftnub-web/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/giftnub-web/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/tailwind.config.js",
+          "hash": "15997733817265247299",
+          "deps": [
+            "npm:@nx/angular",
+            "npm:@tailwindcss/forms",
+            "npm:@tailwindcss/aspect-ratio",
+            "npm:@tailwindcss/typography"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/tsconfig.app.json",
+          "hash": "8365644956319658761"
+        },
+        {
+          "file": "apps/giftnub-web/tsconfig.editor.json",
+          "hash": "17511610827034788226"
+        },
+        {
+          "file": "apps/giftnub-web/tsconfig.json",
+          "hash": "11271817794535700763"
+        },
+        {
+          "file": "apps/giftnub-web/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ]
+    }
+  }
+}

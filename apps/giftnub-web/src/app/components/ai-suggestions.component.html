@@ -1,0 +1,149 @@
+<section id="intelligentSuggestions" class="relative bg-gradient-to-b from-primary-50 to-secondary-50 py-20 overflow-hidden">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse -top-20 -left-20"></div>
+    <div class="absolute w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl animate-pulse delay-1000 top-40 right-20"></div>
+    <div class="absolute w-64 h-64 bg-primary-600/10 rounded-full blur-2xl animate-pulse delay-2000 bottom-20 left-40"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate__animated animate__fadeIn animate__slower">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-primary-600 font-heading">
+        Intelligent Gifting Recommendations
+      </h2>
+      <p class="text-lg text-gray-600 animate__animated animate__fadeIn animate__delay-1s">
+        Experience thoughtfully curated gift suggestions tailored just for you
+      </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      <form (ngSubmit)="onSubmit()" class="relative bg-white p-8 rounded-xl shadow-2xl animate__animated animate__fadeInUp animate__delay-1s hover:shadow-primary-500/20 transition-all duration-500 border-2 border-primary-100">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-50 to-secondary-50 rounded-xl opacity-50"></div>
+        
+        <div class="relative mb-6">
+          <label class="block text-sm font-medium mb-2 text-gray-700" for="giftPrompt">Tell us about your gift recipient</label>
+          <textarea 
+            id="giftPrompt" 
+            [(ngModel)]="giftPrompt"
+            name="giftPrompt"
+            class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300 min-h-[100px]" 
+            placeholder="Example: Looking for a meaningful gift for my sister's wedding. She loves art and travel, and has a modern aesthetic."
+            required
+          ></textarea>
+        </div>
+
+        <div class="relative grid md:grid-cols-3 gap-6 mb-8">
+          <div class="group">
+            <label class="block text-sm font-medium mb-2 transition-colors group-hover:text-primary-600" for="recipientType">
+              Recipient Type *
+            </label>
+            <select 
+              id="recipientType"
+              [(ngModel)]="recipientType"
+              name="recipientType"
+              required
+              class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+            >
+              <option value="">Select type</option>
+              <option value="family">Family</option>
+              <option value="friend">Friend</option>
+              <option value="colleague">Colleague</option>
+              <option value="client">Client</option>
+              <option value="event">Event Guest</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label class="block text-sm font-medium mb-2 transition-colors group-hover:text-primary-600" for="occasion">
+              Occasion *
+            </label>
+            <select 
+              id="occasion"
+              [(ngModel)]="occasion"
+              name="occasion"
+              required
+              class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+            >
+              <option value="">Select occasion</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="wedding">Wedding</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="holiday">Holiday</option>
+              <option value="celebration">Special Celebration</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <label class="block text-sm font-medium mb-2 transition-colors group-hover:text-primary-600" for="budget">
+              Budget Range *
+            </label>
+            <select 
+              id="budget"
+              [(ngModel)]="budget"
+              name="budget"
+              required
+              class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-300"
+            >
+              <option value="">Select budget</option>
+              <option value="0-50">$0 - $50</option>
+              <option value="51-100">$51 - $100</option>
+              <option value="101-250">$101 - $250</option>
+              <option value="251-500">$251 - $500</option>
+              <option value="501+">$501+</option>
+            </select>
+          </div>
+        </div>
+
+        <button 
+          type="submit"
+          [disabled]="isLoading || !giftPrompt || !recipientType || !occasion || !budget"
+          class="relative w-full bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg group disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-primary-500 to-secondary-500 opacity-0 group-hover:opacity-100 blur-xl transition-opacity"></span>
+          <span class="relative flex items-center justify-center gap-2">
+            {{ isLoading ? 'Curating Your Suggestions...' : 'Get Personalized Recommendations' }}
+            <svg 
+              class="w-5 h-5" 
+              [class.animate-spin]="isLoading"
+              [class.animate-pulse]="!isLoading"
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path *ngIf="!isLoading" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              <path *ngIf="isLoading" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </span>
+        </button>
+      </form>
+
+      <!-- Results Section -->
+      <div *ngIf="suggestions.length > 0" class="mt-12 animate__animated animate__fadeIn">
+        <h3 class="text-2xl font-bold text-center mb-8 text-primary-600">Curated Just for You</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div *ngFor="let suggestion of suggestions" class="bg-white rounded-lg p-6 hover:shadow-lg transition duration-300 border-2 border-primary-100 hover:border-primary-200">
+            <div class="text-xl font-semibold mb-2 text-primary-600">{{ suggestion.title }}</div>
+            <p class="text-gray-600 mb-4">{{ suggestion.description }}</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary-600 font-semibold">${{ suggestion.price }}</span>
+              <span class="bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm">{{ suggestion.category }}</span>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <div class="text-sm text-gray-500">
+                Match Confidence: {{ suggestion.confidence }}%
+              </div>
+              <a 
+                href="https://buy.stripe.com/bIY3d32GY2yQfIs7ss"
+                target="_blank"
+                class="bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-2 px-4 rounded transition duration-300"
+              >
+                Buy Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
