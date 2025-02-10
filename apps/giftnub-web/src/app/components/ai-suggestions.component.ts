@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { GiftSuggestion } from '../interfaces/gift.interface';
 
 @Component({
   selector: 'giftnub-ai-suggestions',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './ai-suggestions.component.html',
   styleUrls: ['./ai-suggestions.component.scss']
 })

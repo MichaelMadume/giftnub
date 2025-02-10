@@ -6,52 +6,20 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10975567735463464701"
-      },
-      {
-        "file": "amplify/auth/resource.ts",
-        "hash": "15922709595243783584"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
       },
       {
         "file": "amplify/tsconfig.json",
         "hash": "7348475233595919444"
       },
       {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
       },
       {
         "file": "package.json",
         "hash": "7444585662942598499"
-      },
-      {
-        "file": "amplify/data/resource.ts",
-        "hash": "4015062609152370058"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
       },
       {
         "file": "tsconfig.base.json",
@@ -62,28 +30,60 @@
         "hash": "7663861978715868291"
       },
       {
-        "file": "amplify/backend.ts",
-        "hash": "10312492173327239286"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "5710854610825202009"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "10356342846366472176"
+        "file": "nx.json",
+        "hash": "10975567735463464701"
       },
       {
         "file": "README.md",
         "hash": "4290351960845421863"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "amplify/data/resource.ts",
+        "hash": "4015062609152370058"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "10356342846366472176"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5710854610825202009"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "amplify/backend.ts",
+        "hash": "10312492173327239286"
       },
       {
         "file": "amplify/package.json",
         "hash": "16472391776517746675"
+      },
+      {
+        "file": "amplify/auth/resource.ts",
+        "hash": "15922709595243783584"
       }
     ],
     "projectFileMap": {
@@ -132,16 +132,8 @@
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/giftnub-web/src/app/app.component.spec.ts",
-          "hash": "4027579950264438129",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/router"
-          ]
-        },
-        {
           "file": "apps/giftnub-web/src/app/app.component.ts",
-          "hash": "15145480003556445086",
+          "hash": "12996865621684330420",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -149,10 +141,9 @@
         },
         {
           "file": "apps/giftnub-web/src/app/app.config.ts",
-          "hash": "9915913273379432377",
+          "hash": "15464441497066718863",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router",
             "npm:ngx-stripe",
             "npm:@angular/common",
             "npm:@angular/platform-browser"
@@ -160,27 +151,19 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.html",
-          "hash": "2661123233913547572"
+          "hash": "1534914024240718710"
         },
         {
           "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.scss",
           "hash": "3244421341483603138"
         },
         {
-          "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.spec.ts",
-          "hash": "3005799981538332554",
-          "deps": [
-            "npm:@angular/core"
-          ]
-        },
-        {
           "file": "apps/giftnub-web/src/app/components/ai-suggestions.component.ts",
-          "hash": "10141705151009164844",
+          "hash": "16624922251460935268",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
-            "npm:@angular/forms",
-            "npm:@angular/router"
+            "npm:@angular/forms"
           ]
         },
         {
@@ -200,7 +183,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/consultation-booking.component.ts",
-          "hash": "6688063022056959925",
+          "hash": "16561812295984184200",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -210,7 +193,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/event-gifting.component.ts",
-          "hash": "4782861694237841845",
+          "hash": "9080392117271352037",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -233,7 +216,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/faq.component.ts",
-          "hash": "13386963011524828150",
+          "hash": "5778459039471799980",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -256,16 +239,15 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/footer.component.ts",
-          "hash": "9222127068488098416",
+          "hash": "5081442374645582031",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/router"
+            "npm:@angular/common"
           ]
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.html",
-          "hash": "14307929631001686946"
+          "hash": "6867250020018738018"
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.scss",
@@ -280,24 +262,24 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.ts",
-          "hash": "434499896395174523",
+          "hash": "14541953546568195365",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/components/hero/hero.component.ts",
+          "hash": "14763293398218321761",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
           ]
         },
         {
-          "file": "apps/giftnub-web/src/app/components/hero/hero.component.ts",
-          "hash": "15774330508051657803",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/router"
-          ]
-        },
-        {
           "file": "apps/giftnub-web/src/app/components/navbar/navbar.component.ts",
-          "hash": "16625952949505927277",
+          "hash": "4656458069520420633",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -328,7 +310,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/path-selector.component.ts",
-          "hash": "18202912353221663334",
+          "hash": "15254825007870800665",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -351,7 +333,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/testimonials.component.ts",
-          "hash": "1814124111130801039",
+          "hash": "14792856745144496159",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -425,9 +407,12 @@
         },
         {
           "file": "apps/giftnub-web/src/main.ts",
-          "hash": "16635586463787978962",
+          "hash": "4355877633600113423",
           "deps": [
-            "npm:@angular/platform-browser"
+            "npm:@angular/platform-browser",
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:ngx-stripe"
           ]
         },
         {

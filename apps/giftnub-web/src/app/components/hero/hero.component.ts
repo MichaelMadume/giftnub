@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'giftnub-hero',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule],
   template: `
     <section id="hero" class="min-h-screen pt-16 relative overflow-hidden bg-black">
       <!-- Animated background effects -->

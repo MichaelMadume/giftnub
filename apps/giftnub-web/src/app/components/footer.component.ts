@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'giftnub-footer',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule],
   template: `
-    <footer class="bg-neutral-900 text-white pt-20 pb-10">
+    <footer class="relative bg-black/30 backdrop-blur-xl border-t border-white/5 pt-20 pb-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16"
@@ -15,17 +14,17 @@ import { RouterModule } from '@angular/router';
           <!-- Company Info -->
           <div>
             <h3
-              class="text-2xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text"
+              class="text-2xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text"
             >
-              GiftNub
+              The Gift Nub
             </h3>
-            <p class="text-gray-400 mb-6">
+            <p class="text-white/70 mb-6">
               AI-powered gifting solutions for personal and corporate occasions.
             </p>
             <div class="flex space-x-4">
               <a
                 href="#"
-                class="text-gray-400 hover:text-white transition-colors"
+                class="text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -35,7 +34,7 @@ import { RouterModule } from '@angular/router';
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-white transition-colors"
+                class="text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -45,7 +44,7 @@ import { RouterModule } from '@angular/router';
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-white transition-colors"
+                class="text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -55,7 +54,7 @@ import { RouterModule } from '@angular/router';
               </a>
               <a
                 href="#"
-                class="text-gray-400 hover:text-white transition-colors"
+                class="text-white/70 hover:text-white transition-all duration-300 hover:scale-110"
               >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path
@@ -68,33 +67,33 @@ import { RouterModule } from '@angular/router';
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 class="text-lg font-semibold mb-6 text-white/90">Quick Links</h4>
             <ul class="space-y-4">
               <li>
                 <a
-                  routerLink="/get-started"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  href="#pathSelector"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Get Started</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/ai-suggestions"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  href="#intelligentSuggestions"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >AI Suggestions</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/book"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  href="#consultationBooking"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Book Consultation</a
                 >
               </li>
               <li>
                 <a
-                  routerLink="/gallery"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  href="#giftGallery"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Gift Gallery</a
                 >
               </li>
@@ -103,33 +102,33 @@ import { RouterModule } from '@angular/router';
 
           <!-- Services -->
           <div>
-            <h4 class="text-lg font-semibold mb-6">Services</h4>
+            <h4 class="text-lg font-semibold mb-6 text-white/90">Services</h4>
             <ul class="space-y-4">
               <li>
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Personal Gifting</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Corporate Gifting</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Luxury Experiences</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="text-gray-400 hover:text-white transition-colors"
+                  class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                   >Gift Customization</a
                 >
               </li>
@@ -138,11 +137,11 @@ import { RouterModule } from '@angular/router';
 
           <!-- Contact -->
           <div>
-            <h4 class="text-lg font-semibold mb-6">Contact</h4>
+            <h4 class="text-lg font-semibold mb-6 text-white/90">Contact</h4>
             <ul class="space-y-4">
-              <li class="flex items-center text-gray-400">
+              <li class="flex items-center text-white/70 hover:text-white transition-all group">
                 <svg
-                  class="w-5 h-5 mr-3"
+                  class="w-5 h-5 mr-3 group-hover:scale-110 transition-all duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -156,9 +155,9 @@ import { RouterModule } from '@angular/router';
                 </svg>
                 <a href="mailto:support@giftnub.com">support&#64;giftnub.com</a>
               </li>
-              <li class="flex items-center text-gray-400">
+              <li class="flex items-center text-white/70 hover:text-white transition-all group">
                 <svg
-                  class="w-5 h-5 mr-3"
+                  class="w-5 h-5 mr-3 group-hover:scale-110 transition-all duration-300"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -177,25 +176,25 @@ import { RouterModule } from '@angular/router';
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-gray-800 pt-8">
+        <div class="border-t border-white/5 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            <p class="text-white/70 text-sm mb-4 md:mb-0">
               © {{ currentYear }} GiftNub. All rights reserved.
             </p>
             <div class="flex space-x-6">
               <a
                 href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
+                class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                 >Privacy Policy</a
               >
               <a
                 href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
+                class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                 >Terms of Service</a
               >
               <a
                 href="#"
-                class="text-gray-400 hover:text-white text-sm transition-colors"
+                class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all"
                 >Cookie Policy</a
               >
             </div>

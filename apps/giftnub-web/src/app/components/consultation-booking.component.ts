@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { CalendlyService } from '../services/calendly.service';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
@@ -8,7 +7,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 @Component({
   selector: 'giftnub-consultation-booking',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   template: `
     <section id="consultationBooking" class="relative bg-white py-20">
       <!-- Background decorations -->

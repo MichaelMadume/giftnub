@@ -2512,3 +2512,1510 @@
 [NX Daemon Server] - 2025-02-10T18:21:12.526Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2025-02-10T18:21:12.526Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2025-02-10T18:21:12.526Z - Time taken for 'total execution time for createProjectGraph()' 21.71154100075364ms
+[NX Daemon Server] - 2025-02-10T18:25:24.357Z - [WATCHER]: apps/giftnub-web/src/app/components/path-selector.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:25:24.357Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:25:24.738Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:25:30.758Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:25:30.758Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts
+[NX Daemon Server] - 2025-02-10T18:25:30.758Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:25:30.759Z - Time taken for 'hash changed files from watcher' 0.19545800052583218ms
+[NX Daemon Server] - 2025-02-10T18:25:30.772Z - Time taken for 'build-project-configs' 9.910957999527454ms
+[NX Daemon Server] - 2025-02-10T18:25:30.806Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:25:30.807Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:25:30.807Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:25:30.807Z - Time taken for 'total execution time for createProjectGraph()' 26.525042001158ms
+[NX Daemon Server] - 2025-02-10T18:28:14.336Z - [WATCHER]: apps/giftnub-web/src/app/components/path-selector.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:28:14.336Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:28:14.727Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:28:20.737Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:28:20.738Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts
+[NX Daemon Server] - 2025-02-10T18:28:20.738Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:28:20.739Z - Time taken for 'hash changed files from watcher' 0.3276250008493662ms
+[NX Daemon Server] - 2025-02-10T18:28:20.756Z - Time taken for 'build-project-configs' 14.752040999010205ms
+[NX Daemon Server] - 2025-02-10T18:28:20.802Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:28:20.803Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:28:20.803Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:28:20.803Z - Time taken for 'total execution time for createProjectGraph()' 30.158250000327826ms
+[NX Daemon Server] - 2025-02-10T18:29:12.747Z - [WATCHER]: apps/giftnub-web/src/app/components/hero/hero.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:29:12.747Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:29:13.128Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:29:19.147Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:29:19.148Z - [REQUEST]: apps/giftnub-web/src/app/components/hero/hero.component.ts
+[NX Daemon Server] - 2025-02-10T18:29:19.148Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:29:19.149Z - Time taken for 'hash changed files from watcher' 0.2519999984651804ms
+[NX Daemon Server] - 2025-02-10T18:29:19.184Z - Time taken for 'build-project-configs' 32.697041001170874ms
+[NX Daemon Server] - 2025-02-10T18:29:19.226Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:29:19.227Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:29:19.227Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:29:19.227Z - Time taken for 'total execution time for createProjectGraph()' 30.964124999940395ms
+[NX Daemon Server] - 2025-02-10T18:30:31.633Z - [WATCHER]: apps/giftnub-web/src/app/components/hero/hero.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:30:31.633Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:30:32.154Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:30:38.035Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:30:38.035Z - [REQUEST]: apps/giftnub-web/src/app/components/hero/hero.component.ts
+[NX Daemon Server] - 2025-02-10T18:30:38.035Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:30:38.038Z - Time taken for 'hash changed files from watcher' 0.4350419994443655ms
+[NX Daemon Server] - 2025-02-10T18:30:38.053Z - Time taken for 'build-project-configs' 12.63816599920392ms
+[NX Daemon Server] - 2025-02-10T18:30:38.094Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:30:38.094Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:30:38.094Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:30:38.094Z - Time taken for 'total execution time for createProjectGraph()' 28.51066599972546ms
+[NX Daemon Server] - 2025-02-10T18:31:06.629Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:31:06.629Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:31:06.979Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:31:13.029Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:31:13.029Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T18:31:13.029Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:31:13.030Z - Time taken for 'hash changed files from watcher' 0.257667001336813ms
+[NX Daemon Server] - 2025-02-10T18:31:13.044Z - Time taken for 'build-project-configs' 11.154500000178814ms
+[NX Daemon Server] - 2025-02-10T18:31:13.078Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:31:13.078Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:31:13.078Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:31:13.078Z - Time taken for 'total execution time for createProjectGraph()' 25.544624999165535ms
+[NX Daemon Server] - 2025-02-10T18:32:15.232Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:32:15.232Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:15.559Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:21.633Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:32:21.633Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T18:32:21.633Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:32:21.634Z - Time taken for 'hash changed files from watcher' 0.27187499962747097ms
+[NX Daemon Server] - 2025-02-10T18:32:21.651Z - Time taken for 'build-project-configs' 12.260250000283122ms
+[NX Daemon Server] - 2025-02-10T18:32:21.696Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:32:21.696Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:32:21.696Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:32:21.696Z - Time taken for 'total execution time for createProjectGraph()' 30.416999999433756ms
+[NX Daemon Server] - 2025-02-10T18:32:22.752Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:32:22.753Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:23.137Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:26.827Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:32:26.827Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:27.192Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:32:29.143Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:32:29.143Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T18:32:29.143Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:32:29.145Z - Time taken for 'hash changed files from watcher' 0.38679200038313866ms
+[NX Daemon Server] - 2025-02-10T18:32:29.162Z - Time taken for 'build-project-configs' 15.448832999914885ms
+[NX Daemon Server] - 2025-02-10T18:32:29.198Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:32:29.198Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:32:29.198Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:32:29.198Z - Time taken for 'total execution time for createProjectGraph()' 24.612916000187397ms
+[NX Daemon Server] - 2025-02-10T18:33:12.803Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:33:12.803Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:33:13.165Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:33:19.205Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:33:19.205Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T18:33:19.205Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:33:19.206Z - Time taken for 'hash changed files from watcher' 0.30741599947214127ms
+[NX Daemon Server] - 2025-02-10T18:33:19.226Z - Time taken for 'build-project-configs' 17.14945900067687ms
+[NX Daemon Server] - 2025-02-10T18:33:19.269Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:33:19.269Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:33:19.269Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:33:19.269Z - Time taken for 'total execution time for createProjectGraph()' 34.550916999578476ms
+[NX Daemon Server] - 2025-02-10T18:33:57.606Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T18:33:57.606Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:33:57.956Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T18:34:04.007Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T18:34:04.007Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T18:34:04.007Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T18:34:04.009Z - Time taken for 'hash changed files from watcher' 1.1286669969558716ms
+[NX Daemon Server] - 2025-02-10T18:34:04.024Z - Time taken for 'build-project-configs' 13.891458000987768ms
+[NX Daemon Server] - 2025-02-10T18:34:04.068Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T18:34:04.069Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T18:34:04.069Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T18:34:04.069Z - Time taken for 'total execution time for createProjectGraph()' 31.21704099699855ms
+[NX Daemon Server] - 2025-02-10T19:22:02.340Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:22:02.340Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:22:08.741Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:22:08.741Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:22:08.741Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:22:08.744Z - Time taken for 'hash changed files from watcher' 0.2500839978456497ms
+[NX Daemon Server] - 2025-02-10T19:22:08.758Z - Time taken for 'build-project-configs' 12.790208000689745ms
+[NX Daemon Server] - 2025-02-10T19:22:08.797Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:22:08.797Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:22:08.797Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:22:08.797Z - Time taken for 'total execution time for createProjectGraph()' 24.33491699770093ms
+[NX Daemon Server] - 2025-02-10T19:22:57.865Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:22:57.865Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:22:58.237Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:23:04.267Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:23:04.267Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:23:04.267Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:23:04.268Z - Time taken for 'hash changed files from watcher' 0.7597920000553131ms
+[NX Daemon Server] - 2025-02-10T19:23:04.292Z - Time taken for 'build-project-configs' 19.89970799908042ms
+[NX Daemon Server] - 2025-02-10T19:23:04.350Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:23:04.350Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:23:04.350Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:23:04.350Z - Time taken for 'total execution time for createProjectGraph()' 46.89812500029802ms
+[NX Daemon Server] - 2025-02-10T19:24:23.248Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:24:23.249Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:24:23.596Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:24:29.649Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:24:29.649Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:24:29.649Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:24:29.650Z - Time taken for 'hash changed files from watcher' 0.27900000289082527ms
+[NX Daemon Server] - 2025-02-10T19:24:29.662Z - Time taken for 'build-project-configs' 9.911208000034094ms
+[NX Daemon Server] - 2025-02-10T19:24:29.694Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:24:29.694Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:24:29.694Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:24:29.694Z - Time taken for 'total execution time for createProjectGraph()' 23.591834001243114ms
+[NX Daemon Server] - 2025-02-10T19:25:17.972Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:25:17.972Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:18.404Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:24.317Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.spec.ts was deleted
+[NX Daemon Server] - 2025-02-10T19:25:24.317Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:24.372Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:25:24.372Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:25:24.372Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.spec.ts
+[NX Daemon Server] - 2025-02-10T19:25:24.373Z - Time taken for 'hash changed files from watcher' 0.21095800027251244ms
+[NX Daemon Server] - 2025-02-10T19:25:24.387Z - Time taken for 'build-project-configs' 10.997000001370907ms
+[NX Daemon Server] - 2025-02-10T19:25:24.429Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:25:24.429Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:25:24.429Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:25:24.429Z - Time taken for 'total execution time for createProjectGraph()' 25.175916999578476ms
+[NX Daemon Server] - 2025-02-10T19:25:36.139Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:25:36.140Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:36.611Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:37.037Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:38.694Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:38.816Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:25:42.541Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:25:42.541Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:25:42.541Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:25:42.542Z - Time taken for 'hash changed files from watcher' 0.20275000110268593ms
+[NX Daemon Server] - 2025-02-10T19:25:42.554Z - Time taken for 'build-project-configs' 10.227000001817942ms
+[NX Daemon Server] - 2025-02-10T19:25:42.590Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:25:42.591Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:25:42.591Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:25:42.591Z - Time taken for 'total execution time for createProjectGraph()' 26.02199999988079ms
+[NX Daemon Server] - 2025-02-10T19:26:49.185Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:26:49.185Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:26:49.563Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:26:55.585Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:26:55.586Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts
+[NX Daemon Server] - 2025-02-10T19:26:55.586Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:26:55.587Z - Time taken for 'hash changed files from watcher' 0.32725000008940697ms
+[NX Daemon Server] - 2025-02-10T19:26:55.599Z - Time taken for 'build-project-configs' 10.554207999259233ms
+[NX Daemon Server] - 2025-02-10T19:26:55.640Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:26:55.641Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:26:55.641Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:26:55.641Z - Time taken for 'total execution time for createProjectGraph()' 28.597291998565197ms
+[NX Daemon Server] - 2025-02-10T19:27:11.489Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:27:11.489Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:27:11.839Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:27:17.890Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:27:17.890Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts
+[NX Daemon Server] - 2025-02-10T19:27:17.890Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:27:17.893Z - Time taken for 'hash changed files from watcher' 0.2640000022947788ms
+[NX Daemon Server] - 2025-02-10T19:27:17.906Z - Time taken for 'build-project-configs' 12.280249997973442ms
+[NX Daemon Server] - 2025-02-10T19:27:17.945Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:27:17.945Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:27:17.945Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:27:17.945Z - Time taken for 'total execution time for createProjectGraph()' 26.151624999940395ms
+[NX Daemon Server] - 2025-02-10T19:28:31.492Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:28:31.492Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:28:37.893Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:28:37.893Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:28:37.893Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:28:37.895Z - Time taken for 'hash changed files from watcher' 0.32170800119638443ms
+[NX Daemon Server] - 2025-02-10T19:28:37.909Z - Time taken for 'build-project-configs' 12.504540998488665ms
+[NX Daemon Server] - 2025-02-10T19:28:37.952Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:28:37.952Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:28:37.952Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:28:37.952Z - Time taken for 'total execution time for createProjectGraph()' 32.66941599920392ms
+[NX Daemon Server] - 2025-02-10T19:31:15.187Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:31:15.187Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:31:15.582Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:31:21.588Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:31:21.589Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:31:21.589Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:31:21.590Z - Time taken for 'hash changed files from watcher' 0.26737500354647636ms
+[NX Daemon Server] - 2025-02-10T19:31:21.603Z - Time taken for 'build-project-configs' 11.492042001336813ms
+[NX Daemon Server] - 2025-02-10T19:31:21.639Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:31:21.640Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:31:21.640Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:31:21.640Z - Time taken for 'total execution time for createProjectGraph()' 26.059207998216152ms
+[NX Daemon Server] - 2025-02-10T19:34:30.222Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:34:30.222Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:34:30.789Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:34:36.623Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:34:36.623Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:34:36.623Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:34:36.625Z - Time taken for 'hash changed files from watcher' 0.28108399733901024ms
+[NX Daemon Server] - 2025-02-10T19:34:36.639Z - Time taken for 'build-project-configs' 11.246915999799967ms
+[NX Daemon Server] - 2025-02-10T19:34:36.689Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:34:36.690Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:34:36.690Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:34:36.690Z - Time taken for 'total execution time for createProjectGraph()' 31.89487500116229ms
+[NX Daemon Server] - 2025-02-10T19:35:15.657Z - [WATCHER]: apps/giftnub-web/src/app/components/path-selector.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:35:15.657Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:35:16.034Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:35:22.058Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:35:22.058Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts
+[NX Daemon Server] - 2025-02-10T19:35:22.059Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:35:22.060Z - Time taken for 'hash changed files from watcher' 0.30845800042152405ms
+[NX Daemon Server] - 2025-02-10T19:35:22.076Z - Time taken for 'build-project-configs' 13.302459001541138ms
+[NX Daemon Server] - 2025-02-10T19:35:22.110Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:35:22.115Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:35:22.115Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:35:22.115Z - Time taken for 'total execution time for createProjectGraph()' 25.274333000183105ms
+[NX Daemon Server] - 2025-02-10T19:35:27.177Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:35:27.177Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:35:33.579Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:35:33.579Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:35:33.579Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:35:33.581Z - Time taken for 'hash changed files from watcher' 0.5854169987142086ms
+[NX Daemon Server] - 2025-02-10T19:35:33.603Z - Time taken for 'build-project-configs' 19.233125001192093ms
+[NX Daemon Server] - 2025-02-10T19:35:33.650Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:35:33.650Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:35:33.650Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:35:33.650Z - Time taken for 'total execution time for createProjectGraph()' 36.10141699761152ms
+[NX Daemon Server] - 2025-02-10T19:36:10.025Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:36:10.025Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:36:10.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:36:16.427Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:36:16.427Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:36:16.427Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:36:16.429Z - Time taken for 'hash changed files from watcher' 0.6185839995741844ms
+[NX Daemon Server] - 2025-02-10T19:36:16.442Z - Time taken for 'build-project-configs' 10.511667001992464ms
+[NX Daemon Server] - 2025-02-10T19:36:16.480Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:36:16.480Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:36:16.480Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:36:16.480Z - Time taken for 'total execution time for createProjectGraph()' 24.118834000080824ms
+[NX Daemon Server] - 2025-02-10T19:37:19.423Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:37:19.423Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:37:25.824Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:37:25.824Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.html
+[NX Daemon Server] - 2025-02-10T19:37:25.824Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:37:25.825Z - Time taken for 'hash changed files from watcher' 0.23395799845457077ms
+[NX Daemon Server] - 2025-02-10T19:37:25.839Z - Time taken for 'build-project-configs' 10.909499999135733ms
+[NX Daemon Server] - 2025-02-10T19:37:25.882Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:37:25.883Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:37:25.883Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:37:25.883Z - Time taken for 'total execution time for createProjectGraph()' 30.667915999889374ms
+[NX Daemon Server] - 2025-02-10T19:39:27.862Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:39:27.862Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:39:34.262Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:39:34.262Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:39:34.262Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:39:34.264Z - Time taken for 'hash changed files from watcher' 0.3814999982714653ms
+[NX Daemon Server] - 2025-02-10T19:39:34.277Z - Time taken for 'build-project-configs' 11.740667000412941ms
+[NX Daemon Server] - 2025-02-10T19:39:34.322Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:39:34.322Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:39:34.322Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:39:34.322Z - Time taken for 'total execution time for createProjectGraph()' 29.03083399683237ms
+[NX Daemon Server] - 2025-02-10T19:39:45.660Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:39:45.660Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:39:46.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:39:52.060Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:39:52.060Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:39:52.060Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:39:52.061Z - Time taken for 'hash changed files from watcher' 0.34666699916124344ms
+[NX Daemon Server] - 2025-02-10T19:39:52.073Z - Time taken for 'build-project-configs' 10.100834000855684ms
+[NX Daemon Server] - 2025-02-10T19:39:52.115Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:39:52.116Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:39:52.116Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:39:52.116Z - Time taken for 'total execution time for createProjectGraph()' 24.263666998595ms
+[NX Daemon Server] - 2025-02-10T19:40:44.101Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:40:44.101Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:40:50.502Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:40:50.502Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:40:50.502Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:40:50.503Z - Time taken for 'hash changed files from watcher' 0.2752089984714985ms
+[NX Daemon Server] - 2025-02-10T19:40:50.517Z - Time taken for 'build-project-configs' 11.763790998607874ms
+[NX Daemon Server] - 2025-02-10T19:40:50.553Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:40:50.553Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:40:50.553Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:40:50.553Z - Time taken for 'total execution time for createProjectGraph()' 27.06258299946785ms
+[NX Daemon Server] - 2025-02-10T19:40:58.718Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:40:58.718Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:05.119Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:41:05.119Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:41:05.119Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:41:05.123Z - Time taken for 'hash changed files from watcher' 0.38245800137519836ms
+[NX Daemon Server] - 2025-02-10T19:41:05.135Z - Time taken for 'build-project-configs' 11.87983300164342ms
+[NX Daemon Server] - 2025-02-10T19:41:05.196Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:41:05.196Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:41:05.196Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:41:05.196Z - Time taken for 'total execution time for createProjectGraph()' 52.44979200139642ms
+[NX Daemon Server] - 2025-02-10T19:41:16.579Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:41:16.579Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:16.957Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:22.625Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:41:22.625Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:22.981Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:41:22.981Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:41:22.981Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:41:22.982Z - Time taken for 'hash changed files from watcher' 0.3147919997572899ms
+[NX Daemon Server] - 2025-02-10T19:41:22.995Z - Time taken for 'build-project-configs' 11.167167000472546ms
+[NX Daemon Server] - 2025-02-10T19:41:23.006Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:23.033Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:41:23.034Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:41:23.034Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:41:23.034Z - Time taken for 'total execution time for createProjectGraph()' 27.148999996483326ms
+[NX Daemon Server] - 2025-02-10T19:41:54.225Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:41:54.225Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:41:54.572Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:42:00.626Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:42:00.626Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:42:00.626Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:42:00.629Z - Time taken for 'hash changed files from watcher' 0.47995800152421ms
+[NX Daemon Server] - 2025-02-10T19:42:00.643Z - Time taken for 'build-project-configs' 11.908499997109175ms
+[NX Daemon Server] - 2025-02-10T19:42:00.688Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:42:00.689Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:42:00.689Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:42:00.689Z - Time taken for 'total execution time for createProjectGraph()' 32.26629099994898ms
+[NX Daemon Server] - 2025-02-10T19:42:20.130Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:42:20.130Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:42:26.531Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:42:26.531Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:42:26.531Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:42:26.532Z - Time taken for 'hash changed files from watcher' 0.2114580012857914ms
+[NX Daemon Server] - 2025-02-10T19:42:26.544Z - Time taken for 'build-project-configs' 10.6070840023458ms
+[NX Daemon Server] - 2025-02-10T19:42:26.582Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:42:26.583Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:42:26.583Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:42:26.583Z - Time taken for 'total execution time for createProjectGraph()' 25.604832999408245ms
+[NX Daemon Server] - 2025-02-10T19:42:33.249Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:42:33.249Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:42:35.202Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:42:35.202Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:42:39.650Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:42:39.650Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:42:39.650Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:42:39.653Z - Time taken for 'hash changed files from watcher' 0.5017919987440109ms
+[NX Daemon Server] - 2025-02-10T19:42:39.666Z - Time taken for 'build-project-configs' 11.42662500217557ms
+[NX Daemon Server] - 2025-02-10T19:42:39.702Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:42:39.702Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:42:39.702Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:42:39.702Z - Time taken for 'total execution time for createProjectGraph()' 20.597959000617266ms
+[NX Daemon Server] - 2025-02-10T19:43:58.098Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:43:58.098Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:44:04.499Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:44:04.499Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:44:04.499Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:44:04.500Z - Time taken for 'hash changed files from watcher' 0.23808299750089645ms
+[NX Daemon Server] - 2025-02-10T19:44:04.513Z - Time taken for 'build-project-configs' 11.3084169998765ms
+[NX Daemon Server] - 2025-02-10T19:44:04.547Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:44:04.547Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:44:04.547Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:44:04.547Z - Time taken for 'total execution time for createProjectGraph()' 21.642583001405ms
+[NX Daemon Server] - 2025-02-10T19:44:38.041Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T19:44:38.042Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:44:39.905Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:44:39.905Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:44:44.442Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:44:44.442Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts,apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts,apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:44:44.442Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:44:44.443Z - Time taken for 'hash changed files from watcher' 0.404959000647068ms
+[NX Daemon Server] - 2025-02-10T19:44:44.456Z - Time taken for 'build-project-configs' 10.143541999161243ms
+[NX Daemon Server] - 2025-02-10T19:44:44.487Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:44:44.487Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:44:44.487Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:44:44.487Z - Time taken for 'total execution time for createProjectGraph()' 22.55154199898243ms
+[NX Daemon Server] - 2025-02-10T19:45:11.413Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:45:11.413Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:17.814Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:45:17.814Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:45:17.814Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:45:17.816Z - Time taken for 'hash changed files from watcher' 0.4187919981777668ms
+[NX Daemon Server] - 2025-02-10T19:45:17.830Z - Time taken for 'build-project-configs' 12.254792001098394ms
+[NX Daemon Server] - 2025-02-10T19:45:17.865Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:45:17.865Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:45:17.865Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:45:17.865Z - Time taken for 'total execution time for createProjectGraph()' 27.435499999672174ms
+[NX Daemon Server] - 2025-02-10T19:45:22.399Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:45:22.400Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:22.759Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:28.800Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:45:28.800Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:45:28.800Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:45:28.801Z - Time taken for 'hash changed files from watcher' 0.19033300131559372ms
+[NX Daemon Server] - 2025-02-10T19:45:28.814Z - Time taken for 'build-project-configs' 10.73216699808836ms
+[NX Daemon Server] - 2025-02-10T19:45:28.849Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:45:28.850Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:45:28.850Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:45:28.850Z - Time taken for 'total execution time for createProjectGraph()' 26.918541003018618ms
+[NX Daemon Server] - 2025-02-10T19:45:33.187Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T19:45:33.187Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:33.249Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:45:33.249Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:33.658Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:39.588Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:45:39.588Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:45:39.588Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:45:39.590Z - Time taken for 'hash changed files from watcher' 0.4412910006940365ms
+[NX Daemon Server] - 2025-02-10T19:45:39.730Z - Time taken for 'build-project-configs' 135.3295409977436ms
+[NX Daemon Server] - 2025-02-10T19:45:39.799Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:45:39.820Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:45:39.820Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:45:39.820Z - Time taken for 'total execution time for createProjectGraph()' 41.297166999429464ms
+[NX Daemon Server] - 2025-02-10T19:45:48.781Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:45:48.781Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:49.151Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:45:55.181Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:45:55.181Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:45:55.181Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:45:55.182Z - Time taken for 'hash changed files from watcher' 0.17579199746251106ms
+[NX Daemon Server] - 2025-02-10T19:45:55.194Z - Time taken for 'build-project-configs' 10.10716699808836ms
+[NX Daemon Server] - 2025-02-10T19:45:55.226Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:45:55.226Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:45:55.226Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:45:55.226Z - Time taken for 'total execution time for createProjectGraph()' 24.426833000034094ms
+[NX Daemon Server] - 2025-02-10T19:46:21.699Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T19:46:21.699Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:46:28.100Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:46:28.101Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T19:46:28.101Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:46:28.102Z - Time taken for 'hash changed files from watcher' 0.41179199889302254ms
+[NX Daemon Server] - 2025-02-10T19:46:28.115Z - Time taken for 'build-project-configs' 10.603542000055313ms
+[NX Daemon Server] - 2025-02-10T19:46:28.150Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:46:28.151Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:46:28.151Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:46:28.151Z - Time taken for 'total execution time for createProjectGraph()' 27.723999999463558ms
+[NX Daemon Server] - 2025-02-10T19:46:33.013Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:46:33.013Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:46:33.430Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:46:39.414Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:46:39.414Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T19:46:39.414Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:46:39.415Z - Time taken for 'hash changed files from watcher' 0.2074580006301403ms
+[NX Daemon Server] - 2025-02-10T19:46:39.427Z - Time taken for 'build-project-configs' 9.663374997675419ms
+[NX Daemon Server] - 2025-02-10T19:46:39.478Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:46:39.479Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:46:39.479Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:46:39.479Z - Time taken for 'total execution time for createProjectGraph()' 24.788584001362324ms
+[NX Daemon Server] - 2025-02-10T19:47:11.034Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:47:11.034Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:11.378Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:17.436Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:47:17.436Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:47:17.436Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:47:17.439Z - Time taken for 'hash changed files from watcher' 0.20079199969768524ms
+[NX Daemon Server] - 2025-02-10T19:47:17.454Z - Time taken for 'build-project-configs' 14.815542001277208ms
+[NX Daemon Server] - 2025-02-10T19:47:17.498Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:47:17.498Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:47:17.498Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:47:17.498Z - Time taken for 'total execution time for createProjectGraph()' 29.421833001077175ms
+[NX Daemon Server] - 2025-02-10T19:47:17.874Z - [WATCHER]: apps/giftnub-web/src/app/app.routes.ts was created or restored
+[NX Daemon Server] - 2025-02-10T19:47:17.874Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:18.004Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:47:18.004Z - [REQUEST]: apps/giftnub-web/src/app/app.routes.ts
+[NX Daemon Server] - 2025-02-10T19:47:18.004Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:47:18.016Z - Time taken for 'hash changed files from watcher' 1.4235000014305115ms
+[NX Daemon Server] - 2025-02-10T19:47:18.033Z - Time taken for 'build-project-configs' 14.62074999883771ms
+[NX Daemon Server] - 2025-02-10T19:47:18.067Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:47:18.068Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:47:18.068Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:47:18.068Z - Time taken for 'total execution time for createProjectGraph()' 24.88308299705386ms
+[NX Daemon Server] - 2025-02-10T19:47:20.076Z - [WATCHER]: apps/giftnub-web/src/app/app.routes.ts was modified
+[NX Daemon Server] - 2025-02-10T19:47:20.076Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:20.278Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:47:20.278Z - [REQUEST]: apps/giftnub-web/src/app/app.routes.ts
+[NX Daemon Server] - 2025-02-10T19:47:20.278Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:47:20.279Z - Time taken for 'hash changed files from watcher' 0.7414999976754189ms
+[NX Daemon Server] - 2025-02-10T19:47:20.291Z - Time taken for 'build-project-configs' 9.471625000238419ms
+[NX Daemon Server] - 2025-02-10T19:47:20.323Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:47:20.324Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:47:20.324Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:47:20.324Z - Time taken for 'total execution time for createProjectGraph()' 22.684417001903057ms
+[NX Daemon Server] - 2025-02-10T19:47:29.297Z - [WATCHER]: apps/giftnub-web/src/main.ts was modified
+[NX Daemon Server] - 2025-02-10T19:47:29.297Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:29.698Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:47:29.699Z - [REQUEST]: apps/giftnub-web/src/main.ts
+[NX Daemon Server] - 2025-02-10T19:47:29.699Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:47:29.700Z - Time taken for 'hash changed files from watcher' 0.7967080026865005ms
+[NX Daemon Server] - 2025-02-10T19:47:29.711Z - Time taken for 'build-project-configs' 9.314167000353336ms
+[NX Daemon Server] - 2025-02-10T19:47:29.743Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:47:29.744Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:47:29.744Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:47:29.744Z - Time taken for 'total execution time for createProjectGraph()' 24.280958000570536ms
+[NX Daemon Server] - 2025-02-10T19:47:29.750Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:42.563Z - [WATCHER]: apps/giftnub-web/src/main.ts was modified
+[NX Daemon Server] - 2025-02-10T19:47:42.563Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:42.941Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:43.364Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:47:43.364Z - [REQUEST]: apps/giftnub-web/src/main.ts
+[NX Daemon Server] - 2025-02-10T19:47:43.364Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:47:43.365Z - Time taken for 'hash changed files from watcher' 0.22825000062584877ms
+[NX Daemon Server] - 2025-02-10T19:47:43.379Z - Time taken for 'build-project-configs' 11.904832996428013ms
+[NX Daemon Server] - 2025-02-10T19:47:43.419Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:47:43.419Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:47:43.419Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:47:43.419Z - Time taken for 'total execution time for createProjectGraph()' 27.043457999825478ms
+[NX Daemon Server] - 2025-02-10T19:47:58.513Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:47:58.513Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:47:58.976Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:48:00.116Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:48:00.116Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:48:00.116Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:48:00.119Z - Time taken for 'hash changed files from watcher' 0.5027090013027191ms
+[NX Daemon Server] - 2025-02-10T19:48:00.150Z - Time taken for 'build-project-configs' 29.694250002503395ms
+[NX Daemon Server] - 2025-02-10T19:48:00.200Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:48:00.200Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:48:00.200Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:48:00.200Z - Time taken for 'total execution time for createProjectGraph()' 40.15958300232887ms
+[NX Daemon Server] - 2025-02-10T19:48:58.248Z - [WATCHER]: 0 file(s) created or restored, 5 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T19:48:58.248Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:49:01.451Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:49:01.451Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts,apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/app.component.ts,apps/giftnub-web/src/app/app.routes.ts,apps/giftnub-web/src/main.ts
+[NX Daemon Server] - 2025-02-10T19:49:01.451Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:49:01.455Z - Time taken for 'hash changed files from watcher' 2.0046250000596046ms
+[NX Daemon Server] - 2025-02-10T19:49:01.475Z - Time taken for 'build-project-configs' 19.595667000859976ms
+[NX Daemon Server] - 2025-02-10T19:49:01.516Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:49:01.517Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:49:01.517Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:49:01.517Z - Time taken for 'total execution time for createProjectGraph()' 21.45483300089836ms
+[NX Daemon Server] - 2025-02-10T19:49:47.099Z - [WATCHER]: apps/giftnub-web/src/app/app.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:49:47.099Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:49:47.481Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:49:53.504Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:49:53.504Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts
+[NX Daemon Server] - 2025-02-10T19:49:53.504Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:49:53.506Z - Time taken for 'hash changed files from watcher' 3.5750000029802322ms
+[NX Daemon Server] - 2025-02-10T19:49:53.519Z - Time taken for 'build-project-configs' 11.938625000417233ms
+[NX Daemon Server] - 2025-02-10T19:49:53.560Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:49:53.560Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:49:53.561Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:49:53.561Z - Time taken for 'total execution time for createProjectGraph()' 29.44429199770093ms
+[NX Daemon Server] - 2025-02-10T19:49:55.795Z - [WATCHER]: apps/giftnub-web/src/main.ts was modified
+[NX Daemon Server] - 2025-02-10T19:49:55.795Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:49:56.180Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:50:02.195Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:50:02.195Z - [REQUEST]: apps/giftnub-web/src/main.ts
+[NX Daemon Server] - 2025-02-10T19:50:02.195Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:50:02.197Z - Time taken for 'hash changed files from watcher' 0.27675000205636024ms
+[NX Daemon Server] - 2025-02-10T19:50:02.211Z - Time taken for 'build-project-configs' 13.220417000353336ms
+[NX Daemon Server] - 2025-02-10T19:50:02.255Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:50:02.256Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:50:02.256Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:50:02.256Z - Time taken for 'total execution time for createProjectGraph()' 27.741207998245955ms
+[NX Daemon Server] - 2025-02-10T19:50:08.436Z - [WATCHER]: apps/giftnub-web/src/app/app.routes.ts was deleted
+[NX Daemon Server] - 2025-02-10T19:50:08.436Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:50:14.837Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:50:14.837Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:50:14.837Z - [REQUEST]: apps/giftnub-web/src/app/app.routes.ts
+[NX Daemon Server] - 2025-02-10T19:50:14.839Z - Time taken for 'hash changed files from watcher' 0.048624999821186066ms
+[NX Daemon Server] - 2025-02-10T19:50:14.851Z - Time taken for 'build-project-configs' 10.621541999280453ms
+[NX Daemon Server] - 2025-02-10T19:50:14.885Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:50:14.886Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:50:14.886Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:50:14.886Z - Time taken for 'total execution time for createProjectGraph()' 19.256333999335766ms
+[NX Daemon Server] - 2025-02-10T19:50:41.928Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:50:41.928Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:50:42.310Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:50:48.329Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:50:48.329Z - [REQUEST]: apps/giftnub-web/src/app/components/footer.component.ts
+[NX Daemon Server] - 2025-02-10T19:50:48.329Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:50:48.332Z - Time taken for 'hash changed files from watcher' 0.284875001758337ms
+[NX Daemon Server] - 2025-02-10T19:50:48.346Z - Time taken for 'build-project-configs' 12.38866700232029ms
+[NX Daemon Server] - 2025-02-10T19:50:48.383Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:50:48.383Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:50:48.384Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:50:48.384Z - Time taken for 'total execution time for createProjectGraph()' 28.59195800125599ms
+[NX Daemon Server] - 2025-02-10T19:50:54.813Z - [WATCHER]: apps/giftnub-web/src/app/components/path-selector.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:50:54.813Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:50:55.192Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:01.214Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:01.214Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:01.214Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:01.216Z - Time taken for 'hash changed files from watcher' 0.2836670018732548ms
+[NX Daemon Server] - 2025-02-10T19:51:01.233Z - Time taken for 'build-project-configs' 13.211082998663187ms
+[NX Daemon Server] - 2025-02-10T19:51:01.278Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:01.279Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:01.279Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:01.279Z - Time taken for 'total execution time for createProjectGraph()' 29.81666700169444ms
+[NX Daemon Server] - 2025-02-10T19:51:04.044Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:04.044Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:04.116Z - [WATCHER]: apps/giftnub-web/src/app/components/hero/hero.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:04.116Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:04.515Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:10.445Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:10.445Z - [REQUEST]: apps/giftnub-web/src/app/components/footer.component.ts,apps/giftnub-web/src/app/components/hero/hero.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:10.445Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:10.446Z - Time taken for 'hash changed files from watcher' 0.4004579968750477ms
+[NX Daemon Server] - 2025-02-10T19:51:10.458Z - Time taken for 'build-project-configs' 10.331291001290083ms
+[NX Daemon Server] - 2025-02-10T19:51:10.503Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:10.504Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:10.504Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:10.504Z - Time taken for 'total execution time for createProjectGraph()' 27.864333000034094ms
+[NX Daemon Server] - 2025-02-10T19:51:11.934Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:11.934Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:12.326Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:14.049Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:14.049Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:14.431Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:18.335Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:18.335Z - [REQUEST]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts,apps/giftnub-web/src/app/components/footer.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:18.335Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:18.336Z - Time taken for 'hash changed files from watcher' 0.34379199892282486ms
+[NX Daemon Server] - 2025-02-10T19:51:18.348Z - Time taken for 'build-project-configs' 9.298374999314547ms
+[NX Daemon Server] - 2025-02-10T19:51:18.387Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:18.387Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:18.387Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:18.387Z - Time taken for 'total execution time for createProjectGraph()' 28.274000000208616ms
+[NX Daemon Server] - 2025-02-10T19:51:19.820Z - [WATCHER]: apps/giftnub-web/src/app/app.config.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:19.820Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:26.222Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:26.222Z - [REQUEST]: apps/giftnub-web/src/app/app.config.ts
+[NX Daemon Server] - 2025-02-10T19:51:26.222Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:26.225Z - Time taken for 'hash changed files from watcher' 0.4310000017285347ms
+[NX Daemon Server] - 2025-02-10T19:51:26.235Z - Time taken for 'build-project-configs' 10.007374998182058ms
+[NX Daemon Server] - 2025-02-10T19:51:26.269Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:26.270Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:26.270Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:26.270Z - Time taken for 'total execution time for createProjectGraph()' 20.532041002064943ms
+[NX Daemon Server] - 2025-02-10T19:51:27.841Z - [WATCHER]: apps/giftnub-web/src/app/components/path-selector.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:27.841Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:28.194Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:34.242Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:34.242Z - [REQUEST]: apps/giftnub-web/src/app/components/path-selector.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:34.242Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:34.243Z - Time taken for 'hash changed files from watcher' 0.2837909981608391ms
+[NX Daemon Server] - 2025-02-10T19:51:34.254Z - Time taken for 'build-project-configs' 9.788832999765873ms
+[NX Daemon Server] - 2025-02-10T19:51:34.280Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:34.280Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:34.280Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:34.280Z - Time taken for 'total execution time for createProjectGraph()' 16.59775000065565ms
+[NX Daemon Server] - 2025-02-10T19:51:35.920Z - [WATCHER]: apps/giftnub-web/src/app/components/consultation-booking.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:35.920Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:42.321Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:42.321Z - [REQUEST]: apps/giftnub-web/src/app/components/consultation-booking.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:42.321Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:42.324Z - Time taken for 'hash changed files from watcher' 0.5618340000510216ms
+[NX Daemon Server] - 2025-02-10T19:51:42.335Z - Time taken for 'build-project-configs' 9.656874999403954ms
+[NX Daemon Server] - 2025-02-10T19:51:42.376Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:42.377Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:42.377Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:42.377Z - Time taken for 'total execution time for createProjectGraph()' 24.974916998296976ms
+[NX Daemon Server] - 2025-02-10T19:51:46.037Z - [WATCHER]: apps/giftnub-web/src/app/app.component.spec.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:46.037Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:51.616Z - [WATCHER]: apps/giftnub-web/src/app/components/ai-suggestions.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:51:51.616Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:51.931Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:51:52.503Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:51:52.503Z - [REQUEST]: apps/giftnub-web/src/app/app.component.spec.ts,apps/giftnub-web/src/app/components/ai-suggestions.component.ts
+[NX Daemon Server] - 2025-02-10T19:51:52.503Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:51:52.505Z - Time taken for 'hash changed files from watcher' 2.9787079989910126ms
+[NX Daemon Server] - 2025-02-10T19:51:52.528Z - Time taken for 'build-project-configs' 20.10962500050664ms
+[NX Daemon Server] - 2025-02-10T19:51:52.644Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:51:52.645Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:51:52.645Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:51:52.645Z - Time taken for 'total execution time for createProjectGraph()' 38.58795799687505ms
+[NX Daemon Server] - 2025-02-10T19:52:01.411Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:01.412Z - [WATCHER]: apps/giftnub-web/src/app/app.config.ts was modified
+[NX Daemon Server] - 2025-02-10T19:52:01.939Z - [WATCHER]: apps/giftnub-web/src/app/app.config.ts was modified
+[NX Daemon Server] - 2025-02-10T19:52:01.939Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:07.813Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:52:07.813Z - [REQUEST]: apps/giftnub-web/src/app/app.config.ts
+[NX Daemon Server] - 2025-02-10T19:52:07.813Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:52:07.814Z - Time taken for 'hash changed files from watcher' 0.254916001111269ms
+[NX Daemon Server] - 2025-02-10T19:52:07.826Z - Time taken for 'build-project-configs' 9.90812499821186ms
+[NX Daemon Server] - 2025-02-10T19:52:07.854Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:52:07.854Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:52:07.854Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:52:07.854Z - Time taken for 'total execution time for createProjectGraph()' 17.749166000634432ms
+[NX Daemon Server] - 2025-02-10T19:52:22.191Z - [WATCHER]: apps/giftnub-web/src/app/components/consultation-booking.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:52:22.191Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:28.591Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:52:28.591Z - [REQUEST]: apps/giftnub-web/src/app/components/consultation-booking.component.ts
+[NX Daemon Server] - 2025-02-10T19:52:28.591Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:52:28.593Z - Time taken for 'hash changed files from watcher' 0.22120799869298935ms
+[NX Daemon Server] - 2025-02-10T19:52:28.607Z - Time taken for 'build-project-configs' 11.633040998131037ms
+[NX Daemon Server] - 2025-02-10T19:52:28.641Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:52:28.641Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:52:28.641Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:52:28.641Z - Time taken for 'total execution time for createProjectGraph()' 24.55808300152421ms
+[NX Daemon Server] - 2025-02-10T19:52:28.910Z - [WATCHER]: apps/giftnub-web/src/app/components/consultation-booking.component.ts was modified
+[NX Daemon Server] - 2025-02-10T19:52:28.910Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:35.311Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:52:35.311Z - [REQUEST]: apps/giftnub-web/src/app/components/consultation-booking.component.ts
+[NX Daemon Server] - 2025-02-10T19:52:35.311Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:52:35.312Z - Time taken for 'hash changed files from watcher' 0.24833399802446365ms
+[NX Daemon Server] - 2025-02-10T19:52:35.326Z - Time taken for 'build-project-configs' 12.273875001817942ms
+[NX Daemon Server] - 2025-02-10T19:52:35.362Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:52:35.363Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:52:35.363Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:52:35.363Z - Time taken for 'total execution time for createProjectGraph()' 25.687457997351885ms
+[NX Daemon Server] - 2025-02-10T19:52:39.079Z - [WATCHER]: apps/giftnub-web/src/app/app.component.spec.ts was modified
+[NX Daemon Server] - 2025-02-10T19:52:39.079Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:41.538Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T19:52:41.540Z - [WATCHER]: apps/giftnub-web/src/app/app.component.spec.ts was deleted
+[NX Daemon Server] - 2025-02-10T19:52:45.481Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T19:52:45.481Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T19:52:45.481Z - [REQUEST]: apps/giftnub-web/src/app/app.component.spec.ts
+[NX Daemon Server] - 2025-02-10T19:52:45.483Z - Time taken for 'hash changed files from watcher' 0.057916998863220215ms
+[NX Daemon Server] - 2025-02-10T19:52:45.496Z - Time taken for 'build-project-configs' 9.655500002205372ms
+[NX Daemon Server] - 2025-02-10T19:52:45.530Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T19:52:45.530Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T19:52:45.530Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T19:52:45.531Z - Time taken for 'total execution time for createProjectGraph()' 21.150249999016523ms
+[NX Daemon Server] - 2025-02-10T20:05:58.415Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T20:05:58.415Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:05:58.847Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:06:04.818Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:06:04.819Z - [REQUEST]: apps/giftnub-web/src/app/app.component.ts,apps/giftnub-web/src/app/components/hero/hero.component.ts
+[NX Daemon Server] - 2025-02-10T20:06:04.819Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:06:04.821Z - Time taken for 'hash changed files from watcher' 0.6350829973816872ms
+[NX Daemon Server] - 2025-02-10T20:06:04.846Z - Time taken for 'build-project-configs' 22.974041998386383ms
+[NX Daemon Server] - 2025-02-10T20:06:04.882Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:06:04.882Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:06:04.882Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:06:04.882Z - Time taken for 'total execution time for createProjectGraph()' 22.679542001336813ms
+[NX Daemon Server] - 2025-02-10T20:09:01.276Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:09:01.276Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:09:07.677Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:09:07.677Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:09:07.677Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:09:07.678Z - Time taken for 'hash changed files from watcher' 0.1943340003490448ms
+[NX Daemon Server] - 2025-02-10T20:09:07.692Z - Time taken for 'build-project-configs' 11.073915999382734ms
+[NX Daemon Server] - 2025-02-10T20:09:07.757Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:09:07.758Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:09:07.758Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:09:07.758Z - Time taken for 'total execution time for createProjectGraph()' 53.26945799961686ms
+[NX Daemon Server] - 2025-02-10T20:09:14.655Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:09:14.655Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:09:15.061Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:09:21.056Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:09:21.056Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:09:21.056Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:09:21.057Z - Time taken for 'hash changed files from watcher' 0.18295899778604507ms
+[NX Daemon Server] - 2025-02-10T20:09:21.069Z - Time taken for 'build-project-configs' 9.837583001703024ms
+[NX Daemon Server] - 2025-02-10T20:09:21.107Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:09:21.108Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:09:21.108Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:09:21.108Z - Time taken for 'total execution time for createProjectGraph()' 25.33949999883771ms
+[NX Daemon Server] - 2025-02-10T20:10:39.412Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:10:39.413Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:10:39.846Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:10:45.815Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:10:45.815Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:10:45.815Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:10:45.816Z - Time taken for 'hash changed files from watcher' 0.21079199761152267ms
+[NX Daemon Server] - 2025-02-10T20:10:45.927Z - Time taken for 'build-project-configs' 107.44050000235438ms
+[NX Daemon Server] - 2025-02-10T20:10:45.984Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:10:45.984Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:10:45.984Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:10:45.984Z - Time taken for 'total execution time for createProjectGraph()' 43.516083002090454ms
+[NX Daemon Server] - 2025-02-10T20:10:55.654Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:10:55.654Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:02.055Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:11:02.055Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:11:02.055Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:11:02.056Z - Time taken for 'hash changed files from watcher' 0.3335000015795231ms
+[NX Daemon Server] - 2025-02-10T20:11:02.071Z - Time taken for 'build-project-configs' 12.447791997343302ms
+[NX Daemon Server] - 2025-02-10T20:11:02.109Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:11:02.109Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:11:02.109Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:11:02.109Z - Time taken for 'total execution time for createProjectGraph()' 28.19045799970627ms
+[NX Daemon Server] - 2025-02-10T20:11:05.097Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:11:05.097Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:05.539Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:11.499Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:11:11.499Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:11:11.499Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:11:11.501Z - Time taken for 'hash changed files from watcher' 0.33191699907183647ms
+[NX Daemon Server] - 2025-02-10T20:11:11.522Z - Time taken for 'build-project-configs' 18.346499998122454ms
+[NX Daemon Server] - 2025-02-10T20:11:11.573Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:11:11.573Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:11:11.573Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:11:11.573Z - Time taken for 'total execution time for createProjectGraph()' 37.67466699704528ms
+[NX Daemon Server] - 2025-02-10T20:11:13.011Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:11:13.011Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:13.694Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:15.718Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:15.925Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:11:19.412Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:11:19.412Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:11:19.412Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:11:19.414Z - Time taken for 'hash changed files from watcher' 0.35625000298023224ms
+[NX Daemon Server] - 2025-02-10T20:11:19.433Z - Time taken for 'build-project-configs' 15.743916999548674ms
+[NX Daemon Server] - 2025-02-10T20:11:19.492Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:11:19.493Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:11:19.493Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:11:19.493Z - Time taken for 'total execution time for createProjectGraph()' 45.0190000012517ms
+[NX Daemon Server] - 2025-02-10T20:15:14.084Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:15:14.084Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:15:14.504Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:15:20.484Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:15:20.484Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:15:20.484Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:15:20.486Z - Time taken for 'hash changed files from watcher' 0.28299999982118607ms
+[NX Daemon Server] - 2025-02-10T20:15:20.500Z - Time taken for 'build-project-configs' 11.625ms
+[NX Daemon Server] - 2025-02-10T20:15:20.543Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:15:20.543Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:15:20.543Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:15:20.543Z - Time taken for 'total execution time for createProjectGraph()' 26.431582998484373ms
+[NX Daemon Server] - 2025-02-10T20:15:34.575Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:15:34.575Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:15:40.982Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:15:40.982Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:15:40.982Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:15:40.987Z - Time taken for 'hash changed files from watcher' 5.13620800152421ms
+[NX Daemon Server] - 2025-02-10T20:15:41.057Z - Time taken for 'build-project-configs' 66.73266699910164ms
+[NX Daemon Server] - 2025-02-10T20:15:41.162Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:15:41.163Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:15:41.164Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:15:41.164Z - Time taken for 'total execution time for createProjectGraph()' 88.55337499827147ms
+[NX Daemon Server] - 2025-02-10T20:15:42.986Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:15:42.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:15:43.500Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:15:49.388Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:15:49.388Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:15:49.388Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:15:49.389Z - Time taken for 'hash changed files from watcher' 0.37529199942946434ms
+[NX Daemon Server] - 2025-02-10T20:15:49.411Z - Time taken for 'build-project-configs' 18.16091699898243ms
+[NX Daemon Server] - 2025-02-10T20:15:49.470Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:15:49.470Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:15:49.471Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:15:49.471Z - Time taken for 'total execution time for createProjectGraph()' 46.88962499797344ms
+[NX Daemon Server] - 2025-02-10T20:16:03.365Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T20:16:03.365Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:03.893Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:09.772Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:16:09.772Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:16:09.772Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:16:09.773Z - Time taken for 'hash changed files from watcher' 1.0805840007960796ms
+[NX Daemon Server] - 2025-02-10T20:16:09.788Z - Time taken for 'build-project-configs' 11.969416998326778ms
+[NX Daemon Server] - 2025-02-10T20:16:09.836Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:16:09.836Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:16:09.836Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:16:09.836Z - Time taken for 'total execution time for createProjectGraph()' 30.995374999940395ms
+[NX Daemon Server] - 2025-02-10T20:16:39.916Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:39.917Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:16:40.304Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:40.967Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:16:40.967Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:41.495Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:16:46.318Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:16:46.318Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:16:46.319Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:16:46.320Z - Time taken for 'hash changed files from watcher' 0.4365000016987324ms
+[NX Daemon Server] - 2025-02-10T20:16:46.339Z - Time taken for 'build-project-configs' 13.592875000089407ms
+[NX Daemon Server] - 2025-02-10T20:16:46.392Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:16:46.392Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:16:46.392Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:16:46.392Z - Time taken for 'total execution time for createProjectGraph()' 39.294874999672174ms
+[NX Daemon Server] - 2025-02-10T20:17:29.809Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:17:29.809Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:17:30.248Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:17:36.210Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:17:36.210Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:17:36.210Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:17:36.211Z - Time taken for 'hash changed files from watcher' 0.25050000101327896ms
+[NX Daemon Server] - 2025-02-10T20:17:36.228Z - Time taken for 'build-project-configs' 12.53804200142622ms
+[NX Daemon Server] - 2025-02-10T20:17:36.272Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:17:36.273Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:17:36.273Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:17:36.273Z - Time taken for 'total execution time for createProjectGraph()' 30.940999999642372ms
+[NX Daemon Server] - 2025-02-10T20:17:51.737Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:17:51.737Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:17:58.140Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:17:58.140Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:17:58.140Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:17:58.142Z - Time taken for 'hash changed files from watcher' 1.4937499985098839ms
+[NX Daemon Server] - 2025-02-10T20:17:58.159Z - Time taken for 'build-project-configs' 15.29024999961257ms
+[NX Daemon Server] - 2025-02-10T20:17:58.219Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:17:58.220Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:17:58.220Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:17:58.220Z - Time taken for 'total execution time for createProjectGraph()' 35.61754200235009ms
+[NX Daemon Server] - 2025-02-10T20:18:02.901Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:18:02.902Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:03.399Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:09.302Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:18:09.302Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:18:09.302Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:18:09.304Z - Time taken for 'hash changed files from watcher' 0.2849170006811619ms
+[NX Daemon Server] - 2025-02-10T20:18:09.323Z - Time taken for 'build-project-configs' 16.706208001822233ms
+[NX Daemon Server] - 2025-02-10T20:18:09.372Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:18:09.372Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:18:09.372Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:18:09.372Z - Time taken for 'total execution time for createProjectGraph()' 34.93266699835658ms
+[NX Daemon Server] - 2025-02-10T20:18:12.953Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:18:12.954Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:19.355Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:18:19.355Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:18:19.355Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:18:19.357Z - Time taken for 'hash changed files from watcher' 0.3051670007407665ms
+[NX Daemon Server] - 2025-02-10T20:18:19.375Z - Time taken for 'build-project-configs' 15.551166001707315ms
+[NX Daemon Server] - 2025-02-10T20:18:19.422Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:18:19.422Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:18:19.422Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:18:19.422Z - Time taken for 'total execution time for createProjectGraph()' 36.15345799922943ms
+[NX Daemon Server] - 2025-02-10T20:18:25.047Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:18:25.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:25.580Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:31.384Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:18:31.384Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:18:31.384Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:18:31.386Z - Time taken for 'hash changed files from watcher' 0.2906249985098839ms
+[NX Daemon Server] - 2025-02-10T20:18:31.404Z - Time taken for 'build-project-configs' 15.279250003397465ms
+[NX Daemon Server] - 2025-02-10T20:18:31.458Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:18:31.459Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:18:31.459Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:18:31.459Z - Time taken for 'total execution time for createProjectGraph()' 39.44983400031924ms
+[NX Daemon Server] - 2025-02-10T20:18:47.472Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:18:47.472Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:47.528Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:18:47.528Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:48.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:18:53.873Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:18:53.873Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:18:53.873Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:18:53.875Z - Time taken for 'hash changed files from watcher' 0.5604170002043247ms
+[NX Daemon Server] - 2025-02-10T20:18:53.900Z - Time taken for 'build-project-configs' 20.211167000234127ms
+[NX Daemon Server] - 2025-02-10T20:18:53.965Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:18:53.966Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:18:53.966Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:18:53.966Z - Time taken for 'total execution time for createProjectGraph()' 51.48641699925065ms
+[NX Daemon Server] - 2025-02-10T20:19:10.083Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:19:10.083Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:19:10.492Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:19:16.484Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:19:16.484Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:19:16.484Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:19:16.486Z - Time taken for 'hash changed files from watcher' 0.27025000005960464ms
+[NX Daemon Server] - 2025-02-10T20:19:16.500Z - Time taken for 'build-project-configs' 11.58662499859929ms
+[NX Daemon Server] - 2025-02-10T20:19:16.548Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:19:16.549Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:19:16.549Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:19:16.549Z - Time taken for 'total execution time for createProjectGraph()' 32.41991700232029ms
+[NX Daemon Server] - 2025-02-10T20:19:22.501Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:19:22.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:19:22.944Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:19:28.902Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:19:28.902Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:19:28.902Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:19:28.904Z - Time taken for 'hash changed files from watcher' 0.2679160013794899ms
+[NX Daemon Server] - 2025-02-10T20:19:28.926Z - Time taken for 'build-project-configs' 19.215124998241663ms
+[NX Daemon Server] - 2025-02-10T20:19:28.986Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:19:28.986Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:19:28.987Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:19:28.987Z - Time taken for 'total execution time for createProjectGraph()' 46.08587500080466ms
+[NX Daemon Server] - 2025-02-10T20:21:08.886Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:21:08.886Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:21:15.287Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:21:15.288Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:21:15.288Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:21:15.290Z - Time taken for 'hash changed files from watcher' 0.39720799773931503ms
+[NX Daemon Server] - 2025-02-10T20:21:15.305Z - Time taken for 'build-project-configs' 13.065000001341105ms
+[NX Daemon Server] - 2025-02-10T20:21:15.347Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:21:15.347Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:21:15.347Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:21:15.347Z - Time taken for 'total execution time for createProjectGraph()' 25.83295799791813ms
+[NX Daemon Server] - 2025-02-10T20:21:37.664Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:21:37.665Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:21:44.066Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:21:44.066Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:21:44.066Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:21:44.069Z - Time taken for 'hash changed files from watcher' 0.3150000013411045ms
+[NX Daemon Server] - 2025-02-10T20:21:44.085Z - Time taken for 'build-project-configs' 13.793540999293327ms
+[NX Daemon Server] - 2025-02-10T20:21:44.124Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:21:44.125Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:21:44.125Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:21:44.125Z - Time taken for 'total execution time for createProjectGraph()' 31.87679199874401ms
+[NX Daemon Server] - 2025-02-10T20:23:42.182Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:23:42.182Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:23:42.614Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:23:48.583Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:23:48.583Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:23:48.583Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:23:48.584Z - Time taken for 'hash changed files from watcher' 0.29408299922943115ms
+[NX Daemon Server] - 2025-02-10T20:23:48.600Z - Time taken for 'build-project-configs' 12.063999999314547ms
+[NX Daemon Server] - 2025-02-10T20:23:48.651Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:23:48.651Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:23:48.651Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:23:48.651Z - Time taken for 'total execution time for createProjectGraph()' 34.00620800256729ms
+[NX Daemon Server] - 2025-02-10T20:24:55.222Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:24:55.222Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:24:55.717Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:24:57.501Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:24:57.501Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:24:57.992Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:25:01.623Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:25:01.623Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:25:01.623Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:25:01.625Z - Time taken for 'hash changed files from watcher' 0.2715409994125366ms
+[NX Daemon Server] - 2025-02-10T20:25:01.646Z - Time taken for 'build-project-configs' 16.871041998267174ms
+[NX Daemon Server] - 2025-02-10T20:25:01.703Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:25:01.704Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:25:01.704Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:25:01.704Z - Time taken for 'total execution time for createProjectGraph()' 44.308375000953674ms
+[NX Daemon Server] - 2025-02-10T20:26:07.060Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:26:07.060Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:26:07.533Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:26:13.461Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:26:13.461Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:26:13.461Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:26:13.463Z - Time taken for 'hash changed files from watcher' 0.3955000005662441ms
+[NX Daemon Server] - 2025-02-10T20:26:13.482Z - Time taken for 'build-project-configs' 16.258457999676466ms
+[NX Daemon Server] - 2025-02-10T20:26:13.523Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:26:13.523Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:26:13.523Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:26:13.523Z - Time taken for 'total execution time for createProjectGraph()' 29.590041998773813ms
+[NX Daemon Server] - 2025-02-10T20:27:27.956Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:27:27.957Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:27:28.369Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:27:34.358Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:27:34.358Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:27:34.358Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:27:34.361Z - Time taken for 'hash changed files from watcher' 0.6310830004513264ms
+[NX Daemon Server] - 2025-02-10T20:27:34.382Z - Time taken for 'build-project-configs' 17.17449999973178ms
+[NX Daemon Server] - 2025-02-10T20:27:34.432Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:27:34.432Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:27:34.432Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:27:34.432Z - Time taken for 'total execution time for createProjectGraph()' 35.022792000323534ms
+[NX Daemon Server] - 2025-02-10T20:29:55.421Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:29:55.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:29:55.844Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:30:01.821Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:30:01.821Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts
+[NX Daemon Server] - 2025-02-10T20:30:01.821Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:30:01.823Z - Time taken for 'hash changed files from watcher' 0.22062500193715096ms
+[NX Daemon Server] - 2025-02-10T20:30:01.837Z - Time taken for 'build-project-configs' 12.449542000889778ms
+[NX Daemon Server] - 2025-02-10T20:30:01.875Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:30:01.876Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:30:01.876Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:30:01.876Z - Time taken for 'total execution time for createProjectGraph()' 27.838415998965502ms
+[NX Daemon Server] - 2025-02-10T20:31:01.682Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:31:01.682Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:31:02.056Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:31:08.082Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:31:08.082Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts
+[NX Daemon Server] - 2025-02-10T20:31:08.082Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:31:08.083Z - Time taken for 'hash changed files from watcher' 0.258541002869606ms
+[NX Daemon Server] - 2025-02-10T20:31:08.096Z - Time taken for 'build-project-configs' 11.209542002528906ms
+[NX Daemon Server] - 2025-02-10T20:31:08.135Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:31:08.135Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:31:08.135Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:31:08.135Z - Time taken for 'total execution time for createProjectGraph()' 24.744208000600338ms
+[NX Daemon Server] - 2025-02-10T20:35:01.728Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:35:01.728Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:35:08.133Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:35:08.134Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts
+[NX Daemon Server] - 2025-02-10T20:35:08.134Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:35:08.135Z - Time taken for 'hash changed files from watcher' 0.38712500035762787ms
+[NX Daemon Server] - 2025-02-10T20:35:08.158Z - Time taken for 'build-project-configs' 20.982124999165535ms
+[NX Daemon Server] - 2025-02-10T20:35:08.202Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:35:08.202Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:35:08.202Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:35:08.202Z - Time taken for 'total execution time for createProjectGraph()' 22.28991699963808ms
+[NX Daemon Server] - 2025-02-10T20:35:32.028Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:35:32.028Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:35:32.377Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:35:38.431Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:35:38.431Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts
+[NX Daemon Server] - 2025-02-10T20:35:38.431Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:35:38.432Z - Time taken for 'hash changed files from watcher' 0.6429169997572899ms
+[NX Daemon Server] - 2025-02-10T20:35:38.461Z - Time taken for 'build-project-configs' 25.23724999651313ms
+[NX Daemon Server] - 2025-02-10T20:35:38.521Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:35:38.521Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:35:38.521Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:35:38.521Z - Time taken for 'total execution time for createProjectGraph()' 51.48379199951887ms
+[NX Daemon Server] - 2025-02-10T20:41:58.854Z - [WATCHER]: apps/giftnub-web/src/app/components/navbar/navbar.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:41:58.854Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:41:59.290Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:42:05.255Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:42:05.255Z - [REQUEST]: apps/giftnub-web/src/app/components/navbar/navbar.component.ts
+[NX Daemon Server] - 2025-02-10T20:42:05.255Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:42:05.256Z - Time taken for 'hash changed files from watcher' 0.19066699966788292ms
+[NX Daemon Server] - 2025-02-10T20:42:05.270Z - Time taken for 'build-project-configs' 11.164875000715256ms
+[NX Daemon Server] - 2025-02-10T20:42:05.307Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:42:05.307Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:42:05.307Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:42:05.307Z - Time taken for 'total execution time for createProjectGraph()' 27.279332999140024ms
+[NX Daemon Server] - 2025-02-10T20:42:40.232Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:42:40.232Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:42:40.621Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:42:46.633Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:42:46.633Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:42:46.633Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:42:46.635Z - Time taken for 'hash changed files from watcher' 0.43687500059604645ms
+[NX Daemon Server] - 2025-02-10T20:42:46.654Z - Time taken for 'build-project-configs' 16.186333000659943ms
+[NX Daemon Server] - 2025-02-10T20:42:46.704Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:42:46.704Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:42:46.705Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:42:46.705Z - Time taken for 'total execution time for createProjectGraph()' 38.60408399999142ms
+[NX Daemon Server] - 2025-02-10T20:42:55.061Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:42:55.061Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:42:55.442Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:43:01.461Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:43:01.461Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:43:01.461Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:43:01.462Z - Time taken for 'hash changed files from watcher' 0.2861250005662441ms
+[NX Daemon Server] - 2025-02-10T20:43:01.482Z - Time taken for 'build-project-configs' 14.065708000212908ms
+[NX Daemon Server] - 2025-02-10T20:43:01.518Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:43:01.518Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:43:01.519Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:43:01.519Z - Time taken for 'total execution time for createProjectGraph()' 30.40158300101757ms
+[NX Daemon Server] - 2025-02-10T20:43:07.972Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:43:07.973Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:43:08.622Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:43:14.374Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:43:14.374Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:43:14.374Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:43:14.376Z - Time taken for 'hash changed files from watcher' 0.6449580006301403ms
+[NX Daemon Server] - 2025-02-10T20:43:14.395Z - Time taken for 'build-project-configs' 16.71720800176263ms
+[NX Daemon Server] - 2025-02-10T20:43:14.439Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:43:14.439Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:43:14.439Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:43:14.440Z - Time taken for 'total execution time for createProjectGraph()' 29.811666999012232ms
+[NX Daemon Server] - 2025-02-10T20:43:20.414Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:43:20.414Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:43:20.770Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:43:26.815Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:43:26.815Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:43:26.815Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:43:26.817Z - Time taken for 'hash changed files from watcher' 0.28908300027251244ms
+[NX Daemon Server] - 2025-02-10T20:43:26.837Z - Time taken for 'build-project-configs' 13.33704200014472ms
+[NX Daemon Server] - 2025-02-10T20:43:26.884Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:43:26.885Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:43:26.885Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:43:26.885Z - Time taken for 'total execution time for createProjectGraph()' 38.36295799911022ms
+[NX Daemon Server] - 2025-02-10T20:44:38.035Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:44:38.035Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:44:38.412Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:44:44.436Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:44:44.436Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:44:44.436Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:44:44.437Z - Time taken for 'hash changed files from watcher' 0.23854200169444084ms
+[NX Daemon Server] - 2025-02-10T20:44:44.451Z - Time taken for 'build-project-configs' 11.155166000127792ms
+[NX Daemon Server] - 2025-02-10T20:44:44.504Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:44:44.504Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:44:44.504Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:44:44.504Z - Time taken for 'total execution time for createProjectGraph()' 34.17833300307393ms
+[NX Daemon Server] - 2025-02-10T20:44:46.538Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:44:46.538Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:44:46.920Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:44:52.943Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:44:52.943Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:44:52.943Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:44:52.945Z - Time taken for 'hash changed files from watcher' 0.7256669998168945ms
+[NX Daemon Server] - 2025-02-10T20:44:52.957Z - Time taken for 'build-project-configs' 10.833333000540733ms
+[NX Daemon Server] - 2025-02-10T20:44:52.996Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:44:52.996Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:44:52.996Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:44:52.996Z - Time taken for 'total execution time for createProjectGraph()' 25.12049999833107ms
+[NX Daemon Server] - 2025-02-10T20:45:30.354Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:45:30.354Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:45:30.725Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:45:36.050Z - [WATCHER]: apps/giftnub-web/src/app/components/testimonials.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:45:36.050Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:45:36.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:45:36.756Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:45:36.756Z - [REQUEST]: apps/giftnub-web/src/app/components/testimonials.component.ts
+[NX Daemon Server] - 2025-02-10T20:45:36.756Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:45:36.758Z - Time taken for 'hash changed files from watcher' 0.23729199916124344ms
+[NX Daemon Server] - 2025-02-10T20:45:36.769Z - Time taken for 'build-project-configs' 9.570000000298023ms
+[NX Daemon Server] - 2025-02-10T20:45:36.808Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:45:36.809Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:45:36.809Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:45:36.809Z - Time taken for 'total execution time for createProjectGraph()' 23.690999999642372ms
+[NX Daemon Server] - 2025-02-10T20:47:04.532Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:47:04.532Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:47:04.990Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:47:10.932Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:47:10.933Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:47:10.933Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:47:10.938Z - Time taken for 'hash changed files from watcher' 0.31629199907183647ms
+[NX Daemon Server] - 2025-02-10T20:47:10.951Z - Time taken for 'build-project-configs' 11.255208998918533ms
+[NX Daemon Server] - 2025-02-10T20:47:11.010Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:47:11.010Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:47:11.010Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:47:11.011Z - Time taken for 'total execution time for createProjectGraph()' 30.483999997377396ms
+[NX Daemon Server] - 2025-02-10T20:47:40.281Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:47:40.282Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:47:46.683Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:47:46.683Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:47:46.683Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:47:46.686Z - Time taken for 'hash changed files from watcher' 0.42841699719429016ms
+[NX Daemon Server] - 2025-02-10T20:47:46.714Z - Time taken for 'build-project-configs' 24.894499998539686ms
+[NX Daemon Server] - 2025-02-10T20:47:46.777Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:47:46.778Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:47:46.778Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:47:46.778Z - Time taken for 'total execution time for createProjectGraph()' 49.24941699951887ms
+[NX Daemon Server] - 2025-02-10T20:49:12.765Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:49:12.765Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:49:13.165Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:49:19.169Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:49:19.169Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:49:19.169Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:49:19.170Z - Time taken for 'hash changed files from watcher' 0.3155830018222332ms
+[NX Daemon Server] - 2025-02-10T20:49:19.191Z - Time taken for 'build-project-configs' 18.24754199758172ms
+[NX Daemon Server] - 2025-02-10T20:49:19.237Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:49:19.238Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:49:19.238Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:49:19.238Z - Time taken for 'total execution time for createProjectGraph()' 35.600500002503395ms
+[NX Daemon Server] - 2025-02-10T20:50:41.427Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:50:41.427Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:50:42.162Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:50:47.960Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:50:47.960Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:50:47.960Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:50:48.010Z - Time taken for 'hash changed files from watcher' 37.638291999697685ms
+[NX Daemon Server] - 2025-02-10T20:50:48.121Z - Time taken for 'build-project-configs' 136.24337499961257ms
+[NX Daemon Server] - 2025-02-10T20:50:48.189Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:50:48.190Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:50:48.190Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:50:48.190Z - Time taken for 'total execution time for createProjectGraph()' 54.13195899873972ms
+[NX Daemon Server] - 2025-02-10T20:51:33.674Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:51:33.674Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:51:34.033Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:51:40.075Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:51:40.075Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:51:40.075Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:51:40.076Z - Time taken for 'hash changed files from watcher' 0.2708749994635582ms
+[NX Daemon Server] - 2025-02-10T20:51:40.088Z - Time taken for 'build-project-configs' 10.98904200270772ms
+[NX Daemon Server] - 2025-02-10T20:51:40.131Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:51:40.132Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:51:40.132Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:51:40.132Z - Time taken for 'total execution time for createProjectGraph()' 22.44470899924636ms
+[NX Daemon Server] - 2025-02-10T20:52:04.792Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T20:52:04.793Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:52:05.278Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:52:11.196Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:52:11.196Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html,apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:52:11.196Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:52:11.197Z - Time taken for 'hash changed files from watcher' 0.5847500003874302ms
+[NX Daemon Server] - 2025-02-10T20:52:11.210Z - Time taken for 'build-project-configs' 10.8552919998765ms
+[NX Daemon Server] - 2025-02-10T20:52:11.238Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:52:11.239Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:52:11.239Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:52:11.239Z - Time taken for 'total execution time for createProjectGraph()' 19.244333002716303ms
+[NX Daemon Server] - 2025-02-10T20:52:27.552Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:52:27.552Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:52:27.988Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:52:33.953Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:52:33.953Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:52:33.953Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:52:33.954Z - Time taken for 'hash changed files from watcher' 0.237125001847744ms
+[NX Daemon Server] - 2025-02-10T20:52:33.969Z - Time taken for 'build-project-configs' 12.43258299678564ms
+[NX Daemon Server] - 2025-02-10T20:52:34.019Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:52:34.020Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:52:34.020Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:52:34.020Z - Time taken for 'total execution time for createProjectGraph()' 33.89187499880791ms
+[NX Daemon Server] - 2025-02-10T20:53:31.527Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:53:31.527Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:53:31.909Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:53:36.276Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:53:36.276Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:53:36.711Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:53:37.928Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:53:37.928Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:53:37.928Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:53:37.929Z - Time taken for 'hash changed files from watcher' 0.2533329986035824ms
+[NX Daemon Server] - 2025-02-10T20:53:37.944Z - Time taken for 'build-project-configs' 12.587750002741814ms
+[NX Daemon Server] - 2025-02-10T20:53:37.987Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:53:37.987Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:53:37.987Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:53:37.987Z - Time taken for 'total execution time for createProjectGraph()' 31.189916998147964ms
+[NX Daemon Server] - 2025-02-10T20:54:04.580Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:54:04.580Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:54:10.981Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:54:10.981Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:54:10.981Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:54:10.982Z - Time taken for 'hash changed files from watcher' 0.24341700226068497ms
+[NX Daemon Server] - 2025-02-10T20:54:10.998Z - Time taken for 'build-project-configs' 12.47537500038743ms
+[NX Daemon Server] - 2025-02-10T20:54:11.037Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:54:11.038Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:54:11.038Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:54:11.038Z - Time taken for 'total execution time for createProjectGraph()' 30.74770800024271ms
+[NX Daemon Server] - 2025-02-10T20:55:04.653Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:55:04.653Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:55:05.117Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:55:11.054Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:55:11.054Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:55:11.054Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:55:11.055Z - Time taken for 'hash changed files from watcher' 0.3479999974370003ms
+[NX Daemon Server] - 2025-02-10T20:55:11.072Z - Time taken for 'build-project-configs' 14.636749997735023ms
+[NX Daemon Server] - 2025-02-10T20:55:11.125Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:55:11.126Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:55:11.126Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:55:11.126Z - Time taken for 'total execution time for createProjectGraph()' 36.75970800220966ms
+[NX Daemon Server] - 2025-02-10T20:56:28.773Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T20:56:28.773Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:56:29.189Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:56:35.174Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:56:35.174Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T20:56:35.174Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:56:35.175Z - Time taken for 'hash changed files from watcher' 0.258458998054266ms
+[NX Daemon Server] - 2025-02-10T20:56:35.189Z - Time taken for 'build-project-configs' 11.159749999642372ms
+[NX Daemon Server] - 2025-02-10T20:56:35.233Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:56:35.234Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:56:35.234Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:56:35.234Z - Time taken for 'total execution time for createProjectGraph()' 26.521209001541138ms
+[NX Daemon Server] - 2025-02-10T20:56:38.930Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T20:56:38.930Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:56:39.333Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T20:56:45.330Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T20:56:45.330Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T20:56:45.330Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T20:56:45.331Z - Time taken for 'hash changed files from watcher' 0.32691700011491776ms
+[NX Daemon Server] - 2025-02-10T20:56:45.344Z - Time taken for 'build-project-configs' 10.706458002328873ms
+[NX Daemon Server] - 2025-02-10T20:56:45.388Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T20:56:45.389Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T20:56:45.389Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T20:56:45.389Z - Time taken for 'total execution time for createProjectGraph()' 26.295749999582767ms
+[NX Daemon Server] - 2025-02-10T21:01:17.334Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T21:01:17.334Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:01:23.734Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:01:23.734Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T21:01:23.734Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:01:23.736Z - Time taken for 'hash changed files from watcher' 0.23804200068116188ms
+[NX Daemon Server] - 2025-02-10T21:01:23.751Z - Time taken for 'build-project-configs' 12.874542001634836ms
+[NX Daemon Server] - 2025-02-10T21:01:23.791Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:01:23.792Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:01:23.792Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:01:23.792Z - Time taken for 'total execution time for createProjectGraph()' 27.458499997854233ms
+[NX Daemon Server] - 2025-02-10T21:01:28.943Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:01:28.943Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:01:29.319Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:01:35.344Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:01:35.344Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T21:01:35.344Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:01:35.345Z - Time taken for 'hash changed files from watcher' 0.2971250005066395ms
+[NX Daemon Server] - 2025-02-10T21:01:35.358Z - Time taken for 'build-project-configs' 11.028249997645617ms
+[NX Daemon Server] - 2025-02-10T21:01:35.396Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:01:35.396Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:01:35.396Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:01:35.396Z - Time taken for 'total execution time for createProjectGraph()' 27.138624999672174ms
+[NX Daemon Server] - 2025-02-10T21:02:14.097Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:02:14.097Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:02:14.495Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:02:20.498Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:02:20.498Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T21:02:20.498Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:02:20.499Z - Time taken for 'hash changed files from watcher' 0.21620800346136093ms
+[NX Daemon Server] - 2025-02-10T21:02:20.512Z - Time taken for 'build-project-configs' 10.16966699808836ms
+[NX Daemon Server] - 2025-02-10T21:02:20.554Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:02:20.554Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:02:20.554Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:02:20.554Z - Time taken for 'total execution time for createProjectGraph()' 28.04295800253749ms
+[NX Daemon Server] - 2025-02-10T21:02:29.103Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:02:29.103Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:02:35.505Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:02:35.505Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.ts
+[NX Daemon Server] - 2025-02-10T21:02:35.505Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:02:35.506Z - Time taken for 'hash changed files from watcher' 0.2604999989271164ms
+[NX Daemon Server] - 2025-02-10T21:02:35.520Z - Time taken for 'build-project-configs' 11.953499998897314ms
+[NX Daemon Server] - 2025-02-10T21:02:35.556Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:02:35.557Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:02:35.557Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:02:35.557Z - Time taken for 'total execution time for createProjectGraph()' 21.86199999973178ms
+[NX Daemon Server] - 2025-02-10T21:03:04.717Z - [WATCHER]: apps/giftnub-web/src/app/components/gift-gallery.component.html was modified
+[NX Daemon Server] - 2025-02-10T21:03:04.717Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:03:11.117Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:03:11.117Z - [REQUEST]: apps/giftnub-web/src/app/components/gift-gallery.component.html
+[NX Daemon Server] - 2025-02-10T21:03:11.117Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:03:11.119Z - Time taken for 'hash changed files from watcher' 0.2859170027077198ms
+[NX Daemon Server] - 2025-02-10T21:03:11.136Z - Time taken for 'build-project-configs' 14.729916997253895ms
+[NX Daemon Server] - 2025-02-10T21:03:11.186Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:03:11.187Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:03:11.187Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:03:11.187Z - Time taken for 'total execution time for createProjectGraph()' 36.32424999773502ms
+[NX Daemon Server] - 2025-02-10T21:06:33.127Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:06:33.127Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:06:33.569Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:06:39.527Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:06:39.527Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts
+[NX Daemon Server] - 2025-02-10T21:06:39.527Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:06:39.528Z - Time taken for 'hash changed files from watcher' 0.21875ms
+[NX Daemon Server] - 2025-02-10T21:06:39.541Z - Time taken for 'build-project-configs' 10.653124999254942ms
+[NX Daemon Server] - 2025-02-10T21:06:39.575Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:06:39.576Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:06:39.576Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:06:39.576Z - Time taken for 'total execution time for createProjectGraph()' 25.628416001796722ms
+[NX Daemon Server] - 2025-02-10T21:06:45.576Z - [WATCHER]: apps/giftnub-web/src/app/components/event-gifting.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:06:45.577Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:06:49.161Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:06:49.161Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:06:51.978Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:06:51.978Z - [REQUEST]: apps/giftnub-web/src/app/components/event-gifting.component.ts,apps/giftnub-web/src/app/components/gift-gallery.component.ts,apps/giftnub-web/src/app/components/navbar/navbar.component.ts
+[NX Daemon Server] - 2025-02-10T21:06:51.978Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:06:51.979Z - Time taken for 'hash changed files from watcher' 0.5124169997870922ms
+[NX Daemon Server] - 2025-02-10T21:06:51.991Z - Time taken for 'build-project-configs' 9.753332998603582ms
+[NX Daemon Server] - 2025-02-10T21:06:52.018Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:06:52.019Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:06:52.019Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:06:52.019Z - Time taken for 'total execution time for createProjectGraph()' 18.74362500011921ms
+[NX Daemon Server] - 2025-02-10T21:09:59.619Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:09:59.619Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:00.013Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:06.021Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:10:06.021Z - [REQUEST]: apps/giftnub-web/src/app/components/footer.component.ts
+[NX Daemon Server] - 2025-02-10T21:10:06.021Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:10:06.025Z - Time taken for 'hash changed files from watcher' 0.3186670020222664ms
+[NX Daemon Server] - 2025-02-10T21:10:06.039Z - Time taken for 'build-project-configs' 12.679749999195337ms
+[NX Daemon Server] - 2025-02-10T21:10:06.077Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:10:06.077Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:10:06.077Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:10:06.077Z - Time taken for 'total execution time for createProjectGraph()' 29.294707998633385ms
+[NX Daemon Server] - 2025-02-10T21:10:36.468Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:10:36.468Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:36.837Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:42.870Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:10:42.870Z - [REQUEST]: apps/giftnub-web/src/app/components/footer.component.ts
+[NX Daemon Server] - 2025-02-10T21:10:42.870Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:10:42.871Z - Time taken for 'hash changed files from watcher' 0.27250000089406967ms
+[NX Daemon Server] - 2025-02-10T21:10:42.885Z - Time taken for 'build-project-configs' 11.514875002205372ms
+[NX Daemon Server] - 2025-02-10T21:10:42.930Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:10:42.931Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:10:42.931Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:10:42.931Z - Time taken for 'total execution time for createProjectGraph()' 28.416333001106977ms
+[NX Daemon Server] - 2025-02-10T21:10:53.141Z - [WATCHER]: apps/giftnub-web/src/app/components/faq.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:10:53.141Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:53.509Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:10:59.541Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:10:59.541Z - [REQUEST]: apps/giftnub-web/src/app/components/faq.component.ts
+[NX Daemon Server] - 2025-02-10T21:10:59.541Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:10:59.542Z - Time taken for 'hash changed files from watcher' 0.2573329992592335ms
+[NX Daemon Server] - 2025-02-10T21:10:59.556Z - Time taken for 'build-project-configs' 11.49983299896121ms
+[NX Daemon Server] - 2025-02-10T21:10:59.607Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:10:59.607Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:10:59.607Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:10:59.607Z - Time taken for 'total execution time for createProjectGraph()' 29.824333000928164ms
+[NX Daemon Server] - 2025-02-10T21:12:50.399Z - [WATCHER]: apps/giftnub-web/src/app/components/footer.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:12:50.399Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:12:56.800Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:12:56.800Z - [REQUEST]: apps/giftnub-web/src/app/components/footer.component.ts
+[NX Daemon Server] - 2025-02-10T21:12:56.800Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:12:56.801Z - Time taken for 'hash changed files from watcher' 0.28870899975299835ms
+[NX Daemon Server] - 2025-02-10T21:12:56.815Z - Time taken for 'build-project-configs' 11.170334000140429ms
+[NX Daemon Server] - 2025-02-10T21:12:56.842Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:12:56.842Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:12:56.842Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:12:56.842Z - Time taken for 'total execution time for createProjectGraph()' 19.685667000710964ms
+[NX Daemon Server] - 2025-02-10T21:13:39.354Z - [WATCHER]: apps/giftnub-web/src/app/components/faq.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:13:39.354Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:13:39.764Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:13:45.755Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:13:45.755Z - [REQUEST]: apps/giftnub-web/src/app/components/faq.component.ts
+[NX Daemon Server] - 2025-02-10T21:13:45.755Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:13:45.756Z - Time taken for 'hash changed files from watcher' 0.2599169984459877ms
+[NX Daemon Server] - 2025-02-10T21:13:45.770Z - Time taken for 'build-project-configs' 11.159291997551918ms
+[NX Daemon Server] - 2025-02-10T21:13:45.811Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:13:45.812Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:13:45.812Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:13:45.812Z - Time taken for 'total execution time for createProjectGraph()' 32.52641599997878ms
+[NX Daemon Server] - 2025-02-10T21:13:50.884Z - [WATCHER]: apps/giftnub-web/src/app/components/faq.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:13:50.884Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:13:51.297Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:13:57.284Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:13:57.284Z - [REQUEST]: apps/giftnub-web/src/app/components/faq.component.ts
+[NX Daemon Server] - 2025-02-10T21:13:57.284Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:13:57.287Z - Time taken for 'hash changed files from watcher' 0.4332499988377094ms
+[NX Daemon Server] - 2025-02-10T21:13:57.311Z - Time taken for 'build-project-configs' 23.757541999220848ms
+[NX Daemon Server] - 2025-02-10T21:13:57.372Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:13:57.372Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:13:57.372Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:13:57.372Z - Time taken for 'total execution time for createProjectGraph()' 49.90712499991059ms
+[NX Daemon Server] - 2025-02-10T21:16:40.324Z - [WATCHER]: apps/giftnub-web/src/app/components/faq.component.ts was modified
+[NX Daemon Server] - 2025-02-10T21:16:40.324Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:16:46.725Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:16:46.725Z - [REQUEST]: apps/giftnub-web/src/app/components/faq.component.ts
+[NX Daemon Server] - 2025-02-10T21:16:46.725Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:16:46.726Z - Time taken for 'hash changed files from watcher' 0.40379199758172035ms
+[NX Daemon Server] - 2025-02-10T21:16:46.739Z - Time taken for 'build-project-configs' 10.519749999046326ms
+[NX Daemon Server] - 2025-02-10T21:16:46.781Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:16:46.781Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:16:46.781Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:16:46.781Z - Time taken for 'total execution time for createProjectGraph()' 21.76274999976158ms

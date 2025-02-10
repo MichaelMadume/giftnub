@@ -19328,11 +19328,6 @@
       },
       {
         "source": "giftnub-web",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "giftnub-web",
         "target": "npm:ngx-stripe",
         "type": "static"
       },
@@ -19344,6 +19339,11 @@
       {
         "source": "giftnub-web",
         "target": "npm:@angular/forms",
+        "type": "static"
+      },
+      {
+        "source": "giftnub-web",
+        "target": "npm:@angular/router",
         "type": "static"
       },
       {

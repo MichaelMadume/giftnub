@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { PathSelectorComponent } from './components/path-selector.component';
+import { AiSuggestionsComponent } from './components/ai-suggestions.component';
 import { GiftGalleryComponent } from './components/gift-gallery.component';
 import { EventGiftingComponent } from './components/event-gifting.component';
 import { TestimonialsComponent } from './components/testimonials.component';
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer.component';
     NavbarComponent,
     HeroComponent,
     PathSelectorComponent,
+    AiSuggestionsComponent,
     GiftGalleryComponent,
     EventGiftingComponent,
     TestimonialsComponent,
@@ -35,6 +37,9 @@ import { FooterComponent } from './components/footer.component';
       <giftnub-hero></giftnub-hero>
       <div class="bg-neutral-950">
         <giftnub-path-selector></giftnub-path-selector>
+      </div>
+      <div class="bg-black">
+        <giftnub-ai-suggestions></giftnub-ai-suggestions>
       </div>
       <giftnub-gift-gallery></giftnub-gift-gallery>
       <div class="bg-neutral-950">
