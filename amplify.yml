@@ -1,0 +1,18 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+        build:
+          commands:
+            - npx nx build giftnub-web
+      artifacts:
+        baseDirectory: dist/apps/giftnub-web
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .yarn/cache/**/* 

@@ -36,9 +36,7 @@ export class CalendlyService {
 
   // Load Calendly Widget
   private loadCalendlyWidget(elementId: string, url: string): void {
-    // @ts-expect-error: Calendly is loaded from external script
     if (window.Calendly) {
-      // @ts-expect-error: Calendly is loaded from external script
       window.Calendly.initInlineWidget({
         url,
         parentElement: document.getElementById(elementId),

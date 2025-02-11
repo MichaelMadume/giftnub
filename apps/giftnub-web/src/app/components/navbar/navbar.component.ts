@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
           <div class="flex items-center justify-between h-16">
             <div class="flex items-center">
               <div class="flex-shrink-0">
-                <span class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">GiftNub</span>
+                <span class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text">The Gift Nub</span>
               </div>
             </div>
             

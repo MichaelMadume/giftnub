@@ -4,6 +4,9 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "dependencies": {
     "@angular/animations": "19.0.7",
     "@angular/common": "19.0.7",

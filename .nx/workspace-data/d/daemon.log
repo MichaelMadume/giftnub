@@ -4019,3 +4019,248 @@
 [NX Daemon Server] - 2025-02-10T21:16:46.781Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX Daemon Server] - 2025-02-10T21:16:46.781Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX Daemon Server] - 2025-02-10T21:16:46.781Z - Time taken for 'total execution time for createProjectGraph()' 21.76274999976158ms
+[NX Daemon Server] - 2025-02-10T21:26:37.111Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:45.857Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.030Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.085Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.145Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.250Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.388Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.440Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.493Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:46.558Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:26:59.895Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:27:05.470Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:27:05.562Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:27:05.728Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:31:58.012Z - [WATCHER]: 1 file(s) created or restored, 1 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:31:58.012Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:31:58.133Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:31:58.133Z - [REQUEST]: amplify/yarn.lock,amplify/package.json
+[NX Daemon Server] - 2025-02-10T21:31:58.133Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:31:58.134Z - Time taken for 'hash changed files from watcher' 11.176249999552965ms
+[NX Daemon Server] - 2025-02-10T21:31:58.147Z - Time taken for 'build-project-configs' 11.005541000515223ms
+[NX Daemon Server] - 2025-02-10T21:31:58.177Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:31:58.177Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:31:58.177Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:31:58.177Z - Time taken for 'total execution time for createProjectGraph()' 20.96908400207758ms
+[NX Daemon Server] - 2025-02-10T21:32:57.496Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:33:06.422Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:33:06.474Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:33:06.555Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:36:25.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:36:30.079Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:36:30.130Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:36:30.187Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:40:42.246Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:40:44.774Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:47:14.498Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:47:14.498Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:47:14.602Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:47:14.602Z - [REQUEST]: amplify-backup/auth/resource.ts,amplify-backup/backend.ts,amplify-backup/data/resource.ts
+[NX Daemon Server] - 2025-02-10T21:47:14.602Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:47:14.605Z - Time taken for 'hash changed files from watcher' 4.135624997317791ms
+[NX Daemon Server] - 2025-02-10T21:47:14.619Z - Time taken for 'build-project-configs' 13.102125000208616ms
+[NX Daemon Server] - 2025-02-10T21:47:14.648Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:47:14.649Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:47:14.649Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:47:14.649Z - Time taken for 'total execution time for createProjectGraph()' 21.375ms
+[NX Daemon Server] - 2025-02-10T21:50:36.115Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:50:36.134Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:50:36.244Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:50:36.244Z - [REQUEST]: amplify-backup/tsconfig.json,amplify-backup/package.json,amplify-backup/yarn.lock
+[NX Daemon Server] - 2025-02-10T21:50:36.244Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:50:36.245Z - Time taken for 'hash changed files from watcher' 7.038875002413988ms
+[NX Daemon Server] - 2025-02-10T21:50:36.275Z - Time taken for 'build-project-configs' 23.09537500143051ms
+[NX Daemon Server] - 2025-02-10T21:50:36.303Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:50:36.303Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:50:36.303Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:50:36.303Z - Time taken for 'total execution time for createProjectGraph()' 23.04983299970627ms
+[NX Daemon Server] - 2025-02-10T21:50:46.700Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:01.657Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:01.715Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:01.792Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:25.881Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 3 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:51:25.881Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:26.081Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:51:26.081Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T21:51:26.081Z - [REQUEST]: amplify/data/resource.ts,amplify/backend.ts,amplify/auth/resource.ts
+[NX Daemon Server] - 2025-02-10T21:51:26.082Z - Time taken for 'hash changed files from watcher' 0.058958999812603ms
+[NX Daemon Server] - 2025-02-10T21:51:26.103Z - Time taken for 'build-project-configs' 18.993416998535395ms
+[NX Daemon Server] - 2025-02-10T21:51:26.130Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:51:26.130Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:51:26.130Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:51:26.130Z - Time taken for 'total execution time for createProjectGraph()' 19.063916999846697ms
+[NX Daemon Server] - 2025-02-10T21:51:35.705Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2025-02-10T21:51:35.715Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:35.809Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T21:51:35.809Z - [REQUEST]: amplify/yarn.lock,amplify/tsconfig.json,amplify/package.json
+[NX Daemon Server] - 2025-02-10T21:51:35.809Z - [REQUEST]: amplify-backup
+[NX Daemon Server] - 2025-02-10T21:51:35.810Z - Time taken for 'hash changed files from watcher' 3.426791999489069ms
+[NX Daemon Server] - 2025-02-10T21:51:35.823Z - Time taken for 'build-project-configs' 10.491999998688698ms
+[NX Daemon Server] - 2025-02-10T21:51:35.849Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T21:51:35.850Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T21:51:35.850Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T21:51:35.850Z - Time taken for 'total execution time for createProjectGraph()' 18.480707999318838ms
+[NX Daemon Server] - 2025-02-10T21:51:46.746Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:49.139Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:51:59.517Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:52:01.344Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:52:01.408Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:52:48.613Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T21:52:53.602Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:06:21.536Z - [WATCHER]: amplify.yml was created or restored
+[NX Daemon Server] - 2025-02-10T22:06:21.537Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:06:21.641Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:06:21.641Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:06:21.641Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:06:21.643Z - Time taken for 'hash changed files from watcher' 0.4030829966068268ms
+[NX Daemon Server] - 2025-02-10T22:06:21.666Z - Time taken for 'build-project-configs' 18.779584001749754ms
+[NX Daemon Server] - 2025-02-10T22:06:21.701Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:06:21.702Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:06:21.702Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:06:21.702Z - Time taken for 'total execution time for createProjectGraph()' 25.625374998897314ms
+[NX Daemon Server] - 2025-02-10T22:06:23.812Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:06:23.812Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:06:24.013Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:06:24.013Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:06:24.013Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:06:24.015Z - Time taken for 'hash changed files from watcher' 0.6936249993741512ms
+[NX Daemon Server] - 2025-02-10T22:06:24.033Z - Time taken for 'build-project-configs' 15.275375001132488ms
+[NX Daemon Server] - 2025-02-10T22:06:24.065Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:06:24.065Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:06:24.065Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:06:24.065Z - Time taken for 'total execution time for createProjectGraph()' 22.62433300167322ms
+[NX Daemon Server] - 2025-02-10T22:08:18.982Z - [WATCHER]: amplify.yml was deleted
+[NX Daemon Server] - 2025-02-10T22:08:18.982Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:08:19.381Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:08:19.381Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:08:19.381Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:08:19.383Z - Time taken for 'hash changed files from watcher' 0.050582997500896454ms
+[NX Daemon Server] - 2025-02-10T22:08:19.402Z - Time taken for 'build-project-configs' 17.022291999310255ms
+[NX Daemon Server] - 2025-02-10T22:08:19.449Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:08:19.449Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:08:19.449Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:08:19.449Z - Time taken for 'total execution time for createProjectGraph()' 31.06020899862051ms
+[NX Daemon Server] - 2025-02-10T22:08:37.419Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:08:37.420Z - [WATCHER]: amplify.yml was created or restored
+[NX Daemon Server] - 2025-02-10T22:08:37.521Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:08:37.521Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:08:37.521Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:08:37.522Z - Time taken for 'hash changed files from watcher' 0.3382500000298023ms
+[NX Daemon Server] - 2025-02-10T22:08:37.535Z - Time taken for 'build-project-configs' 10.2052499987185ms
+[NX Daemon Server] - 2025-02-10T22:08:37.574Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:08:37.575Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:08:37.575Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:08:37.575Z - Time taken for 'total execution time for createProjectGraph()' 19.500832997262478ms
+[NX Daemon Server] - 2025-02-10T22:08:40.340Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:08:40.340Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:08:40.541Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:08:40.542Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:08:40.542Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:08:40.543Z - Time taken for 'hash changed files from watcher' 1.4620000012218952ms
+[NX Daemon Server] - 2025-02-10T22:08:40.556Z - Time taken for 'build-project-configs' 10.668790999799967ms
+[NX Daemon Server] - 2025-02-10T22:08:40.592Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:08:40.592Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:08:40.592Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:08:40.592Z - Time taken for 'total execution time for createProjectGraph()' 17.74091700091958ms
+[NX Daemon Server] - 2025-02-10T22:14:33.924Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:14:33.924Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:14:34.407Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:14:34.408Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:14:34.408Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:14:34.412Z - Time taken for 'hash changed files from watcher' 77.90329200029373ms
+[NX Daemon Server] - 2025-02-10T22:14:34.496Z - Time taken for 'build-project-configs' 12.097000002861023ms
+[NX Daemon Server] - 2025-02-10T22:14:34.629Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:14:34.632Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:14:34.633Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:14:34.633Z - Time taken for 'total execution time for createProjectGraph()' 119.08637500181794ms
+[NX Daemon Server] - 2025-02-10T22:23:30.096Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:23:30.096Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:23:30.898Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:23:30.899Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:23:30.899Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:23:30.913Z - Time taken for 'hash changed files from watcher' 0.9883330017328262ms
+[NX Daemon Server] - 2025-02-10T22:23:30.930Z - Time taken for 'build-project-configs' 15.090165998786688ms
+[NX Daemon Server] - 2025-02-10T22:23:30.977Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:23:30.978Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:23:30.978Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:23:30.978Z - Time taken for 'total execution time for createProjectGraph()' 28.423708003014326ms
+[NX Daemon Server] - 2025-02-10T22:24:13.399Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:24:13.399Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:24:15.000Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:24:15.000Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:24:15.000Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:24:15.002Z - Time taken for 'hash changed files from watcher' 0.6561250016093254ms
+[NX Daemon Server] - 2025-02-10T22:24:15.023Z - Time taken for 'build-project-configs' 18.333459001034498ms
+[NX Daemon Server] - 2025-02-10T22:24:15.063Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:24:15.064Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:24:15.064Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:24:15.064Z - Time taken for 'total execution time for createProjectGraph()' 27.543499998748302ms
+[NX Daemon Server] - 2025-02-10T22:24:23.114Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:24:23.115Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:24:26.316Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:24:26.316Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:24:26.316Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:24:26.317Z - Time taken for 'hash changed files from watcher' 0.7109169997274876ms
+[NX Daemon Server] - 2025-02-10T22:24:26.328Z - Time taken for 'build-project-configs' 9.561667002737522ms
+[NX Daemon Server] - 2025-02-10T22:24:26.355Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:24:26.355Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:24:26.355Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:24:26.355Z - Time taken for 'total execution time for createProjectGraph()' 16.602874998003244ms
+[NX Daemon Server] - 2025-02-10T22:35:52.169Z - [WATCHER]: apps/giftnub-web/package.json was created or restored
+[NX Daemon Server] - 2025-02-10T22:35:52.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:35:52.270Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:35:52.270Z - [REQUEST]: apps/giftnub-web/package.json
+[NX Daemon Server] - 2025-02-10T22:35:52.270Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:35:52.271Z - Time taken for 'hash changed files from watcher' 0.19304100051522255ms
+[NX Daemon Server] - 2025-02-10T22:35:52.289Z - Time taken for 'build-project-configs' 15.005541000515223ms
+[NX Daemon Server] - 2025-02-10T22:35:52.344Z - Time taken for 'total execution time for createProjectGraph()' 55.94004099816084ms
+[NX Daemon Server] - 2025-02-10T22:35:55.421Z - [WATCHER]: apps/giftnub-web/package.json was modified
+[NX Daemon Server] - 2025-02-10T22:35:55.421Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:35:55.632Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:35:55.632Z - [REQUEST]: apps/giftnub-web/package.json
+[NX Daemon Server] - 2025-02-10T22:35:55.632Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:35:55.633Z - Time taken for 'hash changed files from watcher' 0.619208000600338ms
+[NX Daemon Server] - 2025-02-10T22:35:55.713Z - Time taken for 'build-project-configs' 77.50720900297165ms
+[NX Daemon Server] - 2025-02-10T22:35:55.756Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:35:55.757Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:35:55.757Z - Time taken for 'total execution time for createProjectGraph()' 32.219209000468254ms
+[NX Daemon Server] - 2025-02-10T22:37:22.898Z - [WATCHER]: package.json was modified
+[NX Daemon Server] - 2025-02-10T22:37:22.899Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:37:23.299Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:37:23.300Z - [REQUEST]: package.json
+[NX Daemon Server] - 2025-02-10T22:37:23.300Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:37:23.301Z - Time taken for 'hash changed files from watcher' 0.2470410019159317ms
+[NX Daemon Server] - 2025-02-10T22:37:23.312Z - Time taken for 'build-project-configs' 9.397041000425816ms
+[NX Daemon Server] - 2025-02-10T22:37:23.340Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:37:23.341Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:37:23.341Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:37:23.341Z - Time taken for 'total execution time for createProjectGraph()' 17.23708299919963ms
+[NX Daemon Server] - 2025-02-10T22:38:11.313Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:38:11.313Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:38:12.114Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:38:12.114Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:38:12.114Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:38:12.117Z - Time taken for 'hash changed files from watcher' 0.6424579992890358ms
+[NX Daemon Server] - 2025-02-10T22:38:12.140Z - Time taken for 'build-project-configs' 22.036499999463558ms
+[NX Daemon Server] - 2025-02-10T22:38:12.177Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:38:12.177Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:38:12.177Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:38:12.177Z - Time taken for 'total execution time for createProjectGraph()' 26.428707998245955ms
+[NX Daemon Server] - 2025-02-10T22:41:58.406Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-10T22:41:58.406Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-10T22:42:00.008Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-10T22:42:00.008Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-10T22:42:00.008Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-10T22:42:00.012Z - Time taken for 'hash changed files from watcher' 1.0354169979691505ms
+[NX Daemon Server] - 2025-02-10T22:42:00.036Z - Time taken for 'build-project-configs' 22.424041997641325ms
+[NX Daemon Server] - 2025-02-10T22:42:00.081Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-10T22:42:00.082Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-10T22:42:00.082Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-10T22:42:00.082Z - Time taken for 'total execution time for createProjectGraph()' 27.721500001847744ms
+[NX Daemon Server] - 2025-02-11T01:41:58.501Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-11T01:41:58.501Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-11T01:41:58.503Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (sources)
+[NX Daemon Server] - 2025-02-11T01:41:58.504Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (outputs)
+[NX Daemon Server] - 2025-02-11T01:41:58.508Z - Server stopped because: "10800000ms of inactivity"

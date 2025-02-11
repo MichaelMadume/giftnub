@@ -5,12 +5,17 @@
       "type": "app",
       "data": {
         "root": "apps/giftnub-web",
-        "name": "giftnub-web",
-        "$schema": "../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "application",
-        "prefix": "giftnub",
         "sourceRoot": "apps/giftnub-web/src",
-        "tags": [],
+        "name": "giftnub-web",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {},
+          "js": {
+            "packageName": "giftnub-web"
+          }
+        },
         "targets": {
           "build": {
             "executor": "@angular-devkit/build-angular:application",
@@ -138,6 +143,9 @@
             "parallelism": true
           }
         },
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "application",
+        "prefix": "giftnub",
         "implicitDependencies": []
       }
     }
