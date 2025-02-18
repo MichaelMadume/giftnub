@@ -4264,3 +4264,208 @@
 [NX Daemon Server] - 2025-02-11T01:41:58.503Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (sources)
 [NX Daemon Server] - 2025-02-11T01:41:58.504Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (outputs)
 [NX Daemon Server] - 2025-02-11T01:41:58.508Z - Server stopped because: "10800000ms of inactivity"
+[NX Daemon Server] - 2025-02-11T16:59:59.172Z - Started listening on: /var/folders/w8/m27c4rm53z325czryk3lgydw0000gn/T/a91efbcb8c2ac9a0c346/d.sock
+[NX Daemon Server] - 2025-02-11T16:59:59.187Z - [WATCHER]: Subscribed to changes within: /Users/michaelmadume/Documents/GIFTNUB/giftnub (native)
+[NX Daemon Server] - 2025-02-11T16:59:59.189Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-11T16:59:59.189Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-11T16:59:59.190Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-11T16:59:59.193Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-11T16:59:59.199Z - Time taken for 'loadSpecifiedNxPlugins' 0.9051669999998921ms
+[NX Daemon Server] - 2025-02-11T16:59:59.346Z - Time taken for 'Load Nx Plugin: /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 149.984958ms
+[NX Daemon Server] - 2025-02-11T16:59:59.346Z - Time taken for 'Load Nx Plugin: /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/package-json' 150.3889160000001ms
+[NX Daemon Server] - 2025-02-11T16:59:59.828Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-11T16:59:59.828Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-11T16:59:59.828Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-11T16:59:59.842Z - Time taken for 'loadDefaultNxPlugins' 632.912458ms
+[NX Daemon Server] - 2025-02-11T17:00:00.206Z - Time taken for 'build-project-configs' 349.163ms
+[NX Daemon Server] - 2025-02-11T17:00:00.855Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-11T17:00:00.856Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-11T17:00:00.856Z - Time taken for 'total for creating and serializing project graph' 1662.3483750000003ms
+[NX Daemon Server] - 2025-02-11T17:00:00.858Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-11T17:00:00.858Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1663. Response time: 2.
+[NX Daemon Server] - 2025-02-11T17:00:01.962Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX Daemon Server] - 2025-02-11T17:00:02.030Z - Done responding to the client handleHashTasks
+[NX Daemon Server] - 2025-02-11T17:00:02.030Z - Handled HASH_TASKS. Handling time: 48. Response time: 68.
+[NX Daemon Server] - 2025-02-11T17:00:02.428Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-02-11T17:00:02.429Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX Daemon Server] - 2025-02-11T17:00:02.429Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 218. Response time: 1.
+[NX Daemon Server] - 2025-02-11T17:00:11.860Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-11T17:00:11.861Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2025-02-11T17:00:11.861Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-11T17:00:11.863Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-11T17:00:11.863Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2025-02-11T17:00:11.864Z - Time taken for 'total for creating and serializing project graph' 0.5073750000010477ms
+[NX Daemon Server] - 2025-02-11T17:00:11.869Z - Done responding to the client project-graph
+[NX Daemon Server] - 2025-02-11T17:00:11.869Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 6.
+[NX Daemon Server] - 2025-02-11T17:00:25.438Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:00:28.797Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:00:30.679Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:00:31.204Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-11T17:00:31.205Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:00:31.215Z - [REQUEST]: Responding to the client. recordOutputsHash
+[NX Daemon Server] - 2025-02-11T17:00:31.216Z - Done responding to the client recordOutputsHash
+[NX Daemon Server] - 2025-02-11T17:00:31.216Z - Handled RECORD_OUTPUTS_HASH. Handling time: 3. Response time: 1.
+[NX Daemon Server] - 2025-02-11T17:00:31.265Z - [REQUEST]: Responding to the client. handleRecordTaskRuns
+[NX Daemon Server] - 2025-02-11T17:00:31.265Z - Done responding to the client handleRecordTaskRuns
+[NX Daemon Server] - 2025-02-11T17:00:31.265Z - Handled RECORD_TASK_RUNS. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-02-11T17:00:31.265Z - [REQUEST]: Responding to the client. handleGetFlakyTasks
+[NX Daemon Server] - 2025-02-11T17:00:31.266Z - Done responding to the client handleGetFlakyTasks
+[NX Daemon Server] - 2025-02-11T17:00:31.266Z - Handled GET_FLAKY_TASKS. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-02-11T17:00:31.272Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:00:32.461Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-11T17:03:46.137Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-11T17:03:46.137Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:03:46.378Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-11T17:03:46.378Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-11T17:03:46.378Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-11T17:03:46.380Z - Time taken for 'hash changed files from watcher' 3.660915999993449ms
+[NX Daemon Server] - 2025-02-11T17:03:46.408Z - Time taken for 'build-project-configs' 24.02058300000499ms
+[NX Daemon Server] - 2025-02-11T17:03:46.473Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-11T17:03:46.474Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-11T17:03:46.474Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-11T17:03:46.474Z - Time taken for 'total execution time for createProjectGraph()' 31.97841700000572ms
+[NX Daemon Server] - 2025-02-11T17:06:02.668Z - [WATCHER]: amplify.yml was modified
+[NX Daemon Server] - 2025-02-11T17:06:02.669Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:06:05.049Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-11T17:06:05.049Z - [REQUEST]: amplify.yml
+[NX Daemon Server] - 2025-02-11T17:06:05.049Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-11T17:06:05.110Z - Time taken for 'hash changed files from watcher' 48.25104199995985ms
+[NX Daemon Server] - 2025-02-11T17:06:06.383Z - Time taken for 'build-project-configs' 1189.9357079999754ms
+[NX Daemon Server] - 2025-02-11T17:06:06.913Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2025-02-11T17:06:06.916Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2025-02-11T17:06:06.916Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2025-02-11T17:06:06.916Z - Time taken for 'total execution time for createProjectGraph()' 585.8308749999851ms
+[NX Daemon Server] - 2025-02-11T17:06:09.011Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-11T17:06:09.012Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (sources)
+[NX Daemon Server] - 2025-02-11T17:06:09.012Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (outputs)
+[NX Daemon Server] - 2025-02-11T17:06:09.013Z - Server stopped because: "LOCK_FILES_CHANGED"
+[NX Daemon Server] - 2025-02-16T10:47:05.036Z - Started listening on: /var/folders/w8/m27c4rm53z325czryk3lgydw0000gn/T/a91efbcb8c2ac9a0c346/d.sock
+[NX Daemon Server] - 2025-02-16T10:47:05.055Z - [WATCHER]: Subscribed to changes within: /Users/michaelmadume/Documents/GIFTNUB/giftnub (native)
+[NX Daemon Server] - 2025-02-16T10:47:05.057Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:47:05.057Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-02-16T10:47:05.058Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:47:05.059Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-16T10:47:05.062Z - Time taken for 'loadSpecifiedNxPlugins' 0.6148340000000303ms
+[NX Daemon Server] - 2025-02-16T10:47:05.188Z - Time taken for 'Load Nx Plugin: /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/project-json/build-nodes/project-json' 127.65083299999998ms
+[NX Daemon Server] - 2025-02-16T10:47:05.188Z - Time taken for 'Load Nx Plugin: /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/package-json' 128.032333ms
+[NX Daemon Server] - 2025-02-16T10:47:05.268Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2025-02-16T10:47:05.268Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-16T10:47:05.268Z - [REQUEST]: 
+[NX Daemon Server] - 2025-02-16T10:47:05.271Z - Time taken for 'loadDefaultNxPlugins' 208.08133299999997ms
+
+ NX   Failed to parse yarn lockfile
+
+Please open an issue at `https://github.com/nrwl/nx/issues/new?template=1-bug.yml` and provide a reproduction.
+
+Original error: Failed to convert JavaScript value `Undefined` into rust type `String`
+
+
+Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+    at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+    at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+    at Array.forEach (<anonymous>)
+    at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+    at Map.forEach (<anonymous>)
+    at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+    at Array.forEach (<anonymous>)
+    at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+    at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+    at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+
+[NX Daemon Server] - 2025-02-16T10:47:06.359Z - Time taken for 'build-project-configs' 1082.7672499999999ms
+[NX Daemon Server] - 2025-02-16T10:47:06.362Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - yarn.lock: Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+      at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+      at Array.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+      at Map.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+      at Array.forEach (<anonymous>)
+      at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+      at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+      at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+[NX Daemon Server] - 2025-02-16T10:47:06.362Z - Time taken for 'total execution time for createProjectGraph()' 5.054750000000013ms
+[NX Daemon Server] - 2025-02-16T10:47:06.362Z - Done responding to the client null
+[NX Daemon Server] - 2025-02-16T10:47:06.362Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1303. Response time: 0.
+[NX Daemon Server] - 2025-02-16T10:47:06.363Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:47:29.153Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:47:29.154Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:47:29.154Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:47:29.156Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-16T10:47:29.156Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - yarn.lock: Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+      at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+      at Array.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+      at Map.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+      at Array.forEach (<anonymous>)
+      at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+      at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+      at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+[NX Daemon Server] - 2025-02-16T10:47:29.156Z - Done responding to the client null
+[NX Daemon Server] - 2025-02-16T10:47:29.156Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-16T10:47:29.157Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:48:14.539Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:48:14.539Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:48:14.540Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:48:14.541Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-16T10:48:14.541Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - yarn.lock: Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+      at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+      at Array.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+      at Map.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+      at Array.forEach (<anonymous>)
+      at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+      at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+      at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+[NX Daemon Server] - 2025-02-16T10:48:14.541Z - Done responding to the client null
+[NX Daemon Server] - 2025-02-16T10:48:14.541Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-16T10:48:14.542Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:48:25.334Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:48:25.334Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:48:25.334Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:48:25.336Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-16T10:48:25.336Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - yarn.lock: Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+      at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+      at Array.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+      at Map.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+      at Array.forEach (<anonymous>)
+      at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+      at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+      at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+[NX Daemon Server] - 2025-02-16T10:48:25.336Z - Done responding to the client null
+[NX Daemon Server] - 2025-02-16T10:48:25.336Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2025-02-16T10:48:25.337Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:49:15.349Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:49:15.349Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:49:15.350Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-02-16T10:49:15.354Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2025-02-16T10:49:15.355Z - [REQUEST]: Responding to the client with an error. Error when preparing serialized project graph. Failed to process project graph.
+     - yarn.lock: Error: Failed to convert JavaScript value `Undefined` into rust type `String`
+      at hashArray (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/hasher/file-hasher.js:9:12)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:90:57
+      at Array.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:73:23
+      at Map.forEach (<anonymous>)
+      at /Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:68:22
+      at Array.forEach (<anonymous>)
+      at getNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:62:34)
+      at getYarnLockfileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/yarn-parser.js:32:12)
+      at getLockFileNodes (/Users/michaelmadume/Documents/GIFTNUB/giftnub/node_modules/nx/src/plugins/js/lock-file/lock-file.js:45:59)
+[NX Daemon Server] - 2025-02-16T10:49:15.355Z - Done responding to the client null
+[NX Daemon Server] - 2025-02-16T10:49:15.355Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-02-16T10:49:15.356Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-02-16T10:49:46.371Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2025-02-16T10:49:46.372Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (sources)
+[NX Daemon Server] - 2025-02-16T10:49:46.372Z - [WATCHER]: Stopping the watcher for /Users/michaelmadume/Documents/GIFTNUB/giftnub (outputs)
+[NX Daemon Server] - 2025-02-16T10:49:46.372Z - Server stopped because: "NX_VERSION_CHANGED"

@@ -6,44 +6,40 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": ".gitignore",
-        "hash": "5710854610825202009"
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
       },
       {
         "file": ".eslintignore",
         "hash": "7663861978715868291"
       },
       {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
+        "file": "amplify/package.json",
+        "hash": "1538548619402863162"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
       },
       {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "amplify/yarn.lock",
-        "hash": "2911588470282529649"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10975567735463464701"
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
       },
       {
         "file": "README.md",
         "hash": "4290351960845421863"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
+        "file": ".gitignore",
+        "hash": "5710854610825202009"
+      },
+      {
+        "file": "package.json",
+        "hash": "12215076086780615180"
       },
       {
         "file": "amplify/tsconfig.json",
@@ -54,32 +50,48 @@
         "hash": "9430166341120122740"
       },
       {
-        "file": "package.json",
-        "hash": "12215076086780615180"
+        "file": "amplify/auth/resource.ts",
+        "hash": "15922709595243783584"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10975567735463464701"
+      },
+      {
+        "file": "amplify/data/resource.ts",
+        "hash": "4015062609152370058"
       },
       {
         "file": "yarn.lock",
         "hash": "10356342846366472176"
       },
       {
+        "file": "amplify/yarn.lock",
+        "hash": "2911588470282529649"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
         "file": "amplify.yml",
-        "hash": "15808694855735407951"
+        "hash": "17039208452203792595"
       },
       {
-        "file": "amplify/package.json",
-        "hash": "8387472645532318658"
+        "file": "amplify/backend.ts",
+        "hash": "10312492173327239286"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
       },
       {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
       }
     ],
     "projectFileMap": {
@@ -256,7 +268,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/navbar/navbar.component.ts",
-          "hash": "4656458069520420633",
+          "hash": "12169263899608166744",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -329,7 +341,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/services/calendly.service.ts",
-          "hash": "9843613329782229413",
+          "hash": "2053569711978099764",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",

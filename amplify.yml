@@ -1,16 +1,17 @@
 version: 1
 applications:
-  - appRoot: .
+  - appRoot: apps/giftnub-web
     frontend:
       phases:
         preBuild:
           commands:
+            - yarn global add nx
             - yarn install
         build:
           commands:
-            - npx nx build giftnub-web
+            - npx nx build giftnub-web --configuration=production
       artifacts:
-        baseDirectory: dist/apps/giftnub-web
+        baseDirectory: ../../dist/apps/giftnub-web/browser
         files:
           - '**/*'
       cache:
