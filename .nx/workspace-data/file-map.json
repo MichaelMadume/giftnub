@@ -4,6 +4,96 @@
   "pathMappings": {},
   "nxJsonPlugins": [],
   "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
+        "file": "amplify/package.json",
+        "hash": "1538548619402863162"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "README.md",
+        "hash": "4290351960845421863"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5710854610825202009"
+      },
+      {
+        "file": "package.json",
+        "hash": "12215076086780615180"
+      },
+      {
+        "file": "amplify/tsconfig.json",
+        "hash": "7348475233595919444"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "amplify/auth/resource.ts",
+        "hash": "15922709595243783584"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10975567735463464701"
+      },
+      {
+        "file": "amplify/data/resource.ts",
+        "hash": "4015062609152370058"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "10356342846366472176"
+      },
+      {
+        "file": "amplify/yarn.lock",
+        "hash": "2911588470282529649"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "amplify.yml",
+        "hash": "17039208452203792595"
+      },
+      {
+        "file": "amplify/backend.ts",
+        "hash": "10312492173327239286"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      }
+    ],
     "projectFileMap": {
       "giftnub-web": [
         {
@@ -356,64 +446,6 @@
           "hash": "2927375835638640771"
         }
       ]
-    },
-    "nonProjectFiles": [
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "5710854610825202009"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "README.md",
-        "hash": "4290351960845421863"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10975567735463464701"
-      },
-      {
-        "file": "package.json",
-        "hash": "4769890533433685220"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
-      }
-    ]
+    }
   }
 }
