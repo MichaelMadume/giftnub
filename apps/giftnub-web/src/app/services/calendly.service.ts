@@ -1,124 +1,100 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, throwError } from 'rxjs';
+import { map, catchError, switchMap } from 'rxjs/operators';
 import { GiftNubStripeService } from './stripe.service';
 import { environment } from '../../environments/environment';
+
+interface CalendlyEvent {
+  uri: string;
+  name: string;
+  start_time: string;
+  end_time: string;
+}
+
+interface SchedulingResponse {
+  resource: {
+    uri: string;
+    status: string;
+  };
+}
 
 @Injectable({
   providedIn: 'root',
 })
 export class CalendlyService {
-  private calendlyConfig = environment.calendly;
+  private readonly apiUrl = environment.api.calendly;
   private paymentStatus = new BehaviorSubject<'pending' | 'completed' | 'failed'>('pending');
+  private pendingBooking: any = null;
 
   constructor(
     private http: HttpClient,
     private stripeService: GiftNubStripeService
   ) {}
 
-  // Initialize Calendly Widget
-  initializeCalendlyWidget(elementId: string, eventType: 'personal' | 'corporate'): void {
-    // Add Calendly script if not already added
-    if (!document.getElementById('calendly-script')) {
-      const script = document.createElement('script');
-      script.id = 'calendly-script';
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.head.appendChild(script);
-
-      script.onload = () => {
-        this.loadCalendlyWidget(elementId, this.getEventUrl(eventType));
-      };
-    } else {
-      this.loadCalendlyWidget(elementId, this.getEventUrl(eventType));
-    }
-  }
-
-  // Load Calendly Widget
-  private loadCalendlyWidget(elementId: string, url: string): void {
-    if (window.Calendly) {
-      window.Calendly.initInlineWidget({
-        url,
-        parentElement: document.getElementById(elementId),
-        prefill: {},
-        utm: {},
-        styles: {
-          height: '700px'
-        }
-      });
-    }
-  }
-
-  // Get the full event URL based on type
-  private getEventUrl(eventType: 'personal' | 'corporate'): string {
-    const type = eventType === 'corporate' 
-      ? this.calendlyConfig.corporateEventType 
-      : this.calendlyConfig.personalEventType;
-    return `${this.calendlyConfig.url}/${type}`;
-  }
-
-  // Handle successful booking with payment
-  private async handleEventScheduled(event: any): Promise<void> {
-    try {
-      // Create a payment intent for the consultation fee
-      const amount = this.getConsultationFee(event.data.type as 'personal' | 'corporate'); // You'll need to implement this based on your pricing
-      const paymentIntent = await this.stripeService.createPaymentIntent(amount).toPromise();
-
-      if (paymentIntent?.clientSecret) {
-        // Store the event details temporarily
-        sessionStorage.setItem('pendingBooking', JSON.stringify(event.data));
-        
-        // Redirect to payment page or open payment modal
-        this.paymentStatus.next('pending');
-        // You'll need to implement the payment UI/flow here
+  // Get user's available time slots
+  getAvailability(startTime: string, endTime: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/availability`, {
+      params: {
+        start_time: startTime,
+        end_time: endTime
       }
-    } catch (error) {
-      console.error('Payment setup failed:', error);
-      this.paymentStatus.next('failed');
-    }
-  }
-
-  // Get consultation fee based on type
-  getConsultationFee(type: 'personal' | 'corporate'): number {
-    const fees = {
-      personal: 5000, // $50.00
-      corporate: 15000, // $150.00
-    };
-    return fees[type];
-  }
-
-  // Get Available Time Slots
-  getAvailableTimeSlots(
-    startTime: string,
-    endTime: string
-  ): Observable<any> {
-    return this.http.get(
-      `${this.calendlyConfig.url}/scheduling_availability`,
-      {
-        headers: {
-          'X-TOKEN': this.calendlyConfig.apiKey,
-        },
-        params: {
-          start_time: startTime,
-          end_time: endTime,
-        },
-      }
+    }).pipe(
+      catchError(error => throwError(() => new Error('Failed to fetch availability')))
     );
   }
 
-  // Schedule Event after payment
-  confirmBooking(eventDetails: any, paymentMethodId: string): Observable<any> {
-    return this.http.post(
-      `${this.calendlyConfig.url}/scheduled_events`,
-      {
-        ...eventDetails,
-        payment_method_id: paymentMethodId
-      },
-      {
-        headers: {
-          'X-TOKEN': this.calendlyConfig.apiKey,
-        },
+  // Get event types (meeting types)
+  getEventTypes(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/event-types`).pipe(
+      catchError(error => throwError(() => new Error('Failed to fetch event types')))
+    );
+  }
+
+  // Process payment and schedule meeting
+  scheduleWithPayment(eventDetails: any, amount: number): Observable<any> {
+    // First create payment intent
+    return this.stripeService.createPaymentIntent(amount).pipe(
+      switchMap(({ clientSecret, paymentIntentId }) => {
+        // Store event details for after payment
+        this.pendingBooking = { ...eventDetails, paymentIntentId };
+        return this.stripeService.processPayment(eventDetails.paymentMethodId, clientSecret);
+      }),
+      switchMap(paymentIntent => {
+        if (paymentIntent.status === 'succeeded') {
+          // Now schedule the meeting
+          return this.scheduleEvent(this.pendingBooking);
+        } else {
+          return throwError(() => new Error('Payment failed'));
+        }
+      }),
+      catchError(error => {
+        this.paymentStatus.next('failed');
+        return throwError(() => error);
+      })
+    );
+  }
+
+  // Schedule event after successful payment
+  private scheduleEvent(eventDetails: any): Observable<SchedulingResponse> {
+    return this.http.post<SchedulingResponse>(`${this.apiUrl}/schedule`, {
+      event_type_uri: eventDetails.eventTypeUri,
+      start_time: eventDetails.startTime,
+      end_time: eventDetails.endTime,
+      invitee: {
+        email: eventDetails.email,
+        name: eventDetails.name,
+        payment_intent_id: eventDetails.paymentIntentId
       }
+    }).pipe(
+      map(response => {
+        this.paymentStatus.next('completed');
+        return response;
+      }),
+      catchError(error => {
+        this.paymentStatus.next('failed');
+        return throwError(() => new Error('Failed to schedule meeting'));
+      })
     );
   }
 
@@ -127,33 +103,18 @@ export class CalendlyService {
     return this.paymentStatus.asObservable();
   }
 
-  // Update payment status
-  updatePaymentStatus(status: 'pending' | 'completed' | 'failed'): void {
-    this.paymentStatus.next(status);
-  }
-
-  // Get Event Types
-  getEventTypes(): Observable<any> {
-    return this.http.get(
-      `${this.calendlyConfig.url}/event_types`,
-      {
-        headers: {
-          'X-TOKEN': this.calendlyConfig.apiKey,
-        },
-      }
+  // Cancel scheduled event
+  cancelEvent(eventUri: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/scheduled-events/${eventUri}`).pipe(
+      catchError(error => throwError(() => new Error('Failed to cancel meeting')))
     );
   }
 
-  // Cancel Event
-  cancelEvent(eventId: string): Observable<any> {
-    return this.http.post(
-      `${this.calendlyConfig.url}/scheduled_events/${eventId}/cancellation`,
-      {},
-      {
-        headers: {
-          'X-TOKEN': this.calendlyConfig.apiKey,
-        },
-      }
+  // Get scheduled events
+  getScheduledEvents(): Observable<CalendlyEvent[]> {
+    return this.http.get<{ collection: CalendlyEvent[] }>(`${this.apiUrl}/scheduled-events`).pipe(
+      map(response => response.collection),
+      catchError(error => throwError(() => new Error('Failed to fetch scheduled events')))
     );
   }
 }

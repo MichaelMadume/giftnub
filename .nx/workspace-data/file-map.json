@@ -6,92 +6,120 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": "amplify/amplify_outputs.json",
+        "hash": "15530557022821264238"
+      },
+      {
         "file": "jest.config.ts",
         "hash": "12333515226966617182"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": "amplify/package.json",
-        "hash": "1538548619402863162"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
+        "file": "amplify/functions/calendly-operations/handler.ts",
+        "hash": "15199061328623021577"
       },
       {
         "file": "README.md",
         "hash": "4290351960845421863"
       },
       {
-        "file": ".gitignore",
-        "hash": "5710854610825202009"
-      },
-      {
-        "file": "package.json",
-        "hash": "12215076086780615180"
-      },
-      {
-        "file": "amplify/tsconfig.json",
-        "hash": "7348475233595919444"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "amplify/auth/resource.ts",
-        "hash": "15922709595243783584"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10975567735463464701"
-      },
-      {
-        "file": "amplify/data/resource.ts",
-        "hash": "4015062609152370058"
-      },
-      {
-        "file": "yarn.lock",
-        "hash": "10356342846366472176"
-      },
-      {
-        "file": "amplify/yarn.lock",
-        "hash": "2911588470282529649"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": "amplify.yml",
-        "hash": "17039208452203792595"
-      },
-      {
         "file": "amplify/backend.ts",
-        "hash": "10312492173327239286"
+        "hash": "16315896463741095318"
       },
       {
         "file": ".editorconfig",
         "hash": "5443105041930014821"
       },
       {
+        "file": "title=apps/giftnub-web/src/app/components/payment.component.ts",
+        "hash": "18164486227812464591"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "amplify/functions/calendly-operations/.env.local",
+        "hash": "13929314084764119574"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": "amplify/package.json",
+        "hash": "11399742635005673469"
+      },
+      {
+        "file": "amplify/functions/calendly-operations/resource.ts",
+        "hash": "7132814510374069580"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
+      },
+      {
         "file": ".vscode/extensions.json",
         "hash": "235626400633494639"
+      },
+      {
+        "file": "amplify/functions/stripe-payments/resource.ts",
+        "hash": "4194371567171065284"
+      },
+      {
+        "file": "amplify.yml",
+        "hash": "9716161090996639436"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5710854610825202009"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "7476536009146875458"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "amplify/yarn.lock",
+        "hash": "10060627216400366570"
+      },
+      {
+        "file": "amplify/tsconfig.json",
+        "hash": "7348475233595919444"
+      },
+      {
+        "file": "amplify/functions/stripe-payments/handler.ts",
+        "hash": "6259377642028904324"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "amplify/functions/stripe-payments/.env.local",
+        "hash": "13486439275542310775"
+      },
+      {
+        "file": "title=apps/giftnub-web/src/app/services/stripe-payment.service.ts",
+        "hash": "18164486227812464591"
+      },
+      {
+        "file": "package.json",
+        "hash": "8074867988287680266"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10975567735463464701"
       }
     ],
     "projectFileMap": {
@@ -172,12 +200,15 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/consultation-booking.component.ts",
-          "hash": "16561812295984184200",
+          "hash": "9003387192730042952",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
             "npm:@angular/router",
-            "npm:@angular/forms"
+            "npm:@angular/forms",
+            "npm:rxjs",
+            "npm:@stripe/stripe-js",
+            "npm:ngx-stripe"
           ]
         },
         {
@@ -341,7 +372,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/services/calendly.service.ts",
-          "hash": "2053569711978099764",
+          "hash": "1169057370236448488",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -357,7 +388,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/services/stripe.service.ts",
-          "hash": "18003947088731379412",
+          "hash": "2531026110173235737",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -384,7 +415,7 @@
         },
         {
           "file": "apps/giftnub-web/src/environments/environment.ts",
-          "hash": "18435350287251396435"
+          "hash": "3651344443059781300"
         },
         {
           "file": "apps/giftnub-web/src/favicon.ico",
