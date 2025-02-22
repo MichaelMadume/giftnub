@@ -11500,6 +11500,24 @@
         "hash": "sha512-BS8PfmtDGnrgYdOonGZQdLZslWIeCGFP9tpan0hi1Co2Zr2NKADsvGYA8XxuG/4UWgJ6Cjtv+YJnB6MM69QGlQ=="
       }
     },
+    "npm:date-fns": {
+      "type": "npm",
+      "name": "npm:date-fns",
+      "data": {
+        "version": "4.1.0",
+        "packageName": "date-fns",
+        "hash": "sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg=="
+      }
+    },
+    "npm:date-fns-tz": {
+      "type": "npm",
+      "name": "npm:date-fns-tz",
+      "data": {
+        "version": "3.2.0",
+        "packageName": "date-fns-tz",
+        "hash": "sha512-sg8HqoTEulcbbbVXeg84u5UnlsQa8GS5QXMqjjYIhS4abEVVKIUwe0/l/UhrZdKaL/W5eWZNlbTeEIiOXTcsBQ=="
+      }
+    },
     "npm:date-format": {
       "type": "npm",
       "name": "npm:date-format",
@@ -18610,6 +18628,16 @@
       {
         "source": "giftnub-web",
         "target": "npm:@stripe/stripe-js",
+        "type": "static"
+      },
+      {
+        "source": "giftnub-web",
+        "target": "npm:date-fns",
+        "type": "static"
+      },
+      {
+        "source": "giftnub-web",
+        "target": "npm:date-fns-tz",
         "type": "static"
       },
       {
@@ -46705,6 +46733,13 @@
       {
         "source": "npm:data-view-byte-offset",
         "target": "npm:is-data-view",
+        "type": "static"
+      }
+    ],
+    "npm:date-fns-tz": [
+      {
+        "source": "npm:date-fns-tz",
+        "target": "npm:date-fns",
         "type": "static"
       }
     ],

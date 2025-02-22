@@ -1,4 +1,4 @@
-import { handler } from '../lambda/calendly-operations/src/index';
+import { handler } from '../lambda/calendly-operations/src/index.js';
 import { config } from 'dotenv';
 import { APIGatewayProxyEvent } from 'aws-lambda';
 
@@ -9,7 +9,7 @@ const event: Partial<APIGatewayProxyEvent> = {
   path: '/calendly/availability',
   queryStringParameters: {
     start_time: '2025-02-22T00:00:00Z',
-    end_time: '2025-02-28T00:00:00Z',
+    end_time: '2025-02-27T00:00:00Z',
   },
 };
 

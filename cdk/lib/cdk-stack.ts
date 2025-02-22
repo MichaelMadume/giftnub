@@ -3,11 +3,27 @@ import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 import * as nodejs from 'aws-cdk-lib/aws-lambda-nodejs';
 import * as iam from 'aws-cdk-lib/aws-iam';
+import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as path from 'path';
 
 export class CdkStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
+
+    // Create DynamoDB table for consultation bookings
+    const consultationTable = new dynamodb.Table(this, 'ConsultationBookings', {
+      partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+      timeToLiveAttribute: 'ttl',
+      stream: dynamodb.StreamViewType.NEW_AND_OLD_IMAGES,
+    });
+
+    // Add GSI for status queries
+    consultationTable.addGlobalSecondaryIndex({
+      indexName: 'status-index',
+      partitionKey: { name: 'status', type: dynamodb.AttributeType.STRING },
+      sortKey: { name: 'createdAt', type: dynamodb.AttributeType.STRING },
+    });
 
     // Create the Lambda function for Stripe payments
     const stripePaymentsLambda = new nodejs.NodejsFunction(this, 'StripePaymentsLambda', {
@@ -15,8 +31,9 @@ export class CdkStack extends cdk.Stack {
       handler: 'handler',
       entry: path.join(__dirname, '../lambda/stripe-payments/index.ts'),
       environment: {
-        APP_SECRET: 'app/secrets', // The name of the secret in Secrets Manager
+        APP_SECRET: 'app/secrets',
         NODE_OPTIONS: '--enable-source-maps',
+        CONSULTATION_TABLE_NAME: consultationTable.tableName,
       },
       bundling: {
         sourceMap: true,
@@ -31,8 +48,9 @@ export class CdkStack extends cdk.Stack {
       handler: 'handler',
       entry: path.join(__dirname, '../lambda/calendly-operations/src/index.ts'),
       environment: {
-        APP_SECRET: 'app/secrets', // The name of the secret in Secrets Manager
+        APP_SECRET: 'app/secrets',
         NODE_OPTIONS: '--enable-source-maps',
+        CONSULTATION_TABLE_NAME: consultationTable.tableName,
       },
       bundling: {
         sourceMap: true,
@@ -40,6 +58,28 @@ export class CdkStack extends cdk.Stack {
         externalModules: ['aws-sdk'],
       },
     });
+
+    // Create the Lambda function for consultation bookings
+    const consultationBookingsLambda = new nodejs.NodejsFunction(this, 'ConsultationBookingsLambda', {
+      runtime: lambda.Runtime.NODEJS_18_X,
+      handler: 'handler',
+      entry: path.join(__dirname, '../lambda/consultation-bookings/index.ts'),
+      environment: {
+        APP_SECRET: 'app/secrets',
+        NODE_OPTIONS: '--enable-source-maps',
+        CONSULTATION_TABLE_NAME: consultationTable.tableName,
+      },
+      bundling: {
+        sourceMap: true,
+        minify: true,
+        externalModules: ['aws-sdk'],
+      },
+    });
+
+    // Grant DynamoDB permissions
+    consultationTable.grantReadWriteData(stripePaymentsLambda);
+    consultationTable.grantReadWriteData(calendlyOperationsLambda);
+    consultationTable.grantReadWriteData(consultationBookingsLambda);
 
     // Grant the Lambda functions permission to read secrets
     const secretsPolicy = new iam.PolicyStatement({
@@ -49,6 +89,7 @@ export class CdkStack extends cdk.Stack {
 
     stripePaymentsLambda.addToRolePolicy(secretsPolicy);
     calendlyOperationsLambda.addToRolePolicy(secretsPolicy);
+    consultationBookingsLambda.addToRolePolicy(secretsPolicy);
 
     // Create API Gateway
     const api = new apigateway.RestApi(this, 'GiftNubApi', {
@@ -63,22 +104,30 @@ export class CdkStack extends cdk.Stack {
 
     // Create API resources and methods for Stripe payments
     const payments = api.root.addResource('payments');
-    const createPaymentIntent = payments.addResource('create-payment-intent');
-    createPaymentIntent.addMethod('POST', new apigateway.LambdaIntegration(stripePaymentsLambda));
-
-    const webhook = api.root.addResource('webhook');
-    webhook.addMethod('POST', new apigateway.LambdaIntegration(stripePaymentsLambda));
-    webhook.addMethod('GET', new apigateway.LambdaIntegration(stripePaymentsLambda));
+    const stripeWebhook = payments.addResource('stripe-webhook');
+    stripeWebhook.addMethod('POST', new apigateway.LambdaIntegration(stripePaymentsLambda));
 
     // Create API resources and methods for Calendly operations
     const calendly = api.root.addResource('calendly');
     const availability = calendly.addResource('availability');
     availability.addMethod('GET', new apigateway.LambdaIntegration(calendlyOperationsLambda));
 
-    // Output the API URL
+    // Create API resources and methods for consultation bookings
+    const consultations = api.root.addResource('consultations');
+    consultations.addMethod('POST', new apigateway.LambdaIntegration(consultationBookingsLambda));
+    
+    const consultationStatus = consultations.addResource('{id}');
+    consultationStatus.addMethod('GET', new apigateway.LambdaIntegration(consultationBookingsLambda));
+
+    // Output the API URL and DynamoDB table name
     new cdk.CfnOutput(this, 'ApiUrl', {
       value: api.url,
       description: 'API Gateway URL',
+    });
+
+    new cdk.CfnOutput(this, 'ConsultationTableName', {
+      value: consultationTable.tableName,
+      description: 'DynamoDB Consultation Bookings Table Name',
     });
   }
 }

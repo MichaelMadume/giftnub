@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -7,19 +7,38 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { GiftNubStripeService } from '../services/stripe.service';
+import {
+  ConsultationService,
+  ConsultationBooking,
+} from '../services/consultation.service';
 import { CalendlyService } from '../services/calendly.service';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, Subscription, interval, timer, throwError } from 'rxjs';
+import { takeUntil, switchMap, take, catchError, mergeMap, takeWhile, finalize } from 'rxjs/operators';
 import {
   StripeElementsOptions,
   StripeCardElementOptions,
 } from '@stripe/stripe-js';
 import { NgxStripeModule, StripeCardComponent } from 'ngx-stripe';
+import {
+  format,
+  isToday,
+  isSameDay,
+  isBefore,
+  startOfDay,
+} from 'date-fns';
+import { toZonedTime } from 'date-fns-tz';
 
 interface TimeSlot {
   startTime: string;
-  endTime: string;
   available: boolean;
+}
+
+interface AvailableSlot {
+  start_time: string;
+}
+
+interface AvailabilityResponse {
+  availableSlots: AvailableSlot[];
 }
 
 @Component({
@@ -60,22 +79,22 @@ interface TimeSlot {
         ></div>
       </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      <div class="relative max-w-5xl !w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-5xl font-bold mb-4">
             <span
               class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200"
             >
               Book Your Consultation
             </span>
           </h2>
-          <p class="text-white/70 max-w-2xl mx-auto">
+          <p class="text-white/70 max-w-2xl mx-auto text-lg">
             Schedule a personalized session with our gift experts for a tailored
             gifting experience
           </p>
         </div>
 
-        <div class="max-w-6xl mx-auto">
+        <div class="w-full">
           <div class="grid md:grid-cols-2 gap-8">
             <!-- Consultation Form -->
             <div class="h-full">
@@ -86,39 +105,45 @@ interface TimeSlot {
                 <div
                   class="relative h-full p-8 rounded-xl bg-black/80 backdrop-blur-xl border border-white/10"
                 >
-                  <h3 class="text-xl font-semibold text-white mb-6">
+                  <h3 class="text-2xl font-semibold text-white mb-6">
                     Consultation Details
                   </h3>
                   <form [formGroup]="consultationForm" class="space-y-4">
                     <div>
-                      <label class="block text-sm font-medium text-white/90 mb-2">
+                      <label
+                        class="block text-base font-medium text-white/90 mb-2"
+                      >
                         Full Name *
                       </label>
                       <input
                         type="text"
                         formControlName="name"
-                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
+                        class="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
 
                     <div>
-                      <label class="block text-sm font-medium text-white/90 mb-2">
+                      <label
+                        class="block text-base font-medium text-white/90 mb-2"
+                      >
                         Email Address *
                       </label>
                       <input
                         type="email"
                         formControlName="email"
-                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
+                        class="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
 
                     <div>
-                      <label class="block text-sm font-medium text-white/90 mb-2">
+                      <label
+                        class="block text-base font-medium text-white/90 mb-2"
+                      >
                         Consultation Type *
                       </label>
                       <select
                         formControlName="type"
-                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
+                        class="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
                       >
                         <option value="" class="bg-neutral-900">
                           Select type
@@ -136,13 +161,15 @@ interface TimeSlot {
                     </div>
 
                     <div>
-                      <label class="block text-sm font-medium text-white/90 mb-2">
+                      <label
+                        class="block text-base font-medium text-white/90 mb-2"
+                      >
                         Special Requirements
                       </label>
                       <textarea
                         rows="3"
                         formControlName="notes"
-                        class="w-full px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
+                        class="w-full px-5 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-primary-500 focus:border-primary-500"
                       ></textarea>
                     </div>
                   </form>
@@ -159,12 +186,40 @@ interface TimeSlot {
                 <div
                   class="relative h-full p-8 rounded-xl bg-black/80 backdrop-blur-xl border border-white/10"
                 >
-                  <h3 class="text-xl font-semibold text-white mb-6">
-                    Select Date & Time
-                  </h3>
-                  
-                  <!-- Calendar Grid -->
-                  <div class="mb-8">
+                  <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-semibold text-white">
+                      {{
+                        selectedSlot
+                          ? 'Payment Details'
+                          : selectedDate
+                          ? 'Select Time'
+                          : 'Select Date'
+                      }}
+                    </h3>
+                    <button
+                      *ngIf="selectedDate && !selectedSlot"
+                      (click)="clearDateSelection()"
+                      class="text-white/70 hover:text-white transition-colors text-base"
+                    >
+                      Change Date
+                    </button>
+                    <button
+                      *ngIf="selectedSlot"
+                      (click)="clearTimeSelection()"
+                      class="text-white/70 hover:text-white transition-colors text-base"
+                    >
+                      Change Time
+                    </button>
+                  </div>
+
+                  <!-- Calendar View -->
+                  <div
+                    class="transition-all duration-300"
+                    [class.opacity-0]="selectedDate"
+                    [class.invisible]="selectedDate"
+                    [class.absolute]="selectedDate"
+                    [class.h-0]="selectedDate"
+                  >
                     <div class="flex items-center justify-between mb-6">
                       <button
                         (click)="previousMonth()"
@@ -229,24 +284,88 @@ interface TimeSlot {
                     </div>
                   </div>
 
-                  <!-- Time Slots -->
-                  <div *ngIf="selectedDate" class="space-y-4">
-                    <h4 class="text-lg font-medium text-white mb-4">
-                      Available Time Slots
-                    </h4>
-                    <div class="grid grid-cols-3 gap-2">
-                      <button
-                        *ngFor="let slot of availableTimeSlots"
-                        [class]="getTimeSlotClasses(slot)"
-                        (click)="selectTimeSlot(slot)"
+                  <!-- Time Slots View -->
+                  <div
+                    class="transition-all duration-300 time-slots-view"
+                    [class.opacity-0]="!selectedDate || selectedSlot"
+                    [class.invisible]="!selectedDate || selectedSlot"
+                    [class.absolute]="!selectedDate || selectedSlot"
+                    [class.h-0]="!selectedDate || selectedSlot"
+                  >
+                    <div class="relative">
+                      <!-- Loading Overlay -->
+                      <div
+                        *ngIf="loading"
+                        class="absolute inset-0 bg-black/50 backdrop-blur-sm rounded-lg flex items-center justify-center z-10"
                       >
-                        {{ formatTime(slot.startTime) }}
-                      </button>
+                        <div
+                          class="animate-spin rounded-full h-8 w-8 border-t-2 border-primary-500"
+                        ></div>
+                      </div>
+
+                      <div
+                        class="grid grid-cols-3 gap-2 max-h-[400px] overflow-y-auto pr-2"
+                      >
+                        <button
+                          *ngFor="let slot of availableTimeSlots"
+                          [class]="getTimeSlotClasses(slot)"
+                          (click)="selectTimeSlot(slot)"
+                        >
+                          {{ formatTime(slot.startTime) }}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Payment Section -->
+                  <div
+                    class="transition-all duration-300"
+                    [class.opacity-0]="!selectedSlot"
+                    [class.invisible]="!selectedSlot"
+                    [class.absolute]="!selectedSlot"
+                    [class.h-0]="!selectedSlot"
+                  >
+                    <div class="space-y-8">
+                      <!-- Booking Summary -->
+                      <div class="bg-white/5 rounded-lg p-5 space-y-3">
+                        <div class="flex justify-between text-white/70 text-lg">
+                          <span>Consultation Type</span>
+                          <span>{{ consultationForm.get('type')?.value }}</span>
+                        </div>
+                        <div class="flex justify-between text-white/70 text-lg">
+                          <span>Date & Time</span>
+                          <span>{{
+                            formatDateTime(selectedSlot?.startTime || '')
+                          }}</span>
+                        </div>
+                        <div
+                          class="flex justify-between text-white font-medium text-lg"
+                        >
+                          <span>Total</span>
+                          <span>{{ getConsultationFee() }}</span>
+                        </div>
+                      </div>
+
+                      <!-- Card Details Section -->
+                      <div class="space-y-3 mt-6">
+                        <label
+                          class="block text-base font-medium text-white/90 pb-1"
+                        >
+                          Card Details
+                        </label>
+                        <ngx-stripe-card
+                          [options]="cardOptions"
+                          (change)="onChange($event)"
+                        ></ngx-stripe-card>
+                      </div>
                     </div>
                   </div>
 
                   <!-- Error Message -->
-                  <div *ngIf="error" class="mt-4 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                  <div
+                    *ngIf="error"
+                    class="mt-4 p-4 bg-red-500/10 border border-red-500/20 rounded-lg"
+                  >
                     <p class="text-red-400">{{ error }}</p>
                   </div>
                 </div>
@@ -258,10 +377,14 @@ interface TimeSlot {
           <div class="mt-8 flex justify-center">
             <button
               (click)="processPayment()"
-              [disabled]="!complete || !selectedSlot || !consultationForm.valid || loading"
+              [disabled]="
+                !complete || !selectedSlot || !consultationForm.valid || loading
+              "
               class="relative group overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <div class="relative bg-black/60 backdrop-blur-xl rounded-lg px-8 py-3 transition-all duration-300 group-hover:bg-black/40">
+              <div
+                class="relative bg-black/60 backdrop-blur-xl rounded-lg px-8 py-3 transition-all duration-300 group-hover:bg-black/40"
+              >
                 <span *ngIf="!loading" class="text-white font-medium">
                   Complete Booking
                 </span>
@@ -275,50 +398,52 @@ interface TimeSlot {
       </div>
     </section>
   `,
+  styles: [
+    `
+      :host ::ng-deep .stripe-element {
+        padding: 1rem 1.25rem;
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s;
+        min-height: 3.5rem;
+      }
+      :host ::ng-deep .stripe-element:focus {
+        border-color: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.08);
+      }
+    `,
+  ],
 })
 export class ConsultationBookingComponent implements OnInit, OnDestroy {
-  currentStep = 1; // 1: Details, 2: Calendar, 3: Payment, 4: Success
+  @ViewChild(StripeCardComponent) card!: StripeCardComponent;
+  
+  currentStep = 1;
   consultationForm: FormGroup;
-  dateControl = this.fb.control('');
   loading = false;
   error: string | null = null;
-  minDate = new Date().toISOString().split('T')[0];
   availableTimeSlots: TimeSlot[] = [];
   selectedSlot: TimeSlot | null = null;
   complete = false;
   private destroy$ = new Subject<void>();
+  private currentBooking: ConsultationBooking | null = null;
+  private pollingSubscription: Subscription | null = null;
 
-  cardOptions: StripeCardElementOptions = {
-    style: {
-      base: {
-        color: '#ffffff',
-        fontWeight: '400',
-        fontFamily: '"Inter", system-ui, sans-serif',
-        fontSize: '16px',
-        '::placeholder': {
-          color: 'rgba(255, 255, 255, 0.5)',
-        },
-        backgroundColor: 'transparent',
-      },
-      invalid: {
-        color: '#ff5b5b',
-        iconColor: '#ff5b5b',
-      },
-    },
-  };
-
-  elementsOptions: StripeElementsOptions = {
-    locale: 'en',
-  };
-
+  cardOptions: StripeCardElementOptions;
+  elementsOptions: StripeElementsOptions;
   weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   calendarDays: (Date | null)[] = [];
   currentDate = new Date();
   selectedDate: Date | null = null;
   currentMonthYear = '';
+  availableDates: Date[] = [];
+  userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  private lastAvailabilityResponse: any = null;
 
   constructor(
     private calendlyService: CalendlyService,
+    private consultationService: ConsultationService,
     private stripeService: GiftNubStripeService,
     private fb: FormBuilder
   ) {
@@ -326,7 +451,11 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
       type: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       name: ['', Validators.required],
+      notes: [''],
     });
+
+    this.cardOptions = this.stripeService.cardOptions;
+    this.elementsOptions = this.stripeService.elementsOptions;
   }
 
   ngOnInit(): void {
@@ -340,148 +469,225 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
     }
 
     if (suggestionId) {
-      // Handle suggestion context if needed
       console.log('Suggestion ID:', suggestionId);
     }
 
-    this.dateControl.valueChanges
+    // Initial fetch of availability
+    this.fetchMonthAvailability();
+    this.generateCalendar();
+
+    // Subscribe to booking status updates
+    this.consultationService
+      .getCurrentBookingStatus()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((date) => {
-        if (date) {
-          this.fetchAvailableTimeSlots(date);
+      .subscribe((booking) => {
+        if (booking) {
+          this.currentBooking = booking;
+          this.handleBookingStatusChange(booking);
         }
       });
-
-    this.generateCalendar();
   }
 
   ngOnDestroy(): void {
+    if (this.pollingSubscription) {
+      this.pollingSubscription.unsubscribe();
+    }
     this.destroy$.next();
     this.destroy$.complete();
   }
 
-  nextStep(): void {
-    if (this.currentStep === 1 && this.consultationForm.valid) {
-      this.currentStep = 2;
-      // Pre-fetch next available dates when moving to calendar
-      const today = new Date().toISOString().split('T')[0];
-      this.fetchAvailableTimeSlots(today);
-    } else if (this.currentStep === 2 && this.selectedSlot) {
-      this.currentStep = 3;
+  private handleBookingStatusChange(booking: ConsultationBooking): void {
+    switch (booking.status) {
+      case 'confirmed':
+        this.loading = false;
+        this.currentStep = 4; // Success state
+        break;
+      case 'failed':
+        this.loading = false;
+        this.error = 'Payment failed. Please try again.';
+        break;
+      case 'payment_processing':
+        // Start polling for status updates
+        this.startStatusPolling(booking.id);
+        break;
     }
   }
 
-  onChange(event: any): void {
-    this.complete = event.complete;
-  }
+  private startStatusPolling(bookingId: string): void {
+    const maxRetries = 36; // 3 minutes max polling time (5s * 36)
+    let retryCount = 0;
+    let retryDelay = 5000; // Start with 5 second delay
 
-  getConsultationFee(): string {
-    const type = this.consultationForm.get('type')?.value;
-    switch (type) {
-      case 'corporate':
-        return '$150.00';
-      case 'event':
-        return '$100.00';
-      case 'personal':
-        return '$50.00';
-      default:
-        return '--';
+    // Unsubscribe any existing polling
+    if (this.pollingSubscription) {
+      this.pollingSubscription.unsubscribe();
     }
+
+    this.pollingSubscription = interval(5000) // Poll every 5 seconds
+      .pipe(
+        takeUntil(this.destroy$),
+        switchMap(() => {
+          if (retryCount >= maxRetries) {
+            throw new Error('Polling timeout exceeded');
+          }
+          retryCount++;
+          return this.consultationService.getBookingStatus(bookingId).pipe(
+            catchError(error => {
+              retryDelay = Math.min(retryDelay * 1.5, 15000);
+              return timer(retryDelay).pipe(
+                mergeMap(() => throwError(() => error))
+              );
+            })
+          );
+        }),
+        takeWhile(booking => booking.status === 'payment_processing', true),
+        finalize(() => {
+          retryCount = 0;
+          retryDelay = 5000;
+          this.pollingSubscription = null;
+        })
+      )
+      .subscribe({
+        error: (error) => {
+          this.error = 'Failed to check payment status. Please contact support.';
+          this.loading = false;
+        }
+      });
   }
 
   async processPayment(): Promise<void> {
-    if (!this.complete || !this.selectedSlot) return;
+    if (!this.complete || !this.selectedSlot || !this.consultationForm.valid)
+      return;
 
     this.loading = true;
     this.error = null;
 
     try {
+      // Create booking and get payment intent
+      const bookingResponse = await this.consultationService
+        .createBooking({
+          ...this.consultationForm.value,
+          startTime: this.selectedSlot.startTime,
+        })
+        .toPromise();
+
+      if (!bookingResponse) {
+        throw new Error('Failed to create booking');
+      }
+
+      // Create payment method
       const { paymentMethod } = await this.stripeService
-        .createPaymentMethod(this.cardOptions)
+        .createPaymentMethod(this.card.element)
         .toPromise();
 
       if (paymentMethod) {
-        const amount = this.getAmountFromType(
-          this.consultationForm.get('type')?.value
-        );
-        const eventDetails = {
-          ...this.consultationForm.value,
-          startTime: this.selectedSlot.startTime,
-          endTime: this.selectedSlot.endTime,
-          paymentMethodId: paymentMethod.id,
-          amount,
-        };
-
-        // Schedule appointment and process payment in one go
-        await this.calendlyService
-          .scheduleWithPayment(eventDetails, amount)
-          .pipe(takeUntil(this.destroy$))
+        // Process payment
+        await this.stripeService
+          .processPayment(
+            paymentMethod.id,
+            bookingResponse.paymentIntent.clientSecret
+          )
           .toPromise();
-
-        this.currentStep = 4;
       }
     } catch (error: any) {
       this.error =
         error.message || 'Payment processing failed. Please try again.';
-    } finally {
       this.loading = false;
     }
   }
 
-  private fetchAvailableTimeSlots(date: string): void {
-    const startTime = new Date(date);
-    startTime.setHours(0, 0, 0, 0);
-
-    const endTime = new Date(date);
-    endTime.setHours(23, 59, 59, 999);
-
-    this.loading = true;
+  private fetchMonthAvailability(silent = false): void {
+    if (!silent) {
+      this.loading = true;
+    }
     this.error = null;
-    this.selectedSlot = null; // Reset selection when date changes
 
     this.calendlyService
-      .getAvailability(startTime.toISOString(), endTime.toISOString())
+      .getAvailability()
       .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
-          this.availableTimeSlots = this.processAvailabilityResponse(response);
-          this.loading = false;
+          this.processAvailabilityResponse(response);
+          if (!silent) {
+            this.loading = false;
+          }
         },
         error: (error) => {
-          this.error =
-            'Failed to fetch available time slots. Please try again.';
-          this.loading = false;
+          this.error = 'Failed to fetch availability. Please try again.';
+          if (!silent) {
+            this.loading = false;
+          }
         },
       });
   }
 
-  private processAvailabilityResponse(response: any): TimeSlot[] {
-    if (!this.selectedDate) return [];
-    
-    // Generate time slots from 9 AM to 5 PM
-    const slots: TimeSlot[] = [];
-    const date = this.selectedDate.toISOString().split('T')[0];
-    
-    // Business hours: 9 AM to 5 PM
-    const hours = [9, 10, 11, 12, 13, 14, 15, 16];
-    
-    for (const hour of hours) {
-      const startTime = `${date}T${hour.toString().padStart(2, '0')}:00:00`;
-      const endTime = `${date}T${(hour + 1).toString().padStart(2, '0')}:00:00`;
-      
-      // Check if the slot exists in the response and is available
-      const isAvailable = !response?.bookedSlots?.some(
-        (bookedSlot: any) => bookedSlot.startTime === startTime
-      );
-      
-      slots.push({
-        startTime,
-        endTime,
-        available: isAvailable
-      });
+  private processAvailabilityResponse(response: any): void {
+    this.lastAvailabilityResponse = response;
+
+    // Convert UTC times to user's timezone and get unique dates
+    this.availableDates = Array.from(
+      new Set(
+        response.availableSlots.map((slot: any) => {
+          const localDate = toZonedTime(
+            new Date(slot.start_time),
+            this.userTimezone
+          );
+          return startOfDay(localDate);
+        })
+      )
+    );
+
+    // If a date is selected, update its time slots
+    if (this.selectedDate) {
+      // Store the currently selected slot time for comparison
+      const currentSelectedTime = this.selectedSlot?.startTime;
+
+      this.updateTimeSlots(response);
+
+      // If we had a selected slot, check if it's still valid in the new data
+      if (currentSelectedTime) {
+        const isStillAvailable = this.availableTimeSlots.some(
+          (slot) => slot.startTime === currentSelectedTime
+        );
+
+        if (isStillAvailable) {
+          // Restore the selection
+          this.selectedSlot =
+            this.availableTimeSlots.find(
+              (slot) => slot.startTime === currentSelectedTime
+            ) || null;
+        } else {
+          // Only clear selection if the slot is no longer available
+          this.selectedSlot = null;
+        }
+      }
     }
-    
-    return slots;
+  }
+
+  private updateTimeSlots(response: any): void {
+    if (!this.selectedDate) return;
+
+    // Convert all available slots to user's timezone and filter for selected date
+    this.availableTimeSlots = response.availableSlots
+      .map((slot: any) => {
+        const startTime = toZonedTime(
+          new Date(slot.start_time),
+          this.userTimezone
+        );
+        return {
+          startTime: startTime.toISOString(),
+          available: true,
+        };
+      })
+      .filter(
+        (slot: TimeSlot) =>
+          this.selectedDate &&
+          isSameDay(new Date(slot.startTime), this.selectedDate)
+      )
+      .sort(
+        (a: TimeSlot, b: TimeSlot) =>
+          new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
+      );
   }
 
   selectTimeSlot(slot: TimeSlot): void {
@@ -489,64 +695,8 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
   }
 
   formatTime(isoString: string): string {
-    return new Date(isoString).toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-    });
-  }
-
-  async scheduleAppointment(): Promise<void> {
-    if (!this.selectedSlot) return;
-
-    this.loading = true;
-    this.error = null;
-
-    const paymentMethodId = sessionStorage.getItem('paymentMethodId');
-    if (!paymentMethodId) {
-      this.error = 'Payment information not found';
-      this.loading = false;
-      return;
-    }
-
-    const eventDetails = {
-      ...this.consultationForm.value,
-      startTime: this.selectedSlot.startTime,
-      endTime: this.selectedSlot.endTime,
-      paymentMethodId,
-    };
-
-    const amount = this.getAmountFromType(
-      this.consultationForm.get('type')?.value
-    );
-
-    this.calendlyService
-      .scheduleWithPayment(eventDetails, amount)
-      .pipe(takeUntil(this.destroy$))
-      .subscribe({
-        next: () => {
-          this.currentStep = 4;
-          this.loading = false;
-          // Clear stored payment method
-          sessionStorage.removeItem('paymentMethodId');
-        },
-        error: (error) => {
-          this.error = error.message;
-          this.loading = false;
-        },
-      });
-  }
-
-  private getAmountFromType(type: string): number {
-    switch (type) {
-      case 'corporate':
-        return 15000; // $150.00
-      case 'event':
-        return 10000; // $100.00
-      case 'personal':
-      default:
-        return 5000; // $50.00
-    }
+    const date = new Date(isoString);
+    return format(date, 'h:mma').toLowerCase();
   }
 
   generateCalendar(): void {
@@ -603,52 +753,94 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
 
   getDayClasses(day: Date | null): string {
     if (!day) return 'p-2 text-center text-neutral-600';
-    
-    const isToday = this.isToday(day);
-    const isSelected = this.isSelectedDate(day);
-    const isDisabled = this.isDisabledDate(day);
-    
+
+    const isCurrentDay = isToday(day);
+    const isSelected = this.selectedDate && isSameDay(day, this.selectedDate);
+    const isDisabled =
+      isBefore(day, startOfDay(new Date())) || !this.isDateAvailable(day);
+
     return `p-2 text-center rounded-lg cursor-pointer transition-colors ${
-      isDisabled ? 'text-neutral-600 cursor-not-allowed' :
-      isSelected ? 'bg-primary-600 text-white' :
-      isToday ? 'bg-neutral-600 text-white' : 'text-white hover:bg-primary-600/20'
+      isDisabled
+        ? 'text-neutral-600 cursor-not-allowed'
+        : isSelected
+        ? 'bg-primary-600 text-white'
+        : isCurrentDay
+        ? 'bg-neutral-600 text-white'
+        : 'text-white hover:bg-primary-600/20'
     }`;
   }
 
   getTimeSlotClasses(slot: TimeSlot): string {
     const isSelected = this.selectedSlot === slot;
     return `p-3 text-center rounded-lg transition-colors ${
-      !slot.available ? 'bg-neutral-700 text-neutral-500 cursor-not-allowed' :
-      isSelected ? 'bg-primary-600 text-white' : 'bg-neutral-800 text-white hover:bg-primary-600/20'
+      !slot.available
+        ? 'bg-neutral-700 text-neutral-500 cursor-not-allowed'
+        : isSelected
+        ? 'bg-primary-600 text-white'
+        : 'bg-neutral-800 text-white hover:bg-primary-600/20'
     }`;
   }
 
-  isToday(date: Date): boolean {
-    const today = new Date();
-    return (
-      date.getDate() === today.getDate() &&
-      date.getMonth() === today.getMonth() &&
-      date.getFullYear() === today.getFullYear()
+  isDateAvailable(date: Date): boolean {
+    return this.availableDates.some((availableDate) =>
+      isSameDay(availableDate, date)
     );
-  }
-
-  isSelectedDate(date: Date): boolean {
-    return (
-      this.selectedDate?.getDate() === date.getDate() &&
-      this.selectedDate?.getMonth() === date.getMonth() &&
-      this.selectedDate?.getFullYear() === date.getFullYear()
-    );
-  }
-
-  isDisabledDate(date: Date): boolean {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return date < today;
   }
 
   selectDate(date: Date | null): void {
-    if (!date || this.isDisabledDate(date)) return;
+    if (!date || !this.isDateAvailable(date)) return;
+
     this.selectedDate = date;
-    this.fetchAvailableTimeSlots(date.toISOString().split('T')[0]);
+    this.selectedSlot = null;
+
+    // Immediately update time slots with cached data
+    if (this.lastAvailabilityResponse) {
+      this.updateTimeSlots(this.lastAvailabilityResponse);
+    }
+
+    // Fetch fresh data in the background
+    this.fetchMonthAvailability(true);
+  }
+
+  clearDateSelection(): void {
+    // First hide time slots
+    const timeSlotView = document.querySelector('.time-slots-view');
+    if (timeSlotView) {
+      timeSlotView.classList.add('opacity-0');
+    }
+
+    // Wait for fade out before clearing selection
+    setTimeout(() => {
+      this.selectedDate = null;
+      this.selectedSlot = null;
+    }, 150); // Half of the transition duration
+  }
+
+  clearTimeSelection(): void {
+    this.selectedSlot = null;
+  }
+
+  formatDateTime(isoString: string): string {
+    if (!isoString) return '';
+    const date = new Date(isoString);
+    return format(date, 'MMM d, h:mma').toLowerCase();
+  }
+
+  getConsultationFee(): string {
+    const type = this.consultationForm.get('type')?.value;
+    switch (type) {
+      case 'corporate':
+        return '$150.00';
+      case 'event':
+        return '$100.00';
+      case 'personal':
+        return '$50.00';
+      default:
+        return '--';
+    }
+  }
+
+  onChange(event: any): void {
+    this.complete = event.complete;
   }
 }
