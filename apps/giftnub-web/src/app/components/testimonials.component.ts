@@ -67,13 +67,28 @@ import { CommonModule } from '@angular/common';
           </button>
 
           <!-- Testimonials Slider -->
-          <div class="overflow-hidden">
-            <div class="flex transition-transform duration-500" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+          <div class="overflow-hidden touch-pan-y">
+            <div 
+              class="flex select-none touch-pan-y"
+              [class.transition-transform]="!isDragging"
+              [class.duration-300]="!isDragging"
+              [class.cursor-grab]="!isDragging"
+              [class.cursor-grabbing]="isDragging"
+              [style.transform]="transform"
+              (mousedown)="onDragStart($event)"
+              (mousemove)="onDragMove($event)"
+              (mouseup)="onDragEnd($event)"
+              (mouseleave)="onDragEnd($event)"
+              (touchstart)="onDragStart($event)"
+              (touchmove)="onDragMove($event)"
+              (touchend)="onDragEnd($event)"
+              (touchcancel)="onDragEnd($event)"
+            >
               <!-- Individual Testimonial -->
-              <div *ngFor="let testimonial of testimonials" class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+              <div *ngFor="let testimonial of testimonials" [style.width]="(100 / slidesPerView) + '%'" class="flex-shrink-0 px-4">
                 <div class="group relative h-full">
                   <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
-                  <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:scale-[1.02] hover:bg-black/30 group-hover:border-white/20 h-full flex flex-col">
+                  <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:scale-[1.02] hover:bg-black/30 group-hover:border-white/20 h-[400px] flex flex-col">
                     <div class="flex items-center mb-6">
                       <div class="w-12 h-12 rounded-xl bg-gradient-to-r from-primary-500/20 to-secondary-500/20 flex items-center justify-center">
                         <span class="text-white/90 text-xl font-bold">{{ testimonial.initials }}</span>
@@ -83,7 +98,9 @@ import { CommonModule } from '@angular/common';
                         <p class="text-white/50">{{ testimonial.type }}</p>
                       </div>
                     </div>
-                    <p class="text-white/70 mb-6 flex-grow">{{ testimonial.content }}</p>
+                    <div class="text-white/70 mb-6 flex-grow overflow-y-auto custom-scrollbar">
+                      <p class="pr-2">{{ testimonial.content }}</p>
+                    </div>
                     <div class="flex text-secondary-500">
                       <ng-container *ngFor="let star of [1,2,3,4,5]">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -100,10 +117,10 @@ import { CommonModule } from '@angular/common';
           <!-- Dots Navigation -->
           <div class="flex justify-center mt-8 space-x-2">
             <button
-              *ngFor="let _ of testimonials; let i = index"
-              (click)="goToSlide(i)"
+              *ngFor="let i of [].constructor(totalSlides); let idx = index; trackBy: trackByFn"
+              (click)="goToSlide(idx)"
               class="w-2.5 h-2.5 rounded-full transition-all duration-300"
-              [ngClass]="{'bg-primary-500': currentIndex === i, 'bg-white/20': currentIndex !== i}"
+              [ngClass]="{'bg-primary-500': currentIndex === idx, 'bg-white/20': currentIndex !== idx}"
             ></button>
           </div>
         </div>
@@ -142,46 +159,201 @@ import { CommonModule } from '@angular/common';
     .animate-float-fast {
       animation: float-fast 4s ease-in-out infinite;
     }
+
+    .custom-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+    }
   `]
 })
 export class TestimonialsComponent {
   currentIndex = 0;
   testimonials = [
     {
-      name: 'Sarah Johnson',
-      initials: 'SJ',
-      type: 'Personal Gift',
-      content: 'The AI suggestions were spot on! Found the perfect anniversary gift for my husband in minutes. The presentation was absolutely stunning.',
+      name: 'Ola Sola-Ilori',
+      initials: 'OS',
+      type: 'Customer',
+      content: 'I had a really great experience with the Gift Nub. The gift boxes were very beautiful, affordable, the items were curated for the individuals I purchased them for. Thank you so much.',
     },
     {
-      name: 'Tech Corp',
-      initials: 'TC',
-      type: 'Corporate Event',
-      content: 'Handled our company-wide gifting for 500 employees flawlessly. The personalization and attention to detail was impressive.',
+      name: 'Oyetunji Jeremiah',
+      initials: 'OJ',
+      type: 'Customer',
+      content: 'When it comes to ideas and curating gifts, The Gift Nub has got you completely covered. Efficient service delivery and unique gift idea options to choose from that wows the recipients.',
     },
     {
-      name: 'Michael Chen',
-      initials: 'MC',
-      type: 'Wedding Gift',
-      content: 'Their event gifting service made our wedding favors truly special. Every guest was amazed by the thoughtful presentation.',
+      name: 'Johnny Rene',
+      initials: 'JR',
+      type: 'Business Client',
+      content: 'The hamper gifts was amazing all my clients and employees said it was so generous and well put together.',
     },
     {
-      name: 'Emma Davis',
-      initials: 'ED',
-      type: 'Birthday Gift',
-      content: 'The VIP consultation was worth every penny. They created a custom gift experience that exceeded all expectations.',
+      name: 'Oluwapelumi Odebunmi',
+      initials: 'OO',
+      type: 'Customer',
+      content: 'The Gift Nub is truly the definition of professionalism, warmth and customer satisfaction. From consultation to them fully understanding clients needs and also, to them curating boxes filled with love and thoughtfulness, you can definitely trust them to make every moment an unforgettable memory.',
+    },
+    {
+      name: 'Ola Ofuya',
+      initials: 'OO',
+      type: 'Repeat Customer',
+      content: "The Gift Nub's got gift curation down pat!! Can't go wrong with them cos they've knocked it out of the park every time I've ordered personal gifts or business gift hampers. They curate unique and thoughtful gifts, and the customer service is top notch, very responsive and detailed in their communications! Love it!!",
+    },
+    {
+      name: 'Paul Adeyeye',
+      initials: 'PA',
+      type: 'Customer',
+      content: 'I ordered a surprise Christmas Hamper for my friend. I was so blown away by their professionalism and dedication. They went above and beyond to deliver. My friend was so impressed. Thank you so much for the great customer service. I can\'t wait to place another order.',
+    },
+    {
+      name: 'Olumuyiwa Adejuwon',
+      initials: 'OA',
+      type: 'Customer',
+      content: 'It was a Christmas gift to a friend, and your services picked, packaged and delivered an exquisite gift fit for the occasion. My friend loved it and was very pleased with the delivery. I have to add that helping out with gift ideas for our loved ones is so helpful. It makes the process of decision-making a whole lot easier. Thank you, and keep it up!',
+    },
+    {
+      name: 'Jibike',
+      initials: 'JB',
+      type: 'Customer',
+      content: "It was a Val's gift. I really appreciate the fact that you were able to get the air fryer within a short time and your package was really special. She loved her package and called to show her appreciation, which I love so much.",
+    },
+    {
+      name: 'Sola O',
+      initials: 'SO',
+      type: 'Customer',
+      content: "I needed a gift for a dear friend's 40th birthday. It was a last minute ask but Deola of Gift Nub came through! The service was prompt and communication throughout the process was great. The celebrant loved her gift! Thank you!",
+    },
+    {
+      name: 'Bola Adesope',
+      initials: 'BA',
+      type: 'Professional',
+      content: "As a Busy Professional with a hectic schedule, it's often a huge task finding the time to curate a perfect gifting for someone you love and care about. And when I found TheGiftNub, it was a breath of relief. I needed to show my utmost appreciation for my beloved during her birthday and Valentine's. All I needed was to share my vision with the guys at TheGiftNub….and the result, what they delivered was beyond my expectations. The speed of delivery, the quality of the gifts and the excellence in the package wowed me and my wife. I highly recommend TheGiftNub anytime, any day, any occasion.",
     }
   ];
 
+  private viewportSize: 'sm' | 'md' | 'lg' = 'sm';
+  isDragging = false;
+  dragStartX = 0;
+  currentTranslateX = 0;
+  dragDelta = 0;
+  private readonly DRAG_THRESHOLD = 0.2; // 20% of slide width
+
+  constructor() {
+    this.updateViewportSize();
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', () => this.updateViewportSize());
+    }
+  }
+
+  private updateViewportSize() {
+    if (typeof window === 'undefined') return;
+    
+    if (window.innerWidth >= 1024) {
+      this.viewportSize = 'lg';
+    } else if (window.innerWidth >= 768) {
+      this.viewportSize = 'md';
+    } else {
+      this.viewportSize = 'sm';
+    }
+  }
+
+  get slidesPerView(): number {
+    switch (this.viewportSize) {
+      case 'lg': return 3;
+      case 'md': return 2;
+      default: return 1;
+    }
+  }
+
+  get totalSlides(): number {
+    return Math.ceil(this.testimonials.length / this.slidesPerView);
+  }
+
   nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
+    this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
   }
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
+    this.currentIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
   }
 
   goToSlide(index: number) {
     this.currentIndex = index;
+  }
+
+  trackByFn(index: number): number {
+    return index;
+  }
+
+  onDragStart(event: MouseEvent | TouchEvent) {
+    if (event instanceof MouseEvent && event.button !== 0) return; // Only handle left mouse button
+    
+    this.isDragging = true;
+    this.dragStartX = this.getEventX(event);
+    this.currentTranslateX = -this.currentIndex * (100 / this.slidesPerView);
+    this.dragDelta = 0;
+  }
+
+  onDragMove(event: MouseEvent | TouchEvent) {
+    if (!this.isDragging) return;
+    event.preventDefault();
+
+    const currentX = this.getEventX(event);
+    const containerWidth = (event.target as HTMLElement).clientWidth;
+    this.dragDelta = ((currentX - this.dragStartX) / containerWidth) * 100;
+
+    // Limit drag at boundaries with resistance
+    const maxDrag = 0;
+    const minDrag = -((this.totalSlides - 1) * (100 / this.slidesPerView));
+    
+    if (this.currentTranslateX + this.dragDelta > maxDrag) {
+      this.dragDelta = this.dragDelta * 0.2; // Add resistance at start
+    } else if (this.currentTranslateX + this.dragDelta < minDrag) {
+      this.dragDelta = this.dragDelta * 0.2; // Add resistance at end
+    }
+  }
+
+  onDragEnd(event: MouseEvent | TouchEvent) {
+    if (!this.isDragging) return;
+    
+    const slideWidth = 100 / this.slidesPerView;
+    const dragPercentage = Math.abs(this.dragDelta / slideWidth);
+    
+    if (dragPercentage > this.DRAG_THRESHOLD) {
+      if (this.dragDelta > 0 && this.currentIndex > 0) {
+        this.currentIndex--;
+      } else if (this.dragDelta < 0 && this.currentIndex < this.totalSlides - 1) {
+        this.currentIndex++;
+      }
+    }
+
+    this.isDragging = false;
+    this.dragDelta = 0;
+  }
+
+  private getEventX(event: MouseEvent | TouchEvent): number {
+    return event instanceof MouseEvent 
+      ? event.clientX 
+      : event.touches[0]?.clientX || 0;
+  }
+
+  get transform(): string {
+    const baseTranslate = -this.currentIndex * (100 / this.slidesPerView);
+    const dragOffset = this.isDragging ? this.dragDelta : 0;
+    return `translateX(${baseTranslate + dragOffset}%)`;
   }
 }
