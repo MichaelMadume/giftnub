@@ -153,7 +153,19 @@ import { CommonModule } from '@angular/common';
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <a href="mailto:support@giftnub.com">support&#64;giftnub.com</a>
+                <a href="mailto:adeola.adejuwon@gmail.com">adeola.adejuwon&#64;gmail.com</a>
+              </li>
+              <li class="flex items-center text-white/70 hover:text-white transition-all group">
+                <svg
+                  class="w-5 h-5 mr-3 group-hover:scale-110 transition-all duration-300"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.016 18.6h-2.472v-3.9c0-.923-.018-2.11-1.287-2.11-1.29 0-1.487 1.005-1.487 2.043v3.967H9.297V9.6h2.376v1.09h.033c.33-.627 1.14-1.29 2.347-1.29 2.51 0 2.97 1.653 2.97 3.803v4.397zM7.332 8.51a1.437 1.437 0 110-2.874 1.437 1.437 0 010 2.874zM5.88 18.6h2.907V9.6H5.88v9z"
+                  />
+                </svg>
+                <a href="https://www.linkedin.com/in/adejeremiah" target="_blank" rel="noopener noreferrer">linkedin.com/in/adejeremiah</a>
               </li>
               <li class="flex items-center text-white/70 hover:text-white transition-all group">
                 <svg
@@ -166,10 +178,10 @@ import { CommonModule } from '@angular/common';
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
                   />
                 </svg>
-                1-800-GIFTNUB
+                <span>Toronto, Ontario, Canada</span>
               </li>
             </ul>
           </div>
