@@ -6,36 +6,48 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "amplify/amplify_outputs.json",
-        "hash": "15530557022821264238"
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
+        "file": "cdk/lib/cdk-stack.ts",
+        "hash": "628726973373303898"
       },
       {
-        "file": "amplify/functions/calendly-operations/handler.ts",
-        "hash": "15199061328623021577"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
-        "file": "README.md",
-        "hash": "4290351960845421863"
+        "file": "cdk/bin/cdk.ts",
+        "hash": "17562894424700673471"
+      },
+      {
+        "file": "cdk/test/calendly-operations.ts",
+        "hash": "5443893330763508746"
       },
       {
         "file": "amplify/backend.ts",
         "hash": "16315896463741095318"
       },
       {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
+        "file": "cdk/shared/utils/package.json",
+        "hash": "6222394763578143227"
       },
       {
-        "file": "title=apps/giftnub-web/src/app/components/payment.component.ts",
-        "hash": "18164486227812464591"
+        "file": "package.json",
+        "hash": "8074867988287680266"
       },
       {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
+        "file": "package-lock.json",
+        "hash": "7476536009146875458"
+      },
+      {
+        "file": "cdk/lambda/calendly-operations/package.json",
+        "hash": "10017668513772563522"
+      },
+      {
+        "file": "amplify/amplify_outputs.json",
+        "hash": "15530557022821264238"
       },
       {
         "file": "tsconfig.base.json",
@@ -46,16 +58,12 @@
         "hash": "13929314084764119574"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
+        "file": "README.md",
+        "hash": "4290351960845421863"
       },
       {
         "file": "amplify/package.json",
         "hash": "11399742635005673469"
-      },
-      {
-        "file": "amplify/functions/calendly-operations/resource.ts",
-        "hash": "7132814510374069580"
       },
       {
         "file": ".prettierignore",
@@ -66,60 +74,112 @@
         "hash": "7663861978715868291"
       },
       {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
+        "file": "cdk/lambda/stripe-payments/package.json",
+        "hash": "672995604015723078"
       },
       {
-        "file": "amplify/functions/stripe-payments/resource.ts",
-        "hash": "4194371567171065284"
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
       },
       {
-        "file": "amplify.yml",
-        "hash": "9716161090996639436"
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
       },
       {
-        "file": ".gitignore",
-        "hash": "5710854610825202009"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "7476536009146875458"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
+        "file": "cdk/package.json",
+        "hash": "15025791410697605557"
       },
       {
         "file": "amplify/yarn.lock",
         "hash": "10060627216400366570"
       },
       {
-        "file": "amplify/tsconfig.json",
-        "hash": "7348475233595919444"
+        "file": "cdk/lambda/calendly-operations/src/index.ts",
+        "hash": "8980565212567172816"
       },
       {
-        "file": "amplify/functions/stripe-payments/handler.ts",
-        "hash": "6259377642028904324"
+        "file": "cdk/.gitignore",
+        "hash": "7631380206057829858"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
+        "file": "cdk/lambda/stripe-payments/package-lock.json",
+        "hash": "13408055682555165975"
       },
       {
-        "file": "amplify/functions/stripe-payments/.env.local",
-        "hash": "13486439275542310775"
+        "file": ".vscode/launch.json",
+        "hash": "3737579961210941045"
       },
       {
-        "file": "title=apps/giftnub-web/src/app/services/stripe-payment.service.ts",
-        "hash": "18164486227812464591"
+        "file": "cdk/lambda/stripe-payments/index.ts",
+        "hash": "5100079258847910490"
       },
       {
-        "file": "package.json",
-        "hash": "8074867988287680266"
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "amplify/functions/calendly-operations/resource.ts",
+        "hash": "7132814510374069580"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "12500592029234382244"
+      },
+      {
+        "file": "cdk/README.md",
+        "hash": "6316113852016720853"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
+      },
+      {
+        "file": "cdk/test/stripe-payments.ts",
+        "hash": "157374859642863631"
+      },
+      {
+        "file": "amplify/functions/calendly-operations/handler.ts",
+        "hash": "15199061328623021577"
+      },
+      {
+        "file": "cdk/package-lock.json",
+        "hash": "1507291256310589406"
       },
       {
         "file": "nx.json",
         "hash": "10975567735463464701"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "cdk/.npmignore",
+        "hash": "18043273588612545309"
+      },
+      {
+        "file": "cdk/shared/utils/environment.ts",
+        "hash": "12838311040442243965"
+      },
+      {
+        "file": "cdk/tsconfig.json",
+        "hash": "11569800215520768980"
+      },
+      {
+        "file": "cdk/cdk.json",
+        "hash": "15415204497763368904"
+      },
+      {
+        "file": "amplify.yml",
+        "hash": "9716161090996639436"
+      },
+      {
+        "file": "amplify/tsconfig.json",
+        "hash": "7348475233595919444"
+      },
+      {
+        "file": "cdk/lambda/calendly-operations/tsconfig.json",
+        "hash": "12907708894617683440"
       }
     ],
     "projectFileMap": {
@@ -150,7 +210,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/app.component.ts",
-          "hash": "12996865621684330420",
+          "hash": "11946669492354901894",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -158,7 +218,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/app.config.ts",
-          "hash": "15464441497066718863",
+          "hash": "6404738658571980509",
           "deps": [
             "npm:@angular/core",
             "npm:ngx-stripe",
@@ -200,11 +260,10 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/consultation-booking.component.ts",
-          "hash": "9003387192730042952",
+          "hash": "807504328676254808",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
-            "npm:@angular/router",
             "npm:@angular/forms",
             "npm:rxjs",
             "npm:@stripe/stripe-js",
@@ -388,7 +447,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/services/stripe.service.ts",
-          "hash": "2531026110173235737",
+          "hash": "6697324996245832079",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -411,11 +470,11 @@
         },
         {
           "file": "apps/giftnub-web/src/environments/environment.prod.ts",
-          "hash": "2255154772793004377"
+          "hash": "18026667761653530340"
         },
         {
           "file": "apps/giftnub-web/src/environments/environment.ts",
-          "hash": "3651344443059781300"
+          "hash": "6095760273750955606"
         },
         {
           "file": "apps/giftnub-web/src/favicon.ico",

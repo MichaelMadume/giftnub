@@ -1,0 +1,11 @@
+{
+  "name": "@giftnub/shared-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.525.0"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0"
+  }
+} 

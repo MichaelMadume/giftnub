@@ -18604,11 +18604,6 @@
       },
       {
         "source": "giftnub-web",
-        "target": "npm:@angular/router",
-        "type": "static"
-      },
-      {
-        "source": "giftnub-web",
         "target": "npm:rxjs",
         "type": "static"
       },

@@ -15,6 +15,7 @@ import { EventGiftingComponent } from './components/event-gifting.component';
 import { TestimonialsComponent } from './components/testimonials.component';
 import { FaqComponent } from './components/faq.component';
 import { FooterComponent } from './components/footer.component';
+import { ConsultationBookingComponent } from './components/consultation-booking.component';
 
 @Component({
   selector: 'giftnub-root',
@@ -29,7 +30,8 @@ import { FooterComponent } from './components/footer.component';
     EventGiftingComponent,
     TestimonialsComponent,
     FaqComponent,
-    FooterComponent
+    FooterComponent,
+    ConsultationBookingComponent
   ],
   template: `
     <div class="min-h-screen bg-neutral-900 text-white">
@@ -44,6 +46,9 @@ import { FooterComponent } from './components/footer.component';
       <giftnub-gift-gallery></giftnub-gift-gallery>
       <div class="bg-neutral-950">
         <giftnub-event-gifting></giftnub-event-gifting>
+      </div>
+      <div id="consultationBooking">
+        <giftnub-consultation-booking></giftnub-consultation-booking>
       </div>
       <giftnub-testimonials></giftnub-testimonials>
       <div class="bg-neutral-950">

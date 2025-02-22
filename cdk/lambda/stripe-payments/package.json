@@ -1,0 +1,9 @@
+{
+  "name": "stripe-payments-lambda",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "stripe": "^17.6.0",
+    "@types/aws-lambda": "~8.10.136"
+  }
+} 
