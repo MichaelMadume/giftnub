@@ -40,7 +40,7 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
     const style = this.renderer.createElement('style');
     style.textContent = `
       @keyframes imageFade {
-        0%, 100% { 
+        0% { 
           opacity: ${this.minOpacity};
           transform: scale(0.98);
           filter: brightness(0.8) contrast(1.1) blur(1px);
@@ -49,6 +49,11 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
           opacity: ${this.maxOpacity};
           transform: scale(1);
           filter: brightness(1) contrast(1.2) blur(0px);
+        }
+        100% { 
+          opacity: ${this.minOpacity};
+          transform: scale(0.98);
+          filter: brightness(0.8) contrast(1.1) blur(1px);
         }
       }
     `;
@@ -92,6 +97,7 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
       this.renderer.setStyle(img, 'left', `${pos.xPos + pos.xOffset}px`);
       this.renderer.setStyle(img, 'top', `${pos.yPos + pos.yOffset}px`);
       this.renderer.setStyle(img, 'pointer-events', 'none');
+      this.renderer.setStyle(img, 'opacity', `${this.minOpacity}`);
       this.renderer.setStyle(img, 'animation', `imageFade ${pos.animationDuration}s infinite ease-in-out`);
       this.renderer.setStyle(img, 'animation-delay', `${pos.animationDelay}s`);
       this.renderer.setStyle(img, 'filter', 'brightness(0.7)');
