@@ -6,72 +6,68 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "cdk/lambda/stripe-payments/package.json",
-        "hash": "1312421242231979806"
-      },
-      {
-        "file": "cdk/.gitignore",
-        "hash": "7631380206057829858"
-      },
-      {
-        "file": "cdk/bin/cdk.ts",
-        "hash": "17562894424700673471"
-      },
-      {
-        "file": "cdk/test/stripe-payments.ts",
-        "hash": "1648711723951085286"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": "cdk/test/calendly-operations.ts",
-        "hash": "16749334443824948593"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
-      },
-      {
-        "file": "cdk/lambda/calendly-operations/tsconfig.json",
-        "hash": "12907708894617683440"
-      },
-      {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
-      },
-      {
-        "file": "cdk/shared/utils/package.json",
-        "hash": "6222394763578143227"
-      },
-      {
-        "file": "cdk/lambda/calendly-operations/src/index.ts",
-        "hash": "5691440287566810130"
-      },
-      {
-        "file": "cdk/.npmignore",
-        "hash": "18043273588612545309"
+        "file": "cdk/cdk.json",
+        "hash": "15415204497763368904"
       },
       {
         "file": "cdk/README.md",
         "hash": "6316113852016720853"
       },
       {
-        "file": "cdk/cdk.json",
-        "hash": "15415204497763368904"
+        "file": "cdk/lambda/calendly-operations/tsconfig.json",
+        "hash": "12907708894617683440"
+      },
+      {
+        "file": "cdk/shared/utils/package.json",
+        "hash": "6222394763578143227"
+      },
+      {
+        "file": "cdk/.gitignore",
+        "hash": "7631380206057829858"
       },
       {
         "file": "cdk/lambda/stripe-payments/package-lock.json",
         "hash": "13408055682555165975"
       },
       {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
       },
       {
-        "file": "cdk/lambda/calendly-operations/package.json",
-        "hash": "12668643848855123974"
+        "file": "package-lock.json",
+        "hash": "4558723666510463442"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "cdk/lambda/stripe-payments/index.ts",
+        "hash": "15821106476018003071"
+      },
+      {
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
+      },
+      {
+        "file": "cdk/package-lock.json",
+        "hash": "16908948153366502901"
+      },
+      {
+        "file": "cdk/.npmignore",
+        "hash": "18043273588612545309"
+      },
+      {
+        "file": "cdk/shared/utils/environment.ts",
+        "hash": "12838311040442243965"
+      },
+      {
+        "file": "cdk/test/stripe-payments.ts",
+        "hash": "1648711723951085286"
       },
       {
         "file": "cdk/lambda/consultation-bookings/package.json",
@@ -82,28 +78,56 @@
         "hash": "4677024595806562681"
       },
       {
-        "file": ".gitignore",
-        "hash": "12500592029234382244"
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
       },
       {
-        "file": "cdk/lib/cdk-stack.ts",
-        "hash": "17252688790078430946"
+        "file": "cdk/bin/cdk.ts",
+        "hash": "17562894424700673471"
+      },
+      {
+        "file": "cdk/lambda/calendly-operations/src/index.ts",
+        "hash": "5691440287566810130"
       },
       {
         "file": ".eslintignore",
         "hash": "7663861978715868291"
       },
       {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10975567735463464701"
+      },
+      {
+        "file": "cdk/package.json",
+        "hash": "3057514992424672510"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "README.md",
+        "hash": "4290351960845421863"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "12500592029234382244"
+      },
+      {
         "file": "cdk/lambda/consultation-bookings/index.ts",
         "hash": "8535002061241072494"
       },
       {
-        "file": "cdk/package-lock.json",
-        "hash": "16908948153366502901"
-      },
-      {
-        "file": "cdk/lambda/stripe-payments/index.ts",
-        "hash": "15821106476018003071"
+        "file": "cdk/lib/cdk-stack.ts",
+        "hash": "17252688790078430946"
       },
       {
         "file": "package.json",
@@ -114,48 +138,24 @@
         "hash": "3737579961210941045"
       },
       {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
-      },
-      {
-        "file": "README.md",
-        "hash": "4290351960845421863"
-      },
-      {
-        "file": "nx.json",
-        "hash": "10975567735463464701"
-      },
-      {
-        "file": "cdk/shared/utils/environment.ts",
-        "hash": "12838311040442243965"
-      },
-      {
-        "file": "cdk/package.json",
-        "hash": "3057514992424672510"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
         "file": "amplify.yml",
         "hash": "9716161090996639436"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "4558723666510463442"
       },
       {
         "file": ".vscode/extensions.json",
         "hash": "235626400633494639"
       },
       {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
+        "file": "cdk/lambda/stripe-payments/package.json",
+        "hash": "1312421242231979806"
       },
       {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
+        "file": "cdk/lambda/calendly-operations/package.json",
+        "hash": "12668643848855123974"
+      },
+      {
+        "file": "cdk/test/calendly-operations.ts",
+        "hash": "16749334443824948593"
       }
     ],
     "projectFileMap": {
@@ -312,7 +312,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.html",
-          "hash": "6867250020018738018"
+          "hash": "10181409376201670033"
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.scss",
@@ -327,7 +327,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/gift-gallery.component.ts",
-          "hash": "14541953546568195365",
+          "hash": "15791898935874197307",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
@@ -474,6 +474,66 @@
         {
           "file": "apps/giftnub-web/src/assets/founder.jpeg",
           "hash": "16187859021030476953"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-1-luxury-wellness-package.jpg",
+          "hash": "16645569088361699877"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-10-birthday-celebration-box.jpg",
+          "hash": "6301818002314995850"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-11-snowman-holiday-boxes.jpg",
+          "hash": "10288505174078252982"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-12-baby-essentials-basket.jpg",
+          "hash": "10812073335908096516"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-13-ultimate-baby-hamper.jpg",
+          "hash": "7215477630019037141"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-14-holiday-indulgence-basket.jpg",
+          "hash": "476069915728888703"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-15-gourmet-tasting-board.jpg",
+          "hash": "10825490844535313579"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-16-festive-pine-hamper.jpg",
+          "hash": "12946821368899133372"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-2-corporate-welcome-kit.jpg",
+          "hash": "2509190190754727394"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-3-anniversary-celebration-box.jpg",
+          "hash": "14517992057893211255"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-4-executive-gift-suite.jpg",
+          "hash": "17219358609773505832"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-6-team-building-kit.jpg",
+          "hash": "10082628562047571190"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-7-wedding-party-gift-set.jpg",
+          "hash": "3082482396633122868"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-8-birthday-celebration-box.jpg",
+          "hash": "10717676011477833016"
+        },
+        {
+          "file": "apps/giftnub-web/src/assets/gifts/gift-9-birthday-celebration-box.jpg",
+          "hash": "13371435769074338455"
         },
         {
           "file": "apps/giftnub-web/src/environments/environment.prod.ts",
