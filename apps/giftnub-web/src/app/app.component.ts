@@ -17,6 +17,7 @@ import { FaqComponent } from './components/faq.component';
 import { FooterComponent } from './components/footer.component';
 import { ConsultationBookingComponent } from './components/consultation-booking.component';
 import { AboutComponent } from './components/about.component';
+import { WhyComponent } from './components/why.component';
 
 @Component({
   selector: 'giftnub-root',
@@ -30,6 +31,7 @@ import { AboutComponent } from './components/about.component';
     GiftGalleryComponent,
     EventGiftingComponent,
     AboutComponent,
+    WhyComponent,
     TestimonialsComponent,
     FaqComponent,
     FooterComponent,
@@ -49,6 +51,7 @@ import { AboutComponent } from './components/about.component';
       <div class="bg-neutral-950">
         <giftnub-event-gifting></giftnub-event-gifting>
       </div>
+      <giftnub-why></giftnub-why>
       <giftnub-about></giftnub-about>
       <div id="consultationBooking">
         <giftnub-consultation-booking></giftnub-consultation-booking>

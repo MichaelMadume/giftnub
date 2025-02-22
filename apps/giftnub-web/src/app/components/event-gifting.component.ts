@@ -149,8 +149,7 @@ import { CommonModule } from '@angular/common';
 
         <div class="text-center mb-20">
           <a 
-            href="https://buy.stripe.com/bIY3d32GY2yQfIs7ss" 
-            target="_blank"
+            href="#consultationBooking" 
             class="inline-block relative group/btn overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02]"
           >
             <div class="relative bg-black/60 backdrop-blur-xl rounded-lg px-8 py-4 transition-all duration-300 group-hover/btn:bg-black/40">
