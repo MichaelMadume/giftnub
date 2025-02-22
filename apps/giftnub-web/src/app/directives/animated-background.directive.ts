@@ -1,4 +1,6 @@
 import { Directive, ElementRef, Input, OnInit, OnDestroy, Renderer2, NgZone } from '@angular/core';
+import { fromEvent, merge, Subject, timer } from 'rxjs';
+import { debounceTime, takeUntil, take } from 'rxjs/operators';
 
 @Directive({
   selector: '[giftnubAnimatedBackground]',
@@ -16,6 +18,13 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   private worker: Worker | null = null;
   private loadedImages = 0;
   private totalImages = 0;
+  private destroy$ = new Subject<void>();
+  private observer: IntersectionObserver | null = null;
+  private isVisible = false;
+  private userActivityTimeout: any;
+  private readonly INACTIVITY_TIMEOUT = 10000; // 10 seconds
+  private readonly PERMANENT_PAUSE_TIMEOUT = 60000; // 1 minute
+  private isPermanentlyPaused = false;
 
   constructor(
     private el: ElementRef, 
@@ -29,6 +38,15 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
     // Set container style
     this.renderer.setStyle(this.container, 'position', 'relative');
     this.renderer.setStyle(this.container, 'overflow', 'hidden');
+
+    // Initialize intersection observer
+    this.setupIntersectionObserver();
+
+    // Initialize user activity tracking
+    this.setupUserActivityTracking();
+
+    // Setup permanent pause after 1 minute
+    this.setupPermanentPause();
 
     // Initialize web worker
     if (typeof Worker !== 'undefined') {
@@ -69,7 +87,91 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
     if (this.worker) {
       this.worker.terminate();
     }
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+    if (this.userActivityTimeout) {
+      clearTimeout(this.userActivityTimeout);
+    }
+    this.destroy$.next();
+    this.destroy$.complete();
     this.images.forEach(img => this.renderer.removeChild(this.container, img));
+  }
+
+  private setupIntersectionObserver() {
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        const isVisible = entries[0].isIntersecting;
+        if (this.isVisible !== isVisible) {
+          this.isVisible = isVisible;
+          this.updateAnimationState();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    this.observer.observe(this.container);
+  }
+
+  private setupUserActivityTracking() {
+    this.ngZone.runOutsideAngular(() => {
+      const events$ = merge(
+        fromEvent(document, 'mousemove'),
+        fromEvent(document, 'keydown'),
+        fromEvent(document, 'click'),
+        fromEvent(document, 'scroll'),
+        fromEvent(document, 'touchstart'),
+        fromEvent(document, 'touchmove')
+      );
+
+      events$.pipe(
+        debounceTime(100),
+        takeUntil(this.destroy$)
+      ).subscribe(() => {
+        this.onUserActivity();
+      });
+    });
+  }
+
+  private onUserActivity() {
+    // Clear existing timeout
+    if (this.userActivityTimeout) {
+      clearTimeout(this.userActivityTimeout);
+    }
+
+    // Resume animations
+    this.updateAnimationState(true);
+
+    // Set new timeout
+    this.userActivityTimeout = setTimeout(() => {
+      this.updateAnimationState();
+    }, this.INACTIVITY_TIMEOUT);
+  }
+
+  private setupPermanentPause() {
+    timer(this.PERMANENT_PAUSE_TIMEOUT)
+      .pipe(
+        take(1),
+        takeUntil(this.destroy$)
+      )
+      .subscribe(() => {
+        this.isPermanentlyPaused = true;
+        this.updateAnimationState();
+      });
+  }
+
+  private updateAnimationState(forceActive = false) {
+    // If permanently paused, always keep animations paused
+    if (this.isPermanentlyPaused) {
+      this.images.forEach(img => {
+        this.renderer.setStyle(img, 'animation-play-state', 'paused');
+      });
+      return;
+    }
+
+    const shouldAnimate = forceActive || (this.isVisible && !this.userActivityTimeout);
+    this.images.forEach(img => {
+      this.renderer.setStyle(img, 'animation-play-state', shouldAnimate ? 'running' : 'paused');
+    });
   }
 
   private calculateGrid() {
@@ -131,6 +233,9 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
       this.renderer.appendChild(this.container, img);
       this.images.push(img);
     });
+
+    // Initial animation state
+    this.updateAnimationState();
   }
 
   private showAllImages() {
