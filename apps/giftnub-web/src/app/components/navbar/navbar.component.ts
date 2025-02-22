@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
                 <a href="#intelligentSuggestions" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Gift Recommendations</a>
                 <a href="#giftGallery" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Gallery</a>
                 <a href="#eventGifting" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Event Gifting</a>
+                <a href="#about" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">About</a>
                 <a href="#consultationBooking" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Book Consultation</a>
                 <a href="#testimonials" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">Testimonials</a>
                 <a href="#faq" class="text-white/70 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-sm font-medium transition-all">FAQ</a>
@@ -49,6 +50,7 @@ import { CommonModule } from '@angular/common';
             <a href="#intelligentSuggestions" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">Gift Recommendations</a>
             <a href="#giftGallery" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">Gallery</a>
             <a href="#eventGifting" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">Event Gifting</a>
+            <a href="#about" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">About</a>
             <a href="#consultationBooking" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">Book Consultation</a>
             <a href="#testimonials" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">Testimonials</a>
             <a href="#faq" class="text-white/70 hover:text-white hover:bg-white/5 block px-3 py-2 rounded-md text-base font-medium transition-all">FAQ</a>
