@@ -31,6 +31,8 @@ async function getStripeInstance(): Promise<Stripe> {
 
   if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
     await resolveEnvironmentVariablesFromSecretsManager(process.env.APP_SECRET!);
+    console.log('STRIPE_SECRET_KEY', process.env.STRIPE_SECRET_KEY);
+    console.log('STRIPE_WEBHOOK_SECRET', process.env.STRIPE_WEBHOOK_SECRET);
   }
   
   stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
