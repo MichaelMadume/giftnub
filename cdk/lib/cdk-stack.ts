@@ -45,6 +45,8 @@ export class CdkStack extends cdk.Stack {
           minify: true,
           externalModules: ['aws-sdk'],
         },
+        timeout: cdk.Duration.seconds(30),
+        memorySize: 256,
       }
     );
 
@@ -102,6 +104,8 @@ export class CdkStack extends cdk.Stack {
           minify: true,
           externalModules: ['aws-sdk'],
         },
+        timeout: cdk.Duration.seconds(30),
+        memorySize: 256,
       }
     );
 
@@ -123,6 +127,8 @@ export class CdkStack extends cdk.Stack {
           minify: true,
           externalModules: ['aws-sdk'],
         },
+        timeout: cdk.Duration.seconds(30),
+        memorySize: 256,
       }
     );
 

@@ -14,6 +14,11 @@ export interface ConsultationBooking {
   status: 'pending' | 'payment_processing' | 'confirmed' | 'failed';
   paymentIntentId?: string;
   createdAt: string;
+  calendlyData?: {
+    schedulingLink: string;
+    eventTypeName: string;
+    eventTypeUri: string;
+  };
 }
 
 export interface BookingResponse {

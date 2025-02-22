@@ -1,8 +1,9 @@
-import { EventBridgeEvent } from 'aws-lambda';
+import { EventBridgeEvent, APIGatewayProxyResult } from 'aws-lambda';
 import Stripe from 'stripe';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, UpdateCommand, GetCommand } from '@aws-sdk/lib-dynamodb';
 import axios from 'axios';
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
 import { resolveEnvironmentVariablesFromSecretsManager } from '../../shared/utils/environment';
 
 // Logger utility for consistent log format
@@ -27,6 +28,7 @@ let calendlyApi: any = null;
 const client = new DynamoDBClient({});
 const dynamoDB = DynamoDBDocumentClient.from(client);
 const TABLE_NAME = process.env.CONSULTATION_TABLE_NAME!;
+const sesClient = new SESClient({});
 
 async function getStripeInstance(): Promise<Stripe> {
   if (stripe) return stripe;
@@ -76,19 +78,113 @@ async function getConsultationBooking(consultationId: string) {
   }
 }
 
-async function updateConsultationStatus(consultationId: string, status: string, calendlyEventUri?: string): Promise<void> {
+async function sendSchedulingEmail(booking: any, schedulingLink: string, eventType: any) {
+  const logContext = {
+    consultationId: booking.id,
+    email: booking.email,
+    name: booking.name
+  };
+
+  logger.info('Sending scheduling email to user', logContext);
+  
+  try {
+    const emailParams = {
+      Destination: {
+        ToAddresses: [booking.email]
+      },
+      Message: {
+        Body: {
+          Html: {
+            Data: `
+              <h2>Schedule Your Consultation</h2>
+              <p>Hi ${booking.name},</p>
+              <p>Thank you for your payment. Please click the link below to schedule your consultation:</p>
+              <p><a href="${schedulingLink}">Schedule Now</a></p>
+              <p>This is a unique scheduling link created just for you.</p>
+            `
+          }
+        },
+        Subject: {
+          Data: 'Schedule Your Consultation - Payment Received'
+        }
+      },
+      Source: process.env.EMAIL_FROM_ADDRESS!
+    };
+
+    await sesClient.send(new SendEmailCommand(emailParams));
+    logger.info('Successfully sent scheduling email', logContext);
+  } catch (error: any) {
+    logger.error('Failed to send scheduling email', error, logContext);
+    // Don't throw here - we don't want to fail the whole process if email fails
+  }
+}
+
+async function scheduleCalendlyMeeting(booking: any) {
+  const logContext = { 
+    consultationId: booking.id,
+    email: booking.email,
+    name: booking.name,
+    startTime: booking.startTime 
+  };
+  
+  logger.info('Starting Calendly scheduling process', logContext);
+  
+  try {
+    const api = await getCalendlyApi();
+    
+    logger.info('Fetching Calendly user info', logContext);
+    const userResponse = await api.get('/users/me');
+    const userUri = userResponse.data.resource.uri;
+    
+    logger.info('Fetching event types', { ...logContext, userUri });
+    const eventTypesResponse = await api.get('/event_types', {
+      params: { user: userUri }
+    });
+    
+    const eventType = eventTypesResponse.data.collection.find(
+      (et: any) => et.slug === process.env.CALENDLY_EVENT_SLUG
+    );
+
+    if (!eventType) {
+      const error = new Error(`Event type with slug '${process.env.CALENDLY_EVENT_SLUG}' not found`);
+      logger.error('Event type not found', error, { 
+        ...logContext, 
+        slug: process.env.CALENDLY_EVENT_SLUG,
+        availableTypes: eventTypesResponse.data.collection.map((et: any) => et.slug)
+      });
+      throw error;
+    }
+
+    logger.info('Generating scheduling link', { ...logContext, eventTypeUri: eventType.uri });
+    
+    const schedulingLink = `${eventType.scheduling_url}?name=${encodeURIComponent(booking.name)}&email=${encodeURIComponent(booking.email)}`;
+    
+    await sendSchedulingEmail(booking, schedulingLink, eventType);
+
+    return {
+      eventTypeUri: eventType.uri,
+      schedulingLink,
+      eventTypeName: eventType.name
+    };
+  } catch (error: any) {
+    logger.error('Failed to generate Calendly scheduling link', error, logContext);
+    throw error;
+  }
+}
+
+async function updateConsultationStatus(consultationId: string, status: string, calendlyData?: any): Promise<void> {
   logger.info('Updating consultation status', { consultationId, status });
   try {
-    const updateExpression = calendlyEventUri 
-      ? 'SET #status = :status, calendlyEventUri = :calendlyEventUri'
+    const updateExpression = calendlyData 
+      ? 'SET #status = :status, calendlyData = :calendlyData'
       : 'SET #status = :status';
     
     const expressionValues: any = {
       ':status': status
     };
     
-    if (calendlyEventUri) {
-      expressionValues[':calendlyEventUri'] = calendlyEventUri;
+    if (calendlyData) {
+      expressionValues[':calendlyData'] = calendlyData;
     }
 
     await dynamoDB.send(
@@ -109,47 +205,6 @@ async function updateConsultationStatus(consultationId: string, status: string, 
   }
 }
 
-async function scheduleCalendlyMeeting(booking: any) {
-  logger.info('Scheduling Calendly meeting', { consultationId: booking.id });
-  try {
-    const api = await getCalendlyApi();
-    
-    // Get user info
-    const userResponse = await api.get('/users/me');
-    const userUri = userResponse.data.resource.uri;
-
-    // Get event type
-    const eventTypesResponse = await api.get('/event_types', {
-      params: { user: userUri }
-    });
-    
-    const eventType = eventTypesResponse.data.collection.find(
-      (et: any) => et.slug === process.env.CALENDLY_EVENT_SLUG
-    );
-
-    if (!eventType) {
-      throw new Error(`Event type with slug '${process.env.CALENDLY_EVENT_SLUG}' not found`);
-    }
-
-    // Schedule the event
-    const scheduleResponse = await api.post('/scheduled_events', {
-      event_type_uri: eventType.uri,
-      start_time: booking.startTime,
-      email: booking.email,
-      name: booking.name,
-      custom_questions: booking.notes ? [{
-        name: "Special Requirements",
-        answer: booking.notes
-      }] : []
-    });
-
-    return scheduleResponse.data.resource.uri;
-  } catch (error: any) {
-    logger.error('Failed to schedule Calendly meeting', error, { consultationId: booking.id });
-    throw error;
-  }
-}
-
 interface StripeEvent {
   id: string;
   type: string;
@@ -158,7 +213,7 @@ interface StripeEvent {
   };
 }
 
-export const handler = async (event: EventBridgeEvent<string, StripeEvent>): Promise<void> => {
+export const handler = async (event: EventBridgeEvent<string, StripeEvent>): Promise<APIGatewayProxyResult | void> => {
   const requestId = event.id;
   logger.info('Processing Stripe event from EventBridge', { 
     requestId,
@@ -192,10 +247,23 @@ export const handler = async (event: EventBridgeEvent<string, StripeEvent>): Pro
           }
 
           // Schedule the Calendly meeting
-          const calendlyEventUri = await scheduleCalendlyMeeting(booking);
+          const calendlyData = await scheduleCalendlyMeeting(booking);
           
           // Update the consultation status with Calendly event URI
-          await updateConsultationStatus(consultationId, 'confirmed', calendlyEventUri);
+          await updateConsultationStatus(consultationId, 'confirmed', calendlyData);
+
+          return {
+            statusCode: 200,
+            body: JSON.stringify({
+              status: 'success',
+              message: 'Payment processed and scheduling link generated',
+              data: {
+                consultationId,
+                schedulingLink: calendlyData.schedulingLink,
+                eventTypeName: calendlyData.eventTypeName
+              }
+            })
+          };
         }
         break;
       }

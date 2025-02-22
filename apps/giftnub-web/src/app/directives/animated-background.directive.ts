@@ -22,7 +22,7 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   private observer: IntersectionObserver | null = null;
   private isVisible = false;
   private userActivityTimeout: any;
-  private readonly INACTIVITY_TIMEOUT = 10000; // 10 seconds
+  private readonly INACTIVITY_TIMEOUT = 5000; // 10 seconds
   private readonly PERMANENT_PAUSE_TIMEOUT = 60000; // 1 minute
   private isPermanentlyPaused = false;
 
@@ -239,9 +239,17 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   }
 
   private showAllImages() {
+    // Add transition style before making images visible
     this.images.forEach(img => {
+      this.renderer.setStyle(img, 'transition', 'opacity 2s ease-in');
       this.renderer.setStyle(img, 'visibility', 'visible');
-      this.renderer.setStyle(img, 'opacity', `${this.minOpacity}`);
     });
+
+    // Small delay to ensure transition is applied before changing opacity
+    setTimeout(() => {
+      this.images.forEach(img => {
+        this.renderer.setStyle(img, 'opacity', `${this.minOpacity}`);
+      });
+    }, 100);
   }
 } 

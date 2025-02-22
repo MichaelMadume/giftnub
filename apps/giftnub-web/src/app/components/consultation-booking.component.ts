@@ -68,7 +68,20 @@ interface AvailabilityResponse {
               </svg>
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
-            <p class="text-white/70 mb-6">Your consultation has been successfully booked. Check your email for confirmation details.</p>
+            <p class="text-white/70 mb-4">Your consultation has been successfully booked. Please use the link below to schedule your preferred time:</p>
+            
+            <!-- Scheduling Link -->
+            <div class="mb-6 p-4 bg-white/5 rounded-lg">
+              <a 
+                [href]="schedulingLink" 
+                target="_blank" 
+                class="text-primary-400 hover:text-primary-300 break-all transition-colors"
+              >
+                {{ schedulingLink }}
+              </a>
+            </div>
+            
+            <p class="text-white/70 mb-6">A confirmation email has also been sent to your inbox.</p>
             <button
               (click)="closeSuccessMessage()"
               class="relative group overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02]"
@@ -452,6 +465,7 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
   availableTimeSlots: TimeSlot[] = [];
   selectedSlot: TimeSlot | null = null;
   complete = false;
+  schedulingLink: string | null = null;
   private destroy$ = new Subject<void>();
   private currentBooking: ConsultationBooking | null = null;
   private pollingSubscription: Subscription | null = null;
@@ -528,6 +542,7 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
       case 'confirmed':
         this.loading = false;
         this.showSuccess = true;
+        this.schedulingLink = booking.calendlyData?.schedulingLink || null;
         this.resetForm();
         break;
       case 'failed':
@@ -884,5 +899,6 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
 
   closeSuccessMessage(): void {
     this.showSuccess = false;
+    this.schedulingLink = null;
   }
 }
