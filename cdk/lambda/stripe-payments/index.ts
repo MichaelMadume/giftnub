@@ -1,4 +1,4 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { EventBridgeEvent } from 'aws-lambda';
 import Stripe from 'stripe';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, UpdateCommand } from '@aws-sdk/lib-dynamodb';
@@ -29,10 +29,8 @@ const TABLE_NAME = process.env.CONSULTATION_TABLE_NAME!;
 async function getStripeInstance(): Promise<Stripe> {
   if (stripe) return stripe;
 
-  if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
+  if (!process.env.STRIPE_SECRET_KEY) {
     await resolveEnvironmentVariablesFromSecretsManager(process.env.APP_SECRET!);
-    console.log('STRIPE_SECRET_KEY', process.env.STRIPE_SECRET_KEY);
-    console.log('STRIPE_WEBHOOK_SECRET', process.env.STRIPE_WEBHOOK_SECRET);
   }
   
   stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -65,83 +63,29 @@ async function updateConsultationStatus(consultationId: string, status: string):
   }
 }
 
-export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-  const requestId = event.requestContext?.requestId || 'unknown';
-  logger.info('Processing Stripe webhook event', { 
-    requestId,
-    path: event.path,
-    httpMethod: event.httpMethod
-  });
-
-  // Log detailed request information
-  logger.info('Request details', {
-    requestId,
-    headers: event.headers,
-    body: event.body,
-    queryStringParameters: event.queryStringParameters,
-    pathParameters: event.pathParameters,
-    requestContext: event.requestContext
-  });
-
-  const corsHeaders = {
-    'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json'
+interface StripeEvent {
+  id: string;
+  type: string;
+  data: {
+    object: Stripe.PaymentIntent;
   };
+}
+
+export const handler = async (event: EventBridgeEvent<string, StripeEvent>): Promise<void> => {
+  const requestId = event.id;
+  logger.info('Processing Stripe event from EventBridge', { 
+    requestId,
+    eventType: event.detail.type,
+    eventId: event.detail.id
+  });
 
   try {
-    if (!event.body) {
-      logger.error('Missing request body', null, { requestId });
-      return {
-        statusCode: 400,
-        headers: corsHeaders,
-        body: JSON.stringify({ error: 'Missing request body' }),
-      };
-    }
-
-    const stripe = await getStripeInstance();
+    await getStripeInstance();
     
-    // Handle webhook events
-    const sig = event.headers['stripe-signature'] || 
-                event.headers['Stripe-Signature'] ||
-                Object.entries(event.headers)
-                  .find(([key]) => key.toLowerCase() === 'stripe-signature')?.[1];
-
-    if (!sig) {
-      logger.error('Missing Stripe signature', null, { requestId });
-      return {
-        statusCode: 400,
-        headers: corsHeaders,
-        body: JSON.stringify({ error: 'Missing Stripe signature header' }),
-      };
-    }
-    
-    let stripeEvent;
-    
-    try {
-      const payload = event.isBase64Encoded ? Buffer.from(event.body, 'base64').toString('utf8') : event.body;
-      stripeEvent = stripe.webhooks.constructEvent(
-        payload,
-        sig!,
-        process.env.STRIPE_WEBHOOK_SECRET!
-      );
-      logger.info('Successfully constructed Stripe event', { 
-        requestId,
-        eventType: stripeEvent.type,
-        eventId: stripeEvent.id
-      });
-    } catch (err: any) {
-      logger.error('Failed to construct Stripe event', err, { requestId });
-      return {
-        statusCode: 400,
-        headers: corsHeaders,
-        body: JSON.stringify({ error: `Webhook Error: ${err.message}` }),
-      };
-    }
-
     // Handle specific event types
-    switch (stripeEvent.type) {
+    switch (event.detail.type) {
       case 'payment_intent.succeeded': {
-        const paymentIntent = stripeEvent.data.object as Stripe.PaymentIntent;
+        const paymentIntent = event.detail.data.object;
         const consultationId = paymentIntent.metadata.consultationId;
         
         logger.info('Processing successful payment', {
@@ -159,7 +103,7 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
       }
       
       case 'payment_intent.payment_failed': {
-        const failedPayment = stripeEvent.data.object as Stripe.PaymentIntent;
+        const failedPayment = event.detail.data.object;
         const failedConsultationId = failedPayment.metadata.consultationId;
         
         logger.info('Processing failed payment', {
@@ -178,23 +122,12 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
       default:
         logger.info('Unhandled event type received', {
           requestId,
-          eventType: stripeEvent.type,
-          eventId: stripeEvent.id
+          eventType: event.detail.type,
+          eventId: event.detail.id
         });
     }
-
-    return {
-      statusCode: 200,
-      headers: corsHeaders,
-      body: JSON.stringify({ received: true }),
-    };
-
   } catch (error: any) {
-    logger.error('Unexpected error processing webhook', error, { requestId });
-    return {
-      statusCode: 500,
-      headers: corsHeaders,
-      body: JSON.stringify({ error: 'Internal Server Error', message: error.message }),
-    };
+    logger.error('Unexpected error processing event', error, { requestId });
+    throw error; // Re-throw the error to mark the Lambda execution as failed
   }
 }; 

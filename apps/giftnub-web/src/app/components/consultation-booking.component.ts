@@ -55,6 +55,32 @@ interface AvailabilityResponse {
       id="consultationBooking"
       class="relative flex items-center min-h-screen overflow-hidden bg-black"
     >
+      <!-- Success Message -->
+      <div
+        *ngIf="showSuccess"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center"
+      >
+        <div class="bg-black/80 backdrop-blur-xl border border-white/10 p-8 rounded-xl max-w-md w-full mx-4">
+          <div class="text-center">
+            <div class="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/20 text-green-500">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Booking Confirmed!</h3>
+            <p class="text-white/70 mb-6">Your consultation has been successfully booked. Check your email for confirmation details.</p>
+            <button
+              (click)="closeSuccessMessage()"
+              class="relative group overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02]"
+            >
+              <div class="relative bg-black/60 backdrop-blur-xl rounded-lg px-6 py-2 transition-all duration-300 group-hover:bg-black/40">
+                <span class="text-white font-medium">Close</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Background Effects -->
       <div class="absolute inset-0">
         <!-- Dark gradient overlay -->
@@ -418,6 +444,7 @@ interface AvailabilityResponse {
 export class ConsultationBookingComponent implements OnInit, OnDestroy {
   @ViewChild(StripeCardComponent) card!: StripeCardComponent;
   
+  showSuccess = false;
   currentStep = 1;
   consultationForm: FormGroup;
   loading = false;
@@ -500,7 +527,8 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
     switch (booking.status) {
       case 'confirmed':
         this.loading = false;
-        this.currentStep = 4; // Success state
+        this.showSuccess = true;
+        this.resetForm();
         break;
       case 'failed':
         this.loading = false;
@@ -842,5 +870,19 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
 
   onChange(event: any): void {
     this.complete = event.complete;
+  }
+
+  private resetForm(): void {
+    this.consultationForm.reset();
+    this.selectedDate = null;
+    this.selectedSlot = null;
+    this.complete = false;
+    if (this.card) {
+      this.card.element.clear();
+    }
+  }
+
+  closeSuccessMessage(): void {
+    this.showSuccess = false;
   }
 }

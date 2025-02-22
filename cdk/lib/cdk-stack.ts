@@ -4,6 +4,8 @@ import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 import * as nodejs from 'aws-cdk-lib/aws-lambda-nodejs';
 import * as iam from 'aws-cdk-lib/aws-iam';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
+import * as events from 'aws-cdk-lib/aws-events';
+import * as targets from 'aws-cdk-lib/aws-events-targets';
 import * as path from 'path';
 
 export class CdkStack extends cdk.Stack {
@@ -26,55 +28,103 @@ export class CdkStack extends cdk.Stack {
     });
 
     // Create the Lambda function for Stripe payments
-    const stripePaymentsLambda = new nodejs.NodejsFunction(this, 'StripePaymentsLambda', {
-      runtime: lambda.Runtime.NODEJS_18_X,
-      handler: 'handler',
-      entry: path.join(__dirname, '../lambda/stripe-payments/index.ts'),
-      environment: {
-        APP_SECRET: 'app/secrets',
-        NODE_OPTIONS: '--enable-source-maps',
-        CONSULTATION_TABLE_NAME: consultationTable.tableName,
+    const stripePaymentsLambda = new nodejs.NodejsFunction(
+      this,
+      'StripePaymentsLambda',
+      {
+        runtime: lambda.Runtime.NODEJS_18_X,
+        handler: 'handler',
+        entry: path.join(__dirname, '../lambda/stripe-payments/index.ts'),
+        environment: {
+          APP_SECRET: 'app/secrets',
+          NODE_OPTIONS: '--enable-source-maps',
+          CONSULTATION_TABLE_NAME: consultationTable.tableName,
+        },
+        bundling: {
+          sourceMap: true,
+          minify: true,
+          externalModules: ['aws-sdk'],
+        },
+      }
+    );
+
+    // Create EventBridge rule for Stripe events
+    const stripeEventBus = events.EventBus.fromEventBusArn(
+      this,
+      'StripeEventBus',
+      'arn:aws:events:us-east-1:339713151306:event-bus/aws.partner/stripe.com/ed_test_61S4kV4VO3GwMlnCi16S4kRXNcA83YV8u4QmWfM7s99s'
+    );
+
+    // Create rule for payment_intent.succeeded events
+    new events.Rule(this, 'StripePaymentSucceededRule', {
+      eventBus: stripeEventBus,
+      eventPattern: {
+        source: ['aws.partner/stripe.com/ed_test_61S4kV4VO3GwMlnCi16S4kRXNcA83YV8u4QmWfM7s99s'],
+        detailType: ['payment_intent.succeeded'],
+        detail: {
+          type: ['payment_intent.succeeded']
+        }
       },
-      bundling: {
-        sourceMap: true,
-        minify: true,
-        externalModules: ['aws-sdk'],
+      targets: [new targets.LambdaFunction(stripePaymentsLambda)]
+    });
+
+    // Create rule for payment_intent.payment_failed events
+    new events.Rule(this, 'StripePaymentFailedRule', {
+      eventBus: stripeEventBus,
+      eventPattern: {
+        source: ['aws.partner/stripe.com/ed_test_61S4kV4VO3GwMlnCi16S4kRXNcA83YV8u4QmWfM7s99s'],
+        detailType: ['payment_intent.payment_failed'],
+        detail: {
+          type: ['payment_intent.payment_failed']
+        }
       },
+      targets: [new targets.LambdaFunction(stripePaymentsLambda)]
     });
 
     // Create the Lambda function for Calendly operations
-    const calendlyOperationsLambda = new nodejs.NodejsFunction(this, 'CalendlyOperationsLambda', {
-      runtime: lambda.Runtime.NODEJS_18_X,
-      handler: 'handler',
-      entry: path.join(__dirname, '../lambda/calendly-operations/src/index.ts'),
-      environment: {
-        APP_SECRET: 'app/secrets',
-        NODE_OPTIONS: '--enable-source-maps',
-        CONSULTATION_TABLE_NAME: consultationTable.tableName,
-      },
-      bundling: {
-        sourceMap: true,
-        minify: true,
-        externalModules: ['aws-sdk'],
-      },
-    });
+    const calendlyOperationsLambda = new nodejs.NodejsFunction(
+      this,
+      'CalendlyOperationsLambda',
+      {
+        runtime: lambda.Runtime.NODEJS_18_X,
+        handler: 'handler',
+        entry: path.join(
+          __dirname,
+          '../lambda/calendly-operations/src/index.ts'
+        ),
+        environment: {
+          APP_SECRET: 'app/secrets',
+          NODE_OPTIONS: '--enable-source-maps',
+          CONSULTATION_TABLE_NAME: consultationTable.tableName,
+        },
+        bundling: {
+          sourceMap: true,
+          minify: true,
+          externalModules: ['aws-sdk'],
+        },
+      }
+    );
 
     // Create the Lambda function for consultation bookings
-    const consultationBookingsLambda = new nodejs.NodejsFunction(this, 'ConsultationBookingsLambda', {
-      runtime: lambda.Runtime.NODEJS_18_X,
-      handler: 'handler',
-      entry: path.join(__dirname, '../lambda/consultation-bookings/index.ts'),
-      environment: {
-        APP_SECRET: 'app/secrets',
-        NODE_OPTIONS: '--enable-source-maps',
-        CONSULTATION_TABLE_NAME: consultationTable.tableName,
-      },
-      bundling: {
-        sourceMap: true,
-        minify: true,
-        externalModules: ['aws-sdk'],
-      },
-    });
+    const consultationBookingsLambda = new nodejs.NodejsFunction(
+      this,
+      'ConsultationBookingsLambda',
+      {
+        runtime: lambda.Runtime.NODEJS_18_X,
+        handler: 'handler',
+        entry: path.join(__dirname, '../lambda/consultation-bookings/index.ts'),
+        environment: {
+          APP_SECRET: 'app/secrets',
+          NODE_OPTIONS: '--enable-source-maps',
+          CONSULTATION_TABLE_NAME: consultationTable.tableName,
+        },
+        bundling: {
+          sourceMap: true,
+          minify: true,
+          externalModules: ['aws-sdk'],
+        },
+      }
+    );
 
     // Grant DynamoDB permissions
     consultationTable.grantReadWriteData(stripePaymentsLambda);
@@ -84,7 +134,9 @@ export class CdkStack extends cdk.Stack {
     // Grant the Lambda functions permission to read secrets
     const secretsPolicy = new iam.PolicyStatement({
       actions: ['secretsmanager:GetSecretValue'],
-      resources: [`arn:aws:secretsmanager:${this.region}:${this.account}:secret:app/secrets-*`],
+      resources: [
+        `arn:aws:secretsmanager:${this.region}:${this.account}:secret:app/secrets-*`,
+      ],
     });
 
     stripePaymentsLambda.addToRolePolicy(secretsPolicy);
@@ -98,26 +150,35 @@ export class CdkStack extends cdk.Stack {
       defaultCorsPreflightOptions: {
         allowOrigins: apigateway.Cors.ALL_ORIGINS,
         allowMethods: apigateway.Cors.ALL_METHODS,
-        allowHeaders: ['Content-Type', 'X-Amz-Date', 'Authorization', 'X-Api-Key', 'stripe-signature'],
+        allowHeaders: [
+          'Content-Type',
+          'X-Amz-Date',
+          'Authorization',
+          'X-Api-Key',
+        ],
       },
     });
-
-    // Create API resources and methods for Stripe payments
-    const payments = api.root.addResource('payments');
-    const stripeWebhook = payments.addResource('stripe-webhook');
-    stripeWebhook.addMethod('POST', new apigateway.LambdaIntegration(stripePaymentsLambda));
 
     // Create API resources and methods for Calendly operations
     const calendly = api.root.addResource('calendly');
     const availability = calendly.addResource('availability');
-    availability.addMethod('GET', new apigateway.LambdaIntegration(calendlyOperationsLambda));
+    availability.addMethod(
+      'GET',
+      new apigateway.LambdaIntegration(calendlyOperationsLambda)
+    );
 
     // Create API resources and methods for consultation bookings
     const consultations = api.root.addResource('consultations');
-    consultations.addMethod('POST', new apigateway.LambdaIntegration(consultationBookingsLambda));
-    
+    consultations.addMethod(
+      'POST',
+      new apigateway.LambdaIntegration(consultationBookingsLambda)
+    );
+
     const consultationStatus = consultations.addResource('{id}');
-    consultationStatus.addMethod('GET', new apigateway.LambdaIntegration(consultationBookingsLambda));
+    consultationStatus.addMethod(
+      'GET',
+      new apigateway.LambdaIntegration(consultationBookingsLambda)
+    );
 
     // Output the API URL and DynamoDB table name
     new cdk.CfnOutput(this, 'ApiUrl', {

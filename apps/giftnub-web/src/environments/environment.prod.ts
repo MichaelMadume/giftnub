@@ -6,7 +6,7 @@ export const environment = {
     payments: 'https://ei8yx5nxhc.execute-api.us-east-1.amazonaws.com/prod/payments'
   },
   stripe: {
-    publishableKey: 'pk_test_51Qm5i8CzyludbUjXAT8RiieZcwuZOV9AVeICwmBHNsGwjl2vMHJq7lmwpdft5L5hm7LzQ7bGVodvTfxa6G5UO0rq00KdBcSXZk',
+    publishableKey: 'pk_test_51QvMUB2SGBv91lFs9lU5omP3AjQJFYseChL4wKsgE8uzsO7j7SEslUVk4wMHxWnjElucfNiIpsCFaGGVF1qRiXKo00mMTysJOg',
     endpoints: {
       webhook: '/stripe-webhook'
     }
