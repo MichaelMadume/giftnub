@@ -1,7 +1,8 @@
 import { EventBridgeEvent } from 'aws-lambda';
 import Stripe from 'stripe';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { DynamoDBDocumentClient, UpdateCommand } from '@aws-sdk/lib-dynamodb';
+import { DynamoDBDocumentClient, UpdateCommand, GetCommand } from '@aws-sdk/lib-dynamodb';
+import axios from 'axios';
 import { resolveEnvironmentVariablesFromSecretsManager } from '../../shared/utils/environment';
 
 // Logger utility for consistent log format
@@ -22,6 +23,7 @@ const logger = {
 };
 
 let stripe: Stripe | null = null;
+let calendlyApi: any = null;
 const client = new DynamoDBClient({});
 const dynamoDB = DynamoDBDocumentClient.from(client);
 const TABLE_NAME = process.env.CONSULTATION_TABLE_NAME!;
@@ -40,25 +42,110 @@ async function getStripeInstance(): Promise<Stripe> {
   return stripe;
 }
 
-async function updateConsultationStatus(consultationId: string, status: string): Promise<void> {
+async function getCalendlyApi() {
+  if (calendlyApi) return calendlyApi;
+
+  if (!process.env.CALENDLY_API_KEY || !process.env.CALENDLY_EVENT_SLUG) {
+    await resolveEnvironmentVariablesFromSecretsManager(process.env.APP_SECRET!);
+  }
+
+  calendlyApi = axios.create({
+    baseURL: 'https://api.calendly.com',
+    headers: {
+      'Authorization': `Bearer ${process.env.CALENDLY_API_KEY}`,
+      'Content-Type': 'application/json'
+    }
+  });
+
+  return calendlyApi;
+}
+
+async function getConsultationBooking(consultationId: string) {
+  logger.info('Fetching consultation booking', { consultationId });
+  try {
+    const result = await dynamoDB.send(
+      new GetCommand({
+        TableName: TABLE_NAME,
+        Key: { id: consultationId }
+      })
+    );
+    return result.Item;
+  } catch (error: any) {
+    logger.error('Failed to fetch consultation booking', error, { consultationId });
+    throw error;
+  }
+}
+
+async function updateConsultationStatus(consultationId: string, status: string, calendlyEventUri?: string): Promise<void> {
   logger.info('Updating consultation status', { consultationId, status });
   try {
+    const updateExpression = calendlyEventUri 
+      ? 'SET #status = :status, calendlyEventUri = :calendlyEventUri'
+      : 'SET #status = :status';
+    
+    const expressionValues: any = {
+      ':status': status
+    };
+    
+    if (calendlyEventUri) {
+      expressionValues[':calendlyEventUri'] = calendlyEventUri;
+    }
+
     await dynamoDB.send(
       new UpdateCommand({
         TableName: TABLE_NAME,
         Key: { id: consultationId },
-        UpdateExpression: 'SET #status = :status',
+        UpdateExpression: updateExpression,
         ExpressionAttributeNames: {
           '#status': 'status'
         },
-        ExpressionAttributeValues: {
-          ':status': status
-        }
+        ExpressionAttributeValues: expressionValues
       })
     );
     logger.info('Successfully updated consultation status', { consultationId, status });
   } catch (error: any) {
     logger.error('Failed to update consultation status', error, { consultationId, status });
+    throw error;
+  }
+}
+
+async function scheduleCalendlyMeeting(booking: any) {
+  logger.info('Scheduling Calendly meeting', { consultationId: booking.id });
+  try {
+    const api = await getCalendlyApi();
+    
+    // Get user info
+    const userResponse = await api.get('/users/me');
+    const userUri = userResponse.data.resource.uri;
+
+    // Get event type
+    const eventTypesResponse = await api.get('/event_types', {
+      params: { user: userUri }
+    });
+    
+    const eventType = eventTypesResponse.data.collection.find(
+      (et: any) => et.slug === process.env.CALENDLY_EVENT_SLUG
+    );
+
+    if (!eventType) {
+      throw new Error(`Event type with slug '${process.env.CALENDLY_EVENT_SLUG}' not found`);
+    }
+
+    // Schedule the event
+    const scheduleResponse = await api.post('/scheduled_events', {
+      event_type_uri: eventType.uri,
+      start_time: booking.startTime,
+      email: booking.email,
+      name: booking.name,
+      custom_questions: booking.notes ? [{
+        name: "Special Requirements",
+        answer: booking.notes
+      }] : []
+    });
+
+    return scheduleResponse.data.resource.uri;
+  } catch (error: any) {
+    logger.error('Failed to schedule Calendly meeting', error, { consultationId: booking.id });
     throw error;
   }
 }
@@ -97,7 +184,18 @@ export const handler = async (event: EventBridgeEvent<string, StripeEvent>): Pro
         });
         
         if (consultationId) {
-          await updateConsultationStatus(consultationId, 'confirmed');
+          // Get the consultation booking
+          const booking = await getConsultationBooking(consultationId);
+          
+          if (!booking) {
+            throw new Error(`Consultation booking ${consultationId} not found`);
+          }
+
+          // Schedule the Calendly meeting
+          const calendlyEventUri = await scheduleCalendlyMeeting(booking);
+          
+          // Update the consultation status with Calendly event URI
+          await updateConsultationStatus(consultationId, 'confirmed', calendlyEventUri);
         }
         break;
       }

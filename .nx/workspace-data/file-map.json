@@ -6,12 +6,12 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "cdk/cdk.json",
-        "hash": "15415204497763368904"
+        "file": ".vscode/extensions.json",
+        "hash": "235626400633494639"
       },
       {
-        "file": "cdk/README.md",
-        "hash": "6316113852016720853"
+        "file": ".eslintrc.json",
+        "hash": "18315524891129148814"
       },
       {
         "file": "cdk/lambda/calendly-operations/tsconfig.json",
@@ -22,48 +22,96 @@
         "hash": "6222394763578143227"
       },
       {
-        "file": "cdk/.gitignore",
-        "hash": "7631380206057829858"
+        "file": "cdk/lambda/consultation-bookings/index.ts",
+        "hash": "8535002061241072494"
       },
       {
         "file": "cdk/lambda/stripe-payments/package-lock.json",
         "hash": "13408055682555165975"
       },
       {
-        "file": ".prettierrc",
-        "hash": "16267754514737964994"
+        "file": ".vscode/launch.json",
+        "hash": "3737579961210941045"
       },
       {
-        "file": "package-lock.json",
-        "hash": "4558723666510463442"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "5443105041930014821"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "3395189204293871444"
-      },
-      {
-        "file": "cdk/lambda/stripe-payments/index.ts",
-        "hash": "15821106476018003071"
-      },
-      {
-        "file": "migrations.json",
-        "hash": "16741509800673585341"
+        "file": "cdk/lambda/calendly-operations/src/index.ts",
+        "hash": "5691440287566810130"
       },
       {
         "file": "cdk/package-lock.json",
         "hash": "16908948153366502901"
       },
       {
-        "file": "cdk/.npmignore",
-        "hash": "18043273588612545309"
+        "file": ".prettierignore",
+        "hash": "3395189204293871444"
+      },
+      {
+        "file": "cdk/lambda/stripe-payments/package.json",
+        "hash": "9443150457867700351"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "16936441711144470533"
+      },
+      {
+        "file": "cdk/lambda/stripe-payments/index.ts",
+        "hash": "4928908656277379835"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "12500592029234382244"
+      },
+      {
+        "file": "cdk/lib/cdk-stack.ts",
+        "hash": "17252688790078430946"
       },
       {
         "file": "cdk/shared/utils/environment.ts",
         "hash": "12838311040442243965"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "12333515226966617182"
+      },
+      {
+        "file": "cdk/lambda/calendly-operations/package.json",
+        "hash": "12668643848855123974"
+      },
+      {
+        "file": "cdk/README.md",
+        "hash": "6316113852016720853"
+      },
+      {
+        "file": "cdk/package.json",
+        "hash": "3057514992424672510"
+      },
+      {
+        "file": "cdk/.npmignore",
+        "hash": "18043273588612545309"
+      },
+      {
+        "file": "cdk/tsconfig.json",
+        "hash": "4677024595806562681"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "4558723666510463442"
+      },
+      {
+        "file": "cdk/cdk.json",
+        "hash": "15415204497763368904"
+      },
+      {
+        "file": "cdk/bin/cdk.ts",
+        "hash": "17562894424700673471"
+      },
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
       },
       {
         "file": "cdk/test/stripe-payments.ts",
@@ -74,84 +122,36 @@
         "hash": "6152295854317079252"
       },
       {
-        "file": "cdk/tsconfig.json",
-        "hash": "4677024595806562681"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "9430166341120122740"
-      },
-      {
-        "file": "cdk/bin/cdk.ts",
-        "hash": "17562894424700673471"
-      },
-      {
-        "file": "cdk/lambda/calendly-operations/src/index.ts",
-        "hash": "5691440287566810130"
-      },
-      {
-        "file": ".eslintignore",
-        "hash": "7663861978715868291"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "12333515226966617182"
+        "file": "amplify.yml",
+        "hash": "9716161090996639436"
       },
       {
         "file": "nx.json",
         "hash": "10975567735463464701"
       },
       {
-        "file": "cdk/package.json",
-        "hash": "3057514992424672510"
+        "file": "package.json",
+        "hash": "10009303421666301475"
       },
       {
-        "file": ".eslintrc.json",
-        "hash": "18315524891129148814"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "16936441711144470533"
+        "file": ".eslintignore",
+        "hash": "7663861978715868291"
       },
       {
         "file": "README.md",
         "hash": "4290351960845421863"
       },
       {
-        "file": ".gitignore",
-        "hash": "12500592029234382244"
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
       },
       {
-        "file": "cdk/lambda/consultation-bookings/index.ts",
-        "hash": "8535002061241072494"
+        "file": "cdk/.gitignore",
+        "hash": "7631380206057829858"
       },
       {
-        "file": "cdk/lib/cdk-stack.ts",
-        "hash": "17252688790078430946"
-      },
-      {
-        "file": "package.json",
-        "hash": "10009303421666301475"
-      },
-      {
-        "file": ".vscode/launch.json",
-        "hash": "3737579961210941045"
-      },
-      {
-        "file": "amplify.yml",
-        "hash": "9716161090996639436"
-      },
-      {
-        "file": ".vscode/extensions.json",
-        "hash": "235626400633494639"
-      },
-      {
-        "file": "cdk/lambda/stripe-payments/package.json",
-        "hash": "1312421242231979806"
-      },
-      {
-        "file": "cdk/lambda/calendly-operations/package.json",
-        "hash": "12668643848855123974"
+        "file": "migrations.json",
+        "hash": "16741509800673585341"
       },
       {
         "file": "cdk/test/calendly-operations.ts",
@@ -336,7 +336,7 @@
         },
         {
           "file": "apps/giftnub-web/src/app/components/hero/hero.component.ts",
-          "hash": "14763293398218321761",
+          "hash": "7990419106956445650",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common"
@@ -413,6 +413,13 @@
           ]
         },
         {
+          "file": "apps/giftnub-web/src/app/directives/animated-background.directive.ts",
+          "hash": "10076936734023624077",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
           "file": "apps/giftnub-web/src/app/interfaces/gift.interface.ts",
           "hash": "15516603930201789568"
         },
@@ -458,6 +465,10 @@
             "npm:rxjs",
             "npm:@stripe/stripe-js"
           ]
+        },
+        {
+          "file": "apps/giftnub-web/src/app/workers/image-grid.worker.ts",
+          "hash": "6760861299407385922"
         },
         {
           "file": "apps/giftnub-web/src/assets/.gitkeep",

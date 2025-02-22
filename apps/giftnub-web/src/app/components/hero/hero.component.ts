@@ -1,30 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AnimatedBackgroundDirective } from '../../directives/animated-background.directive';
 
 @Component({
   selector: 'giftnub-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AnimatedBackgroundDirective],
   template: `
-    <section id="hero" class="min-h-screen pt-16 relative overflow-hidden bg-black">
-      <!-- Animated background effects -->
-      <div class="absolute inset-0 overflow-hidden">
-        <!-- Dark gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-primary-950 via-black to-black opacity-80"></div>
-        
-        <!-- Gradient orbs -->
-        <div class="absolute w-[500px] h-[500px] -top-32 -left-32 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute w-[500px] h-[500px] -bottom-32 -right-32 bg-secondary-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
-        <!-- Animated grid -->
-        <div class="absolute inset-0 opacity-[0.02]"
-             style="background-image: linear-gradient(to right, white 1px, transparent 1px),
-                                    linear-gradient(to bottom, white 1px, transparent 1px);
-                    background-size: 50px 50px;">
-        </div>
-      </div>
+    <section 
+      id="hero" 
+      class="min-h-screen pt-16 relative overflow-hidden bg-black"
+      giftnubAnimatedBackground
+      [imageUrls]="giftImageUrls"
+      [imageSize]="140"
+      [minOpacity]="0.4"
+      [maxOpacity]="0.8"
+    >
+      <!-- Dark gradient overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-primary-950/80 via-black/90 to-black opacity-85 z-[1] backdrop-blur-[2px]"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32">
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 z-[2]">
         <!-- Main content -->
         <div class="text-center space-y-8 relative z-10">
           <!-- Floating badge -->
@@ -139,4 +134,14 @@ import { CommonModule } from '@angular/common';
     }
   `]
 })
-export class HeroComponent {} 
+export class HeroComponent {
+  giftImageUrls = [
+    'assets/gifts/gift-1-luxury-wellness-package.jpg',
+    'assets/gifts/gift-2-corporate-welcome-kit.jpg',
+    'assets/gifts/gift-3-anniversary-celebration-box.jpg',
+    'assets/gifts/gift-4-executive-gift-suite.jpg',
+    'assets/gifts/gift-6-team-building-kit.jpg',
+    'assets/gifts/gift-7-wedding-party-gift-set.jpg',
+    'assets/gifts/gift-8-birthday-celebration-box.jpg'
+  ];
+} 
