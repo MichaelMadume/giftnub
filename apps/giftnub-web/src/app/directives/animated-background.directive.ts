@@ -14,6 +14,8 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   private images: HTMLElement[] = [];
   private container: HTMLElement;
   private worker: Worker | null = null;
+  private loadedImages = 0;
+  private totalImages = 0;
 
   constructor(
     private el: ElementRef, 
@@ -84,9 +86,32 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   }
 
   private createImageWall(positions: any[]) {
+    this.totalImages = positions.length;
+    this.loadedImages = 0;
+
     positions.forEach(pos => {
       const img = this.renderer.createElement('img');
       const imageUrl = this.imageUrls[Math.floor(Math.random() * this.imageUrls.length)];
+
+      // Set initial visibility to hidden
+      this.renderer.setStyle(img, 'opacity', '0');
+      this.renderer.setStyle(img, 'visibility', 'hidden');
+
+      // Add load event listener
+      img.addEventListener('load', () => {
+        this.loadedImages++;
+        if (this.loadedImages === this.totalImages) {
+          this.showAllImages();
+        }
+      });
+
+      // Add error event listener to handle failed loads
+      img.addEventListener('error', () => {
+        this.loadedImages++;
+        if (this.loadedImages === this.totalImages) {
+          this.showAllImages();
+        }
+      });
 
       this.renderer.setAttribute(img, 'src', imageUrl);
       this.renderer.setStyle(img, 'position', 'absolute');
@@ -97,7 +122,6 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
       this.renderer.setStyle(img, 'left', `${pos.xPos + pos.xOffset}px`);
       this.renderer.setStyle(img, 'top', `${pos.yPos + pos.yOffset}px`);
       this.renderer.setStyle(img, 'pointer-events', 'none');
-      this.renderer.setStyle(img, 'opacity', `${this.minOpacity}`);
       this.renderer.setStyle(img, 'animation', `imageFade ${pos.animationDuration}s infinite ease-in-out`);
       this.renderer.setStyle(img, 'animation-delay', `${pos.animationDelay}s`);
       this.renderer.setStyle(img, 'filter', 'brightness(0.7)');
@@ -106,6 +130,13 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
 
       this.renderer.appendChild(this.container, img);
       this.images.push(img);
+    });
+  }
+
+  private showAllImages() {
+    this.images.forEach(img => {
+      this.renderer.setStyle(img, 'visibility', 'visible');
+      this.renderer.setStyle(img, 'opacity', `${this.minOpacity}`);
     });
   }
 } 
