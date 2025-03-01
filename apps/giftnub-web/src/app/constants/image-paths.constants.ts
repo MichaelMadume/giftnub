@@ -17,9 +17,9 @@ export const GIFT_IMAGES = {
   snowmanHolidayBoxes: 'assets/gifts/gift-11-snowman-holiday-boxes.jpg',
   babyEssentialsBasket: 'assets/gifts/gift-12-baby-essentials-basket.jpg',
   ultimateBabyHamper: 'assets/gifts/gift-13-ultimate-baby-hamper.jpg',
-  holidayIndulgenceBasket: 'assets/gifts/gift-14-holiday-indulgence-basket.jpg',
-  gourmetTastingBoard: 'assets/gifts/gift-15-gourmet-tasting-board.jpg',
-  festivePineHamper: 'assets/gifts/gift-16-festive-pine-hamper.jpg',
+  luxuryBabyGiftBasket: 'assets/gifts/gift-14-holiday-indulgence-basket.jpg',
+  deluxeBabyEssentialsBasket: 'assets/gifts/gift-15-gourmet-tasting-board.jpg',
+  santaSnowmanGiftBoxes: 'assets/gifts/gift-16-festive-pine-hamper.jpg',
 };
 
 // Export an array of all gift image URLs for components that need the full list
@@ -29,8 +29,8 @@ export const ALL_GIFT_IMAGE_URLS = Object.values(GIFT_IMAGES);
 export const getGiftImagesByCategory = (category: string): string[] => {
   const imagesByCategory: Record<string, string[]> = {
     luxury: [GIFT_IMAGES.luxuryWellnessPackage, GIFT_IMAGES.executiveGiftSuite],
-    personal: [GIFT_IMAGES.luxuryWellnessPackage, GIFT_IMAGES.anniversaryCelebrationBox],
-    corporate: [GIFT_IMAGES.corporateWelcomeKit, GIFT_IMAGES.teamBuildingKit],
+    personal: [GIFT_IMAGES.corporateWelcomeKit],
+    corporate: [GIFT_IMAGES.teamBuildingKit],
     wedding: [GIFT_IMAGES.weddingPartyGiftSet],
     birthday: [
       GIFT_IMAGES.birthdayCelebrationBox1,
@@ -39,13 +39,22 @@ export const getGiftImagesByCategory = (category: string): string[] => {
     ],
     holiday: [
       GIFT_IMAGES.snowmanHolidayBoxes,
-      GIFT_IMAGES.holidayIndulgenceBasket,
-      GIFT_IMAGES.festivePineHamper,
-      GIFT_IMAGES.gourmetTastingBoard,
+      GIFT_IMAGES.santaSnowmanGiftBoxes,
+      GIFT_IMAGES.anniversaryCelebrationBox,
+      GIFT_IMAGES.executiveGiftSuite,
     ],
-    baby: [GIFT_IMAGES.babyEssentialsBasket, GIFT_IMAGES.ultimateBabyHamper],
-    gourmet: [GIFT_IMAGES.gourmetTastingBoard, GIFT_IMAGES.holidayIndulgenceBasket],
-    anniversary: [GIFT_IMAGES.anniversaryCelebrationBox],
+    baby: [
+      GIFT_IMAGES.babyEssentialsBasket, 
+      GIFT_IMAGES.ultimateBabyHamper,
+      GIFT_IMAGES.luxuryBabyGiftBasket,
+      GIFT_IMAGES.deluxeBabyEssentialsBasket
+    ],
+    gourmet: [
+      GIFT_IMAGES.luxuryWellnessPackage, 
+      GIFT_IMAGES.anniversaryCelebrationBox
+    ],
+    wellness: [GIFT_IMAGES.corporateWelcomeKit],
+    kids: [GIFT_IMAGES.santaSnowmanGiftBoxes],
   };
 
   return imagesByCategory[category] || [];

@@ -118,8 +118,8 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
   // Add Math property for template usage
   protected readonly Math = Math;
 
-  // Example categories - in production, this would come from a service
-  readonly categories = [
+  // Define base categories
+  private readonly baseCategories = [
     { id: 'all', label: 'All Gifts' },
     { id: 'personal', label: 'Personal' },
     { id: 'corporate', label: 'Corporate' },
@@ -131,6 +131,10 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
     { id: 'gourmet', label: 'Gourmet' },
     { id: 'anniversary', label: 'Anniversary' },
   ];
+
+  // BehaviorSubject for filtered categories
+  private categoriesSubject = new BehaviorSubject<{ id: string; label: string }[]>([]);
+  categories$ = this.categoriesSubject.asObservable();
 
   // Use the centralized gift data instead of defining it here
   private readonly gifts: Gift[] = GIFT_DATA;
@@ -158,6 +162,22 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
     this.isMobile$ = this.breakpointObserver
       .observe([Breakpoints.HandsetPortrait, Breakpoints.TabletPortrait])
       .pipe(map((result) => result.matches));
+
+    // Initialize filtered categories
+    this.updateFilteredCategories();
+  }
+
+  // Filter categories to only show those with gifts
+  private updateFilteredCategories(): void {
+    const filteredCategories = this.baseCategories.filter(category => {
+      // Always keep the "all" category
+      if (category.id === 'all') return true;
+      
+      // Check if there are any gifts for this category
+      return this.gifts.some(gift => gift.category.includes(category.id));
+    });
+    
+    this.categoriesSubject.next(filteredCategories);
   }
 
   // Add window resize listener
