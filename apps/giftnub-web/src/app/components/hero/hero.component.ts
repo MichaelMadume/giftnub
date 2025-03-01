@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimatedBackgroundDirective } from '../../directives/animated-background.directive';
+import { ALL_GIFT_IMAGE_URLS } from '../../constants/gift-data.constants';
 
 @Component({
   selector: 'giftnub-hero',
@@ -135,13 +136,5 @@ import { AnimatedBackgroundDirective } from '../../directives/animated-backgroun
   `]
 })
 export class HeroComponent {
-  giftImageUrls = [
-    'assets/gifts/gift-1-luxury-wellness-package.jpg',
-    'assets/gifts/gift-2-corporate-welcome-kit.jpg',
-    'assets/gifts/gift-3-anniversary-celebration-box.jpg',
-    'assets/gifts/gift-4-executive-gift-suite.jpg',
-    'assets/gifts/gift-6-team-building-kit.jpg',
-    'assets/gifts/gift-7-wedding-party-gift-set.jpg',
-    'assets/gifts/gift-8-birthday-celebration-box.jpg'
-  ];
+  giftImageUrls = ALL_GIFT_IMAGE_URLS.slice(0, 10);
 } 
