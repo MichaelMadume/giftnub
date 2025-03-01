@@ -38,73 +38,71 @@ import { CommonModule } from '@angular/common';
         </div>
 
         <!-- Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Left Column -->
-          <div class="space-y-8">
-            <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
-              <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
-              <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20">
-                <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white/90 mb-4">The Challenge</h3>
-                <p class="text-lg leading-relaxed text-white/80">
-                  Gift-giving is an art, a language of love, and a way to celebrate the meaningful connections in our lives. Yet, let's be honest - finding the perfect gift can feel overwhelming. How many times have you wandered through a store, staring at shelves, unsure of what to pick?
-                </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-2 auto-rows-fr gap-8 lg:gap-12">
+          <!-- Card 1 -->
+          <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
+            <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20 flex flex-col h-full">
+              <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
               </div>
-            </div>
-
-            <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
-              <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
-              <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20">
-                <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Solution</h3>
-                <p class="text-lg leading-relaxed text-white/80">
-                  At The Gift Nub, we believe every gift should tell a story - a story of thoughtfulness, care, and connection. That's why we exist: to transform the stress of gift-giving into a joyful, meaningful experience.
-                </p>
-              </div>
+              <h3 class="text-2xl font-semibold text-white/90 mb-4">The Challenge</h3>
+              <p class="text-lg leading-relaxed text-white/80">
+                Gift-giving is an art, a language of love, and a way to celebrate the meaningful connections in our lives. Yet, let's be honest - finding the perfect gift can feel overwhelming. How many times have you wandered through a store, staring at shelves, unsure of what to pick?
+              </p>
             </div>
           </div>
 
-          <!-- Right Column -->
-          <div class="space-y-8">
-            <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
-              <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
-              <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20">
-                <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Approach</h3>
-                <p class="text-lg leading-relaxed text-white/80">
-                  Through personalized gifting consultations, we help you uncover the perfect gift. For those moments when time is tight, our "Quick-Gift" collection offers stunning, pre-curated options from our gallery of past successes.
-                </p>
+          <!-- Card 2 -->
+          <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
+            <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20 flex flex-col h-full">
+              <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
               </div>
+              <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Approach</h3>
+              <p class="text-lg leading-relaxed text-white/80">
+                Through personalized gifting consultations, we help you uncover the perfect gift. For those moments when time is tight, our "Quick-Gift" collection offers stunning, pre-curated options from our gallery of past successes.
+              </p>
             </div>
+          </div>
 
-            <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
-              <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
-              <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20">
-                <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Promise</h3>
-                <p class="text-lg leading-relaxed text-white/80">
-                  Every gift is a labor of love, meticulously tailored to celebrate the occasion and connection. Because when you give with intention, you don't just give a gift - you give a moment, a memory, and a piece of your heart.
-                </p>
-                <p class="text-xl font-semibold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text mt-6">
-                  Let's make every gift count.
-                </p>
+          <!-- Card 3 -->
+          <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
+            <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20 flex flex-col h-full">
+              <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
+              <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Solution</h3>
+              <p class="text-lg leading-relaxed text-white/80">
+                At The Gift Nub, we believe every gift should tell a story - a story of thoughtfulness, care, and connection. That's why we exist: to transform the stress of gift-giving into a joyful, meaningful experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="group relative transform hover:scale-[1.02] transition-all duration-300">
+            <div class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"></div>
+            <div class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-8 transition-all duration-300 hover:bg-black/30 group-hover:border-white/20 flex flex-col h-full">
+              <div class="w-12 h-12 mb-6 rounded-xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-2.5 group-hover:scale-110 transition-transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-secondary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-semibold text-white/90 mb-4">Our Promise</h3>
+              <p class="text-lg leading-relaxed text-white/80">
+                Every gift is a labor of love, meticulously tailored to celebrate the occasion and connection. Because when you give with intention, you don't just give a gift - you give a moment, a memory, and a piece of your heart.
+              </p>
+              <p class="text-xl font-semibold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text mt-6">
+                Let's make every gift count.
+              </p>
             </div>
           </div>
         </div>
