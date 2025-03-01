@@ -1,6 +1,8 @@
 <section
   id="giftGallery"
-  class="relative min-h-screen overflow-hidden bg-gradient-to-b from-transparent via-black to-black py-24"
+  class="relative min-h-screen overflow-hidden bg-gradient-to-b from-transparent via-black to-black py-24 flex items-center justify-center"
+  (keydown)="onKeyDown($event)"
+  tabindex="0"
 >
   <!-- Enhanced Background Effects -->
   <div class="absolute inset-0">
@@ -35,12 +37,11 @@
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1)_0%,_transparent_70%)] opacity-50"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- DESKTOP VIEW -->
+  <div *ngIf="(isMobile$ | async) === false" class="desktop-view relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200"
-        >
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200">
           Past Gift Experiences
         </span>
       </h2>
@@ -67,149 +68,208 @@
       </div>
     </div>
 
-    <!-- Loading Overlay -->
-    <div *ngIf="loading$ | async" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
-      <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-primary-500"></div>
-    </div>
-
-    <!-- Grid Container with Side Navigation -->
-    <div class="relative">
-      <!-- Previous Button -->
-      <button
-        (click)="previousPage()"
-        [disabled]="currentPage === 1"
-        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 p-3 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-        [ngClass]="{
-          'hover:bg-primary-500/20': currentPage !== 1,
-          'opacity-50 cursor-not-allowed': currentPage === 1
-        }"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      <!-- Next Button -->
-      <button
-        (click)="nextPage()"
-        [disabled]="currentPage === totalPages"
-        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 p-3 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/70 hover:text-white hover:bg-black/60 transition-all transform hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed"
-        [ngClass]="{
-          'hover:bg-primary-500/20': currentPage !== totalPages,
-          'opacity-50 cursor-not-allowed': currentPage === totalPages
-        }"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      <!-- Responsive Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-        <!-- Debug Info -->
-        <div *ngIf="!(filteredGifts$ | async)?.length" class="col-span-full text-center text-white/70">
-          <p>No gifts found in this category.</p>
-        </div>
-
-        <div *ngFor="let gift of filteredGifts$ | async; trackBy: trackByFn; let i = index" 
-             class="group relative fade-in"
-             [style.animation-delay]="'calc(' + i * 100 + 'ms)'"
-        >
-          <!-- Enhanced gradient border effect -->
-          <div
-            class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-2xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"
-          ></div>
-
-          <!-- Improved Card Content -->
-          <div
-            class="relative rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 transition-all duration-300 hover:scale-[1.03] hover:bg-black/30 group-hover:border-white/20 flex flex-col"
-          >
-            <!-- Image Container with gradient overlay -->
-            <div class="relative w-full pt-[60%]">
-              <img 
-                [src]="gift.imageUrl" 
-                [alt]="gift.title"
-                class="absolute inset-0 w-full h-full object-cover rounded-t-2xl"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-secondary-500/10 rounded-t-2xl"
-              ></div>
-            </div>
-
-            <!-- Content Container -->
-            <div class="p-4 flex flex-col gap-2">
-              <div>
-                <h3 class="text-lg font-semibold text-white/90 line-clamp-1">
-                  {{ gift.title }}
-                </h3>
-                <p class="text-white/70 text-sm line-clamp-2 mt-1">{{ gift.description }}</p>
-              </div>
-
-              <div class="flex justify-between items-center mt-2">
-                <span [class]="gift.blurPrice ? 'blur-sm select-none text-secondary-400 font-semibold' : 'text-secondary-400 font-semibold'">${{ gift.price }}</span>
-                <span
-                  class="px-3 py-1 rounded-full text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30 backdrop-blur-sm"
-                >
-                  {{ gift.category }}
-                </span>
-              </div>
-
-              <button
-                (click)="bookToReplicate(gift)"
-                class="w-full relative group/btn overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02] mt-2"
-              >
-                <div
-                  class="relative bg-black/60 backdrop-blur-xl rounded-lg px-4 py-2 transition-all duration-300 group-hover/btn:bg-black/40"
-                >
-                  <span class="text-white font-medium text-sm">Book to Replicate</span>
-                </div>
-              </button>
-            </div>
-
-            <!-- Enhanced Hover Overlay -->
+    <!-- Desktop Swiper Carousel -->
+    <div class="relative w-full px-4 md:px-12">
+      <swiper-container #desktopSwiperContainer class="w-full" init="false">
+        <swiper-slide *ngFor="let gift of filteredGifts$ | async; trackBy: trackByFn">
+          <!-- Desktop Gift Card -->
+          <div class="carousel-card group">
+            <!-- Enhanced gradient border effect -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out rounded-2xl"
+              class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-xl blur group-hover:blur-md opacity-75 transition-all duration-500 group-hover:opacity-100"
+            ></div>
+
+            <!-- Card Content -->
+            <div
+              class="relative h-full rounded-xl backdrop-blur-xl border border-white/10 transition-all duration-300 group-hover:border-white/20 flex flex-col overflow-hidden"
             >
-              <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                <h3 class="text-xl font-semibold text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                  {{ gift.title }}
-                </h3>
-                <p class="text-white/70 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">{{ gift.description }}</p>
-                <div class="flex justify-between items-center mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+              <!-- Image Container -->
+              <div class="image-container">
+                <img 
+                  [src]="gift.imageUrl" 
+                  [alt]="gift.title"
+                  class="w-full h-full object-cover rounded-t-xl"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-secondary-500/10 rounded-t-xl"
+                ></div>
+              </div>
+
+              <!-- Content Container -->
+              <div class="p-4 flex flex-col card-content">
+                <div>
+                  <h3 class="text-lg font-semibold text-white/90 line-clamp-1">
+                    {{ gift.title }}
+                  </h3>
+                  <p class="text-white/70 text-sm line-clamp-2 mt-1">{{ gift.description }}</p>
+                </div>
+
+                <div class="flex justify-between items-center mt-auto mb-3">
                   <span [class]="gift.blurPrice ? 'blur-sm select-none text-secondary-400 font-semibold' : 'text-secondary-400 font-semibold'">${{ gift.price }}</span>
                   <span
-                    class="px-3 py-1 rounded-full text-sm bg-primary-500/20 text-primary-400 border border-primary-500/30 backdrop-blur-sm"
+                    class="px-3 py-1 rounded-full text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30 backdrop-blur-sm"
                   >
-                    {{ gift.category }}
+                    {{ gift.category[0] }}
                   </span>
                 </div>
-                <button
-                  (click)="bookToReplicate(gift)"
-                  class="w-full relative group/btn overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] transition-all duration-300 hover:scale-[1.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-250"
-                >
-                  <div
-                    class="relative bg-black/60 backdrop-blur-xl rounded-lg px-4 py-2 transition-all duration-300 group-hover/btn:bg-black/40"
+
+                <div class="button-container w-full">
+                  <button
+                    (click)="bookToReplicate(gift)"
+                    class="w-full relative overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px]"
                   >
-                    <span class="text-white font-medium">Book to Replicate</span>
+                    <div
+                      class="relative bg-black/60 backdrop-blur-xl rounded-lg flex items-center justify-center h-10 transition-all duration-300 group-hover:bg-black/40"
+                    >
+                      <span class="text-white font-medium text-sm">Book to Replicate</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mirror Reflection -->
+              <div class="mirror-reflection"></div>
+
+              <!-- Enhanced Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out rounded-xl pointer-events-none"
+              >
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 class="text-xl font-semibold text-white mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                    {{ gift.title }}
+                  </h3>
+                  <p class="text-white/70 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-150">{{ gift.description }}</p>
+                  <div class="flex justify-between items-center mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                    <span [class]="gift.blurPrice ? 'blur-sm select-none text-secondary-400 font-semibold' : 'text-secondary-400 font-semibold'">${{ gift.price }}</span>
+                    <span
+                      class="px-3 py-1 rounded-full text-sm bg-primary-500/20 text-primary-400 border border-primary-500/30 backdrop-blur-sm"
+                    >
+                      {{ gift.category[0] }}
+                    </span>
                   </div>
-                </button>
+                  <button
+                    (click)="bookToReplicate(gift)"
+                    class="w-full relative overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-250"
+                  >
+                    <div
+                      class="relative bg-black/60 backdrop-blur-xl rounded-lg flex items-center justify-center h-10 transition-all duration-300 group-hover:bg-black/40"
+                    >
+                      <span class="text-white font-medium">Book to Replicate</span>
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+
+  <!-- MOBILE VIEW -->
+  <div *ngIf="isMobile$ | async" class="mobile-view relative w-full px-3">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold mb-3">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200">
+          Past Gift Experiences
+        </span>
+      </h2>
+      <p class="text-white/70 text-sm max-w-xs mx-auto">
+        Browse our curated collection of successful gift stories
+      </p>
+    </div>
+
+    <div class="mb-6 overflow-x-auto pb-2">
+      <div class="flex flex-nowrap gap-2 justify-start min-w-min">
+        <button
+          *ngFor="let cat of categories"
+          class="px-3 py-1.5 rounded-full transition-all text-xs whitespace-nowrap"
+          [ngClass]="{
+            'bg-gradient-to-r from-primary-500 to-secondary-500 text-white':
+              (activeCategory$ | async) === cat.id,
+            'bg-white/5 text-white/70 hover:bg-white/10':
+              (activeCategory$ | async) !== cat.id
+          }"
+          (click)="setCategory(cat.id)"
+        >
+          {{ cat.label }}
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Swiper Carousel -->
+    <div class="relative w-full">
+      <swiper-container #mobileSwiperContainer class="w-full" init="false">
+        <swiper-slide *ngFor="let gift of filteredGifts$ | async; trackBy: trackByFn">
+          <!-- Mobile Gift Card -->
+          <div class="carousel-card group">
+            <!-- Enhanced gradient border effect -->
+            <div
+              class="absolute -inset-[1px] bg-gradient-to-r from-primary-500/30 to-secondary-500/30 rounded-xl blur opacity-75"
+            ></div>
+
+            <!-- Card Content -->
+            <div
+              class="relative h-full rounded-xl backdrop-blur-xl border border-white/10 flex flex-col overflow-hidden"
+            >
+              <!-- Image Container -->
+              <div class="image-container">
+                <img 
+                  [src]="gift.imageUrl" 
+                  [alt]="gift.title"
+                  class="w-full h-full object-cover rounded-t-xl"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-secondary-500/10 rounded-t-xl"
+                ></div>
+              </div>
+
+              <!-- Content Container -->
+              <div class="p-3 flex flex-col card-content">
+                <div>
+                  <h3 class="text-base font-semibold text-white/90 line-clamp-1">
+                    {{ gift.title }}
+                  </h3>
+                  <p class="text-white/70 text-xs line-clamp-2 mt-1">{{ gift.description }}</p>
+                </div>
+
+                <div class="flex justify-between items-center mt-auto mb-2">
+                  <span [class]="gift.blurPrice ? 'blur-sm select-none text-secondary-400 font-semibold text-sm' : 'text-secondary-400 font-semibold text-sm'">${{ gift.price }}</span>
+                  <span
+                    class="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-primary-400 border border-primary-500/30 backdrop-blur-sm"
+                  >
+                    {{ gift.category[0] }}
+                  </span>
+                </div>
+
+                <div class="button-container w-full">
+                  <button
+                    (click)="bookToReplicate(gift)"
+                    class="w-full relative overflow-hidden rounded-lg bg-gradient-to-r from-primary-500 to-secondary-500 p-[1px]"
+                  >
+                    <div
+                      class="relative bg-black/60 backdrop-blur-xl rounded-lg flex items-center justify-center h-8 transition-all duration-300"
+                    >
+                      <span class="text-white font-medium text-xs">Book to Replicate</span>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mirror Reflection -->
+              <div class="mirror-reflection"></div>
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+
+  <!-- Loading Overlay with improved animation -->
+  <div *ngIf="loading$ | async" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
+    <div class="flex flex-col items-center">
+      <div class="animate-spin rounded-full h-12 w-12 md:h-16 md:w-16 border-t-2 border-b-2 border-primary-500"></div>
+      <p class="text-white/80 mt-4 animate-pulse text-sm md:text-base">Loading gifts...</p>
     </div>
   </div>
 </section>

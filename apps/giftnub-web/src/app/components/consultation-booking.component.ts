@@ -482,6 +482,9 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
 
   private lastAvailabilityResponse: any = null;
 
+  // Store event listener reference to remove it later
+  private giftSelectedListener: EventListener | null = null;
+
   constructor(
     private calendlyService: CalendlyService,
     private consultationService: ConsultationService,
@@ -505,12 +508,38 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
     const type = urlParams.get('type');
     const suggestionId = urlParams.get('suggestion');
 
+    // Read gift parameter from URL hash if present
+    const hashParams = new URLSearchParams(window.location.hash.split('?')[1] || '');
+    const giftId = hashParams.get('gift') || sessionStorage.getItem('giftnub-gift-id');
+    
+    // Listen for gift selection events
+    this.giftSelectedListener = ((event: CustomEvent) => {
+      const selectedGiftId = event.detail?.giftId;
+      if (selectedGiftId) {
+        console.log('Gift selected event:', selectedGiftId);
+        this.consultationForm.patchValue({
+          type: 'personal',
+          notes: `I'm interested in replicating gift ID: ${selectedGiftId}`
+        });
+      }
+    }) as EventListener;
+    
+    window.addEventListener('gift-selected', this.giftSelectedListener);
+
     if (type) {
       this.consultationForm.patchValue({ type });
     }
 
     if (suggestionId) {
       console.log('Suggestion ID:', suggestionId);
+    }
+
+    if (giftId) {
+      console.log('Gift ID:', giftId);
+      this.consultationForm.patchValue({
+        type: 'personal',
+        notes: `I'm interested in replicating gift ID: ${giftId}`
+      });
     }
 
     // Initial fetch of availability
@@ -533,6 +562,12 @@ export class ConsultationBookingComponent implements OnInit, OnDestroy {
     if (this.pollingSubscription) {
       this.pollingSubscription.unsubscribe();
     }
+    
+    // Remove event listener
+    if (this.giftSelectedListener) {
+      window.removeEventListener('gift-selected', this.giftSelectedListener);
+    }
+    
     this.destroy$.next();
     this.destroy$.complete();
   }
