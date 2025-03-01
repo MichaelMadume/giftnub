@@ -22,8 +22,8 @@ export class AnimatedBackgroundDirective implements OnInit, OnDestroy {
   private observer: IntersectionObserver | null = null;
   private isVisible = false;
   private userActivityTimeout: any;
-  private readonly INACTIVITY_TIMEOUT = 5000; // 10 seconds
-  private readonly PERMANENT_PAUSE_TIMEOUT = 60000; // 1 minute
+  private readonly INACTIVITY_TIMEOUT = 10000; // 10 seconds
+  private readonly PERMANENT_PAUSE_TIMEOUT = 600000; // 1 minute
   private isPermanentlyPaused = false;
 
   constructor(
