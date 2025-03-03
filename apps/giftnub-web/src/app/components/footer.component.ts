@@ -13,11 +13,14 @@ import { CommonModule } from '@angular/common';
         >
           <!-- Company Info -->
           <div>
-            <h3
-              class="text-2xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text"
-            >
-              The Gift Nub
-            </h3>
+            <div class="flex items-center mb-6">
+              <img src="assets/images/logo.png" alt="GiftNub Logo" class="h-10 w-auto mr-3" />
+              <h3
+                class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-secondary-400 text-transparent bg-clip-text"
+              >
+                The Gift Nub
+              </h3>
+            </div>
             <p class="text-white/70 mb-6">
               AI-powered gifting solutions for personal and corporate occasions.
             </p>
@@ -190,9 +193,12 @@ import { CommonModule } from '@angular/common';
         <!-- Bottom Bar -->
         <div class="border-t border-white/5 pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-white/70 text-sm mb-4 md:mb-0">
-              © {{ currentYear }} GiftNub. All rights reserved.
-            </p>
+            <div class="flex items-center mb-4 md:mb-0">
+              <img src="assets/images/logo.png" alt="GiftNub Logo" class="h-6 w-auto mr-2" />
+              <p class="text-white/70 text-sm">
+                © {{ currentYear }} GiftNub. All rights reserved.
+              </p>
+            </div>
             <div class="flex space-x-6">
               <a
                 href="#"
