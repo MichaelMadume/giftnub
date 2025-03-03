@@ -195,5 +195,124 @@
         </div>
       </form>
     </div>
+
+    <!-- Loading Animation Overlay -->
+    <div 
+      *ngIf="isLoading" 
+      class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 backdrop-blur-lg transition-all duration-500"
+    >
+      <!-- Animated orbs -->
+      <div class="absolute w-[300px] h-[300px] top-1/4 -translate-x-1/2 bg-primary-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute w-[300px] h-[300px] bottom-1/4 translate-x-1/2 bg-secondary-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
+      
+      <!-- Progress indicator -->
+      <div class="relative mb-12">
+        <div class="w-24 h-24 rounded-full border-t-2 border-b-2 border-white/30 animate-spin"></div>
+        <div class="w-16 h-16 rounded-full border-r-2 border-l-2 border-primary-400/70 animate-spin absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation-duration: 1.5s;"></div>
+        <div class="w-8 h-8 rounded-full border-t-2 border-secondary-400/70 animate-spin absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation-duration: 2.2s; animation-direction: reverse;"></div>
+      </div>
+      
+      <!-- Staggered text animation container -->
+      <div class="text-center relative">
+        <!-- Main loading text with fluid motion -->
+        <h2 class="text-2xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200 relative overflow-hidden">
+          <span class="inline-block animate-text-float" style="animation-delay: 0ms;">C</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 50ms;">u</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 100ms;">r</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 150ms;">a</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 200ms;">t</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 250ms;">i</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 300ms;">n</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 350ms;">g</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 400ms;"> </span>
+          <span class="inline-block animate-text-float" style="animation-delay: 450ms;">Y</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 500ms;">o</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 550ms;">u</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 600ms;">r</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 650ms;"> </span>
+          <span class="inline-block animate-text-float" style="animation-delay: 700ms;">P</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 750ms;">e</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 800ms;">r</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 850ms;">f</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 900ms;">e</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 950ms;">c</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1000ms;">t</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1050ms;"> </span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1100ms;">G</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1150ms;">i</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1200ms;">f</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1250ms;">t</span>
+          <span class="inline-block animate-text-float" style="animation-delay: 1300ms;">s</span>
+        </h2>
+        
+        <!-- Animated ellipsis with pulsing effect -->
+        <div class="flex justify-center items-center space-x-2 text-white/70">
+          <span class="inline-block w-2 h-2 bg-primary-400 rounded-full animate-pulse" style="animation-delay: 0ms;"></span>
+          <span class="inline-block w-2 h-2 bg-white rounded-full animate-pulse" style="animation-delay: 300ms;"></span>
+          <span class="inline-block w-2 h-2 bg-secondary-400 rounded-full animate-pulse" style="animation-delay: 600ms;"></span>
+        </div>
+        
+        <!-- Micro-interactions with rotating messages -->
+        <div class="mt-8 h-8 overflow-hidden relative">
+          <div class="animate-message-rotate">
+            <p class="text-white/60 h-8 flex items-center justify-center">Analyzing your preferences...</p>
+            <p class="text-white/60 h-8 flex items-center justify-center">Finding the perfect match...</p>
+            <p class="text-white/60 h-8 flex items-center justify-center">Curating meaningful options...</p>
+            <p class="text-white/60 h-8 flex items-center justify-center">Almost there...</p>
+            <p class="text-white/60 h-8 flex items-center justify-center">Polishing suggestions...</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-7px);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 30px var(--tw-color-primary-400);
+    }
+  }
+  
+  @keyframes messageRotate {
+    0%, 19% {
+      transform: translateY(0);
+    }
+    20%, 39% {
+      transform: translateY(-32px);
+    }
+    40%, 59% {
+      transform: translateY(-64px);
+    }
+    60%, 79% {
+      transform: translateY(-96px);
+    }
+    80%, 99% {
+      transform: translateY(-128px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-text-float {
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+    display: inline-block;
+  }
+  
+  .animate-message-rotate {
+    animation: messageRotate 10s infinite;
+  }
+</style>
