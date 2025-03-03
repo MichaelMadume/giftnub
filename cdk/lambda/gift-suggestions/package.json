@@ -1,0 +1,26 @@
+{
+  "name": "gift-suggestions",
+  "version": "1.0.0",
+  "description": "Lambda function for AI gift suggestions using LangChain and DeepSeek",
+  "main": "index.js",
+  "dependencies": {
+    "@langchain/core": "^0.3.42",
+    "@langchain/deepseek": "^0.0.1",
+    "langchain": "^0.3.19",
+    "lodash": "^4.17.21",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.121",
+    "@types/lodash": "^4.14.200",
+    "@types/node": "^20.6.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "tsc && mkdir -p dist/shared && cp -r ../../../libs/shared/gift-data dist/shared/gift-data",
+    "clean": "rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

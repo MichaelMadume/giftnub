@@ -18,6 +18,7 @@ import {
 } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Gift, GIFT_DATA, getGiftsByCategory } from '../constants/gift-data.constants';
+import { GiftSuggestion, GiftSuggestionResponse } from '@giftnub/gift-data';
 
 // Import Swiper core and required modules
 import { register } from 'swiper/element/bundle';
@@ -44,6 +45,11 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
 
   // Track mobile vs desktop view
   isMobile$: Observable<boolean>;
+
+  // Add new properties for header text
+  headerTitle$ = new BehaviorSubject<string>('Past Gift Experiences');
+  headerSubtext$ = new BehaviorSubject<string>('Browse our curated collection of successful gift stories');
+  showFilters$ = new BehaviorSubject<boolean>(true);
 
   private activeCategorySubject = new BehaviorSubject<string>('all');
   activeCategory$ = this.activeCategorySubject.asObservable();
@@ -139,18 +145,39 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
   // Use the centralized gift data instead of defining it here
   private readonly gifts: Gift[] = GIFT_DATA;
 
+  private customSuggestionsSubject = new BehaviorSubject<GiftSuggestionResponse | null>(null);
+  customSuggestions$ = this.customSuggestionsSubject.asObservable();
+
   filteredGifts$: Observable<Gift[]> = combineLatest([
     this.activeCategory$,
     this.pagination$,
+    this.customSuggestions$
   ]).pipe(
-    map(([category, pagination]) => {
-      // Using the helper function from constants
-      const filtered = getGiftsByCategory(category);
-
-      // Don't update the pagination here - this creates an infinite loop
-      // When we update paginationSubject, it triggers this observable again
-      // Instead, we'll just return the filtered gifts
-      return filtered;
+    map(([category, pagination, customSuggestions]) => {
+      // If we have custom suggestions, map them to Gift objects and return those
+      console.log('customSuggestions', customSuggestions);
+      if (customSuggestions) {
+        return customSuggestions.suggestions
+          .map(suggestion => {
+            // Find the matching gift from GIFT_DATA using the giftId
+            const matchingGift = GIFT_DATA.find(gift => gift.id === suggestion.giftId);
+            
+            if (matchingGift) {
+              // Create a modified gift with suggestion data and gift image
+              return {
+                ...matchingGift,
+                title: suggestion.title,
+                description: suggestion.description,
+                isRecommended: true
+              };
+            }
+            return null;
+          })
+          .filter(gift => gift !== null) as Gift[];
+      }
+      console.log('category', category);
+      // Using the helper function from constants for normal filtering
+      return getGiftsByCategory(category);
     })
   );
 
@@ -432,5 +459,44 @@ export class GiftGalleryComponent implements OnInit, OnDestroy, AfterViewInit {
         swiper.slideNext();
       }
     }
+  }
+
+  /**
+   * Sets custom suggestions from AI to display in the gallery
+   * @param suggestions The suggestions response from the AI
+   */
+  setSuggestions(suggestions: GiftSuggestionResponse): void {
+    this.customSuggestionsSubject.next(suggestions);
+    
+    // Update header text with marketing theme and message
+    this.headerTitle$.next(suggestions.marketingTheme);
+    this.headerSubtext$.next(suggestions.marketingMessageSummary);
+    
+    // Hide filters when showing suggestions
+    this.showFilters$.next(false);
+    
+    // Reset category to 'all' to ensure all suggested items display
+    this.setCategory('all');
+    
+    // Force update the swiper to reflect the new content
+    setTimeout(() => {
+      this.updateSwiperOnResize();
+    }, 100);
+  }
+  
+  /**
+   * Clears custom suggestions and returns to normal gallery view
+   */
+  clearSuggestions(): void {
+    this.customSuggestionsSubject.next(null);
+    this.headerTitle$.next('Past Gift Experiences');
+    this.headerSubtext$.next('Browse our curated collection of successful gift stories');
+    this.showFilters$.next(true);
+    this.updateFilteredCategories();
+    
+    // Force update the swiper to reflect the new content
+    setTimeout(() => {
+      this.updateSwiperOnResize();
+    }, 100);
   }
 }

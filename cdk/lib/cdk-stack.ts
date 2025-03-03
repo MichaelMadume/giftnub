@@ -132,6 +132,28 @@ export class CdkStack extends cdk.Stack {
       }
     );
 
+    // Create the Lambda function for gift suggestions using LangChain and DeepSeek
+    const giftSuggestionsLambda = new nodejs.NodejsFunction(
+      this,
+      'GiftSuggestionsLambda',
+      {
+        runtime: lambda.Runtime.NODEJS_18_X,
+        handler: 'handler',
+        entry: path.join(__dirname, '../lambda/gift-suggestions/index.ts'),
+        environment: {
+          APP_SECRET: 'app/secrets',
+          NODE_OPTIONS: '--enable-source-maps',
+        },
+        bundling: {
+          sourceMap: true,
+          minify: true,
+          externalModules: ['aws-sdk'],
+        },
+        timeout: cdk.Duration.seconds(60), // Longer timeout for AI processing
+        memorySize: 512, // More memory for LLM operations
+      }
+    );
+
     // Grant DynamoDB permissions
     consultationTable.grantReadWriteData(stripePaymentsLambda);
     consultationTable.grantReadWriteData(calendlyOperationsLambda);
@@ -148,6 +170,7 @@ export class CdkStack extends cdk.Stack {
     stripePaymentsLambda.addToRolePolicy(secretsPolicy);
     calendlyOperationsLambda.addToRolePolicy(secretsPolicy);
     consultationBookingsLambda.addToRolePolicy(secretsPolicy);
+    giftSuggestionsLambda.addToRolePolicy(secretsPolicy);
 
     // Create API Gateway
     const api = new apigateway.RestApi(this, 'GiftNubApi', {
@@ -184,6 +207,14 @@ export class CdkStack extends cdk.Stack {
     consultationStatus.addMethod(
       'GET',
       new apigateway.LambdaIntegration(consultationBookingsLambda)
+    );
+
+    // Create API resources and methods for gift suggestions
+    const gifts = api.root.addResource('gifts');
+    const suggestions = gifts.addResource('suggestions');
+    suggestions.addMethod(
+      'POST',
+      new apigateway.LambdaIntegration(giftSuggestionsLambda)
     );
 
     // Output the API URL and DynamoDB table name

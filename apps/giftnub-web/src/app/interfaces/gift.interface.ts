@@ -9,15 +9,10 @@ export interface Gift {
 
 export type GiftCategory = 'personal' | 'corporate' | 'luxury';
 
-export interface GiftSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  category: string;
-  confidence: number;
-  imageUrl?: string;
-}
+// Import GiftSuggestion from shared library instead of redefining
+// Use the shared interface from gift-data library, which has:
+// id, title, description, giftId
+export { GiftSuggestion } from '@giftnub/gift-data';
 
 export interface ConsultationBooking {
   name: string;

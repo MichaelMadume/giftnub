@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer.component';
 import { ConsultationBookingComponent } from './components/consultation-booking.component';
 import { AboutComponent } from './components/about.component';
 import { WhyComponent } from './components/why.component';
+import { GiftSuggestionResponse } from '@giftnub/gift-data';
 
 @Component({
   selector: 'giftnub-root',
@@ -45,9 +46,9 @@ import { WhyComponent } from './components/why.component';
         <giftnub-path-selector></giftnub-path-selector>
       </div>
       <div class="bg-black">
-        <giftnub-ai-suggestions></giftnub-ai-suggestions>
+        <giftnub-ai-suggestions (suggestionsGenerated)="handleSuggestions($event)"></giftnub-ai-suggestions>
       </div>
-      <giftnub-gift-gallery></giftnub-gift-gallery>
+      <giftnub-gift-gallery id="giftGallery" #giftGallery></giftnub-gift-gallery>
       <div class="bg-neutral-950">
         <giftnub-event-gifting></giftnub-event-gifting>
       </div>
@@ -65,6 +66,8 @@ import { WhyComponent } from './components/why.component';
   `
 })
 export class AppComponent implements OnInit {
+  @ViewChild('giftGallery') giftGallery!: GiftGalleryComponent;
+
   ngOnInit() {
     // Add Calendly widget script
     const script = document.createElement('script');
@@ -78,5 +81,16 @@ export class AppComponent implements OnInit {
         // This will be replaced by the actual Calendly function when the script loads
       }
     };
+  }
+
+  /**
+   * Handle suggestions generated from the AI component
+   * @param suggestions The suggestions response from the AI
+   */
+  handleSuggestions(suggestions: GiftSuggestionResponse): void {
+    // Send suggestions to the gift gallery component to display
+    if (this.giftGallery) {
+      this.giftGallery.setSuggestions(suggestions);
+    }
   }
 }

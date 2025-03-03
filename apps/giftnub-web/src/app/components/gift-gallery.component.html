@@ -39,18 +39,20 @@
 
   <!-- DESKTOP VIEW -->
   <div *ngIf="(isMobile$ | async) === false" class="desktop-view relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
+    <!-- Header Section -->
+    <div class="text-center mb-16 relative">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200">
-          Past Gift Experiences
+          {{ headerTitle$ | async }}
         </span>
       </h2>
       <p class="text-white/70 max-w-2xl mx-auto">
-        Browse our curated collection of successful gift stories
+        {{ headerSubtext$ | async }}
       </p>
     </div>
 
-    <div class="mb-12">
+    <!-- Category Filters - Only show when not in suggestions mode -->
+    <div class="mb-12" *ngIf="!(customSuggestions$ | async)">
       <div class="flex flex-wrap gap-4 justify-center">
         <button
           *ngFor="let cat of categories$ | async"
@@ -164,37 +166,35 @@
         </swiper-slide>
       </swiper-container>
     </div>
+
+    <!-- Return to Gallery Button - Desktop -->
+    <div *ngIf="(customSuggestions$ | async)" class="mt-3 flex justify-center">
+      <button 
+        (click)="clearSuggestions()" 
+        class="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary-500/30 via-secondary-500/30 to-primary-500/30 p-[1px] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/20"
+      >
+        <div class="relative bg-black/80 backdrop-blur-xl rounded-full px-6 py-2.5 transition-all duration-500 group-hover:bg-black/60 flex items-center gap-2">
+          <span class="text-white/90 font-medium text-sm tracking-wide">Return to Gallery</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white/90 transition-transform duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+      </button>
+    </div>
   </div>
 
   <!-- MOBILE VIEW -->
   <div *ngIf="isMobile$ | async" class="mobile-view relative w-full px-3">
-    <div class="text-center mb-8">
+    <!-- Mobile Header Section -->
+    <div class="text-center mb-8 relative">
       <h2 class="text-2xl font-bold mb-3">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-secondary-200">
-          Past Gift Experiences
+          {{ headerTitle$ | async }}
         </span>
       </h2>
       <p class="text-white/70 text-sm max-w-xs mx-auto">
-        Browse our curated collection of successful gift stories
+        {{ headerSubtext$ | async }}
       </p>
-    </div>
-
-    <div class="mb-6 overflow-x-auto pb-2">
-      <div class="flex flex-nowrap gap-2 justify-start min-w-min">
-        <button
-          *ngFor="let cat of categories$ | async"
-          class="px-3 py-1.5 rounded-full transition-all text-xs whitespace-nowrap"
-          [ngClass]="{
-            'bg-gradient-to-r from-primary-500 to-secondary-500 text-white':
-              (activeCategory$ | async) === cat.id,
-            'bg-white/5 text-white/70 hover:bg-white/10':
-              (activeCategory$ | async) !== cat.id
-          }"
-          (click)="setCategory(cat.id)"
-        >
-          {{ cat.label }}
-        </button>
-      </div>
     </div>
 
     <!-- Mobile Swiper Carousel -->
@@ -263,13 +263,20 @@
         </swiper-slide>
       </swiper-container>
     </div>
-  </div>
 
-  <!-- Loading Overlay with improved animation -->
-  <div *ngIf="loading$ | async" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center">
-    <div class="flex flex-col items-center">
-      <div class="animate-spin rounded-full h-12 w-12 md:h-16 md:w-16 border-t-2 border-b-2 border-primary-500"></div>
-      <p class="text-white/80 mt-4 animate-pulse text-sm md:text-base">Loading gifts...</p>
+    <!-- Return to Gallery Button - Mobile -->
+    <div *ngIf="!(showFilters$ | async)" class="mt-4 flex justify-center">
+      <button 
+        (click)="clearSuggestions()" 
+        class="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary-500/30 via-secondary-500/30 to-primary-500/30 p-[1px] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/20"
+      >
+        <div class="relative bg-black/80 backdrop-blur-xl rounded-full px-4 py-1.5 transition-all duration-500 group-hover:bg-black/60 flex items-center gap-1.5">
+          <span class="text-white/90 font-medium text-xs tracking-wide">Return</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white/90 transition-transform duration-500 group-hover:rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+      </button>
     </div>
   </div>
 </section>
